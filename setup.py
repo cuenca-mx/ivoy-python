@@ -13,6 +13,7 @@ test_requires = [
     'isort[pipfile]',
     'flake8',
     'mypy',
+    'iso8601',
 ]
 
 with open('README.md', 'r') as f:
