@@ -8,10 +8,10 @@ from .base import Resource
 @dataclass
 class OrderSharing(Resource):
     """
-    Based on: https://docs.getmati.com/#step-2-create-a-new-identity
+    This is based in iVoy App
     """
 
-    _endpoint: ClassVar[str] = "/api/order/"
+    _endpoint: ClassVar[str] = "/api/orderSharing"
 
     id: str
     dateCreated: dt.datetime
@@ -25,8 +25,7 @@ class OrderSharing(Resource):
     facematchScore: Optional[float] = None
 
     @classmethod
-    def create(cls, **metadata) -> "OrderSharing":
-        endpoint = f"{cls._endpoint}newOrder/json/web"
+    def get_budget(cls, **metadata) -> "OrderSharing":
+        endpoint = f"{cls._endpoint}/newOrder/json/web"
         resp = cls._client.put(endpoint, json=dict(metadata=metadata))
-        resp["id"] = resp.pop("_id")
         return cls(**resp)

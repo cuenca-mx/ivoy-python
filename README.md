@@ -18,3 +18,16 @@ pip install ivoy
 ```bash
 make test
 ```
+
+## Create Client
+
+```python
+from ivoy import Client
+
+client = Client(
+	auth_user= your_auht_user,
+	auth_password= your_auth_password,
+	ivoy_user= ivoy_system_user,
+	ivoy_password= ivoy_system_password
+)
+```
