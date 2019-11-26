@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Any, ClassVar, Dict
 
-from ..types import CoverageZone, OrderAddress, Package, PaymentMethod, Vehicle
+from ..types import CoverageZone, OrderAddress, Package
 from .base import Resource
 
 
@@ -19,9 +19,7 @@ class Budget(Resource):
     origin: OrderAddress
     destiny: OrderAddress
     zone: CoverageZone
-    order_type: Vehicle
     package_type: Package
-    payment_status: PaymentMethod
 
     @classmethod
     def create(
@@ -34,7 +32,7 @@ class Budget(Resource):
                 )
             )
         )
-        resp = cls._client.put(cls._endpoint, json=body)
+        resp = cls._client.post(cls._endpoint, json=body)
         data = resp["data"]
         return cls(
             _response=resp,
@@ -42,9 +40,7 @@ class Budget(Resource):
             price=data["price"],
             eta=data["eta"],
             zone=data["zone"]["idZone"],
-            order_type=data["orderType"]["idOrderType"],
             package_type=data["packageType"]["idPackageType"],
-            payment_status=data["paymentStatus"]["idPaymentStatus"],
             origin=origin,
             destiny=destiny,
         )

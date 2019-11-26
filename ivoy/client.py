@@ -64,6 +64,7 @@ class Client:
                 }
             },
         )
+        self._check_response(response)
         data = response.json()
         expires_at = dt.datetime.strptime(
             data["token"]["expires_in"], "%d/%m/%y %H:%M"
