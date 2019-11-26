@@ -1,8 +1,7 @@
 import json
-
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum, unique
-from typing import BinaryIO, Dict, List, Optional, Union
+from typing import Optional
 
 
 @unique
@@ -51,37 +50,36 @@ class OrderStatus(Enum):
 class OrderAddress:
     is_pickup: int
     is_source: int
-    person_approved: Optional[str] = None
-    phone: Optional[str] = None
-    id_address: Optional[int] = None
-    external_number: Optional[str] = None
-    internal_number: Optional[str] = None
+    phone: Optional[str]
+    external_number: Optional[str]
+    latitude: str
+    longitude: str
+    neighborhood: str
+    street: str
+    zip_code: str
     comment: str = "N/A"
-    latitude: Optional[str] = None
-    longitude: Optional[str] = None
-    neighborhood: Optional[str] = None
-    street: Optional[str] = None
-    zip_code: Optional[str] = None
+    internal_number: Optional[str] = None
+    person_approved: Optional[str] = None
+    id_address: Optional[int] = None
 
     def to_dict(self) -> dict:
         return dict(
-            isPickup = is_pickup,
-            isSource = is_source,
-            comment = comment,
-            personApproved = person_approved,
-            phone = phone,
-            address = dict(
-                idAddress = id_address,
-                externalNumber = external_number,
-                internalNumber = internal_number,
-                latitude = latitude,
-                longitude = longitude,
-                neighborhood = neighborhood,
-                street = street,
-                zipCode = zip_code
-            )
+            isPickup=self.is_pickup,
+            isSource=self.is_source,
+            comment=self.comment,
+            personApproved=self.person_approved,
+            phone=self.phone,
+            address=dict(
+                idAddress=self.id_address,
+                externalNumber=self.external_number,
+                internalNumber=self.internal_number,
+                latitude=self.latitude,
+                longitude=self.longitude,
+                neighborhood=self.neighborhood,
+                street=self.street,
+                zipCode=self.zip_code,
+            ),
         )
 
     def to_json(self) -> str:
         return json.dumps(self.to_dict())
-    
