@@ -7,7 +7,7 @@ cache: pip
 script:
   - export PYTHONPATH=`pwd`
   - make lint
-  - pytest --vcr-record=none
+  - pytest
 
 jobs:
   include:
