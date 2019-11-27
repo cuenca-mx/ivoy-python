@@ -18,8 +18,8 @@ class Client:
     auth_password: str
     web_auth_user: str
     web_auth_password: str
-    sys_user: str
-    sys_password: str
+    ivoy_user: str
+    ivoy_password: str
     token: Optional[str]
     web_token: Optional[str]
     session: Session
@@ -35,12 +35,14 @@ class Client:
         auth_password: Optional[str] = None,
         ivoy_user: Optional[str] = None,
         ivoy_password: Optional[str] = None,
+        web_auth_user: Optional[str] = None,
+        web_auth_password: Optional[str] = None,
     ):
         self.session = Session()
         self.auth_user = auth_user or os.environ["AUTH_USER"]
         self.auth_password = auth_password or os.environ["AUTH_PASS"]
-        self.web_auth_user = auth_user or os.environ["WEB_AUTH_USER"]
-        self.web_auth_password = auth_password or os.environ["WEB_AUTH_PASS"]
+        self.web_auth_user = web_auth_user or os.environ["WEB_AUTH_USER"]
+        self.web_auth_password = web_auth_password or os.environ["WEB_AUTH_PASS"]
         self.ivoy_user = ivoy_user or os.environ["IVOY_USER"]
         self.ivoy_password = ivoy_password or os.environ["IVOY_PASS"]
         self.token = self.get_token()
