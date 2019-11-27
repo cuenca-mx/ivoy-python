@@ -26,7 +26,7 @@ lint:
 		$(isort) --check-only
 		$(black) --check
 		flake8 $(PROJECT) tests setup.py
-		mypy $(PROJECT) tests
+		mypy $(PROJECT) tests --ignore-missing-imports
 
 clean:
 		find . -name '*.pyc' -exec rm -f {} +
