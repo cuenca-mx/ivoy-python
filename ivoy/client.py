@@ -1,24 +1,28 @@
-import datetime as dt
-from typing import Any, ClassVar, Dict, Optional, Tuple
+import os
+from typing import Any, ClassVar, Dict, Optional
 
 from requests import Response, Session
 
+from .exc import ExpiredTokens
 from .resources import Budget, Order, OrderSharing, Resource
 
-API_URL = "https://api.ivoy.dev"
+API_URL = os.environ["IVOY_URL"]
+WEB_URL = os.environ["IVOY_WEB_URL"]
 
 
 class Client:
 
     base_url: ClassVar[str] = API_URL
+    web_url: ClassVar[str] = WEB_URL
     auth_user: str
     auth_password: str
+    web_auth_user: str
+    web_auth_password: str
     sys_user: str
     sys_password: str
     token: Optional[str]
-    headers: Dict[str, str]
+    web_token: Optional[str]
     session: Session
-    token_expires_at: dt.datetime  # token expire date
 
     # resources
     budget: ClassVar = Budget
@@ -27,34 +31,32 @@ class Client:
 
     def __init__(
         self,
-        auth_user: str,
-        auth_password: str,
-        ivoy_user: str,
-        ivoy_password: str,
+        auth_user: Optional[str] = None,
+        auth_password: Optional[str] = None,
+        ivoy_user: Optional[str] = None,
+        ivoy_password: Optional[str] = None,
     ):
         self.session = Session()
-        self.auth_user = auth_user
-        self.auth_password = auth_password
-        self.ivoy_user = ivoy_user
-        self.ivoy_password = ivoy_password
-        self.token, self.token_expires_at = self.get_token()
-        self.headers = {
-            "Content-type": "application/json",
-            "Token": self.token,
-        }
+        self.auth_user = auth_user or os.environ["AUTH_USER"]
+        self.auth_password = auth_password or os.environ["AUTH_PASS"]
+        self.web_auth_user = auth_user or os.environ["WEB_AUTH_USER"]
+        self.web_auth_password = auth_password or os.environ["WEB_AUTH_PASS"]
+        self.ivoy_user = ivoy_user or os.environ["IVOY_USER"]
+        self.ivoy_password = ivoy_password or os.environ["IVOY_PASS"]
+        self.token = self.get_token()
+        self.web_token = self.get_token(True)
         Resource._client = self
 
-    def check_token(self) -> None:
-        now = dt.datetime.utcnow()
-        if now > self.token_expires_at:
-            self.token, self.token_expires_at = self.get_token()
-
-    def get_token(self) -> Tuple[str, dt.datetime]:
+    def get_token(self, web_token: bool = False) -> str:
         url = f"{self.base_url}/api/login/loginClient/json/web"
+        if web_token:
+            auth = (self.web_auth_user, self.web_auth_password)
+        else:
+            auth = (self.auth_user, self.auth_password)
         response = self.session.request(
             "POST",
             url,
-            auth=(self.auth_user, self.auth_password),
+            auth=auth,
             json={
                 "data": {
                     "systemRequest": {
@@ -66,10 +68,7 @@ class Client:
         )
         self._check_response(response)
         data = response.json()
-        expires_at = dt.datetime.strptime(
-            data["token"]["expires_in"], "%d/%m/%y %H:%M"
-        )
-        return data["token"]["access_token"], expires_at
+        return data["token"]["access_token"]
 
     def post(self, endpoint: str, **kwargs: Any) -> Dict[str, Any]:
         return self.request("post", endpoint, **kwargs)
@@ -78,18 +77,40 @@ class Client:
         return self.request("put", endpoint, **kwargs)
 
     def request(
-        self,
-        method: str,
-        endpoint: str,
-        token_score: Optional[str] = None,
-        **kwargs: Any,
+        self, method: str, endpoint: str, **kwargs: Any,
     ) -> Dict[str, Any]:
-        self.check_token()
-        url = self.base_url + endpoint
-        headers = {**self.headers}
+        if "orderSharing" in endpoint:
+            url = self.web_url + endpoint
+        else:
+            url = self.base_url + endpoint
+        headers = self.create_headers(endpoint)
         response = self.session.request(method, url, headers=headers, **kwargs)
-        self._check_response(response)
+
+        try:
+            self._check_response(response)
+        except ExpiredTokens:
+            self.token = self.get_token()
+            self.web_token = self.get_token(True)
+            headers = self.create_headers(endpoint)
+            response = self.session.request(
+                method, url, headers=headers, **kwargs
+            )
+        except Exception as e:
+            raise Exception(e)
+
         return response.json()
+
+    def create_headers(self, endpoint: str) -> Dict[str, Any]:
+        if "orderSharing" in endpoint:
+            return {
+                "Content-type": "application/json",
+                "Token": self.web_token,
+            }
+        else:
+            return {
+                "Content-type": "application/json",
+                "Token": self.token,
+            }
 
     @staticmethod
     def _check_response(response: Response) -> None:
@@ -97,6 +118,9 @@ class Client:
             json = response.json()
             if "code" in json and json["code"] == 0:
                 return
+            elif "code" in json and json["code"] == -156:
+                # Tokens expired
+                raise ExpiredTokens(156, "Tokens have expired.")
             else:
                 raise Exception("iVoy API error: {}".format(json))
         response.raise_for_status()
