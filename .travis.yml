@@ -26,5 +26,5 @@ jobs:
         - pip install coveralls
       script:
         - export PYTHONPATH=`pwd`
-        - pytest --vcr-record=none
+        - pytest
         - coveralls
