@@ -6,7 +6,7 @@ class IvoyException(Exception):
         self.message = message
 
     def __str__(self):
-        return f'Code: {self.code} - Message: {self.message}''
+        return f'Code: {self.code} - Message: {self.message}'
 
 
 class ExpiredTokens(IvoyException):
