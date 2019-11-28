@@ -1,8 +1,8 @@
 __all__ = [
-    "Budget",
-    "Order",
-    "OrderSharing",
-    "Resource",
+    'Budget',
+    'Order',
+    'OrderSharing',
+    'Resource',
 ]
 
 from .base import Resource

@@ -4,22 +4,22 @@ import pytest
 from vcr.request import Request
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope='module')
 def vcr_config() -> dict:
     config = dict()
-    config["filter_headers"] = [("Authorization", None), ("Token", None)]
-    config["before_record_request"] = scrub_body_request  # type: ignore
-    config["before_record_response"] = scrub_body_response  # type: ignore
-    config["decode_compressed_response"] = True  # type: ignore
+    config['filter_headers'] = [('Authorization', None), ('Token', None)]
+    config['before_record_request'] = scrub_body_request  # type: ignore
+    config['before_record_response'] = scrub_body_response  # type: ignore
+    config['decode_compressed_response'] = True  # type: ignore
     return config
 
 
 def scrub_body_request(request: Request) -> dict:
-    body = request.body.decode("utf-8")
+    body = request.body.decode('utf-8')
     body_dict = json.loads(body)
     try:
-        body_dict["data"]["systemRequest"]["user"] = "USER"
-        body_dict["data"]["systemRequest"]["password"] = "PASS"
+        body_dict['data']['systemRequest']['user'] = 'USER'
+        body_dict['data']['systemRequest']['password'] = 'PASS'
     except KeyError:
         pass
 
@@ -28,8 +28,11 @@ def scrub_body_request(request: Request) -> dict:
 
 
 def scrub_body_response(response: dict) -> dict:
-    if "token" in response["body"]["string"].decode():
-        response["body"]["string"] = json.dumps(
-            dict(code=0, token=dict(access_token="123"))
-        ).encode("utf-8")
+    if (
+        'token' in response['body']['string'].decode()
+        and 'isActive' in response['body']['string'].decode()
+    ):
+        response['body']['string'] = json.dumps(
+            dict(code=0, token=dict(access_token='123'))
+        ).encode('utf-8')
     return response

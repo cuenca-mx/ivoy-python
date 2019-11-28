@@ -1,0 +1,342 @@
+interactions:
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4891'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 27 Nov 2019 22:12:21 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8ed4fdd19d7dac3a8be7657837a1f01f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - c214P6WqC3pKkoqd92nAp3AOxYLyFPMQlp6TCVojEW4pWufj8RlIEA==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - D1su3EVoIAMFo2Q=
+      x-amzn-Remapped-Content-Length:
+      - '4891'
+      x-amzn-Remapped-Date:
+      - Wed, 27 Nov 2019 22:12:21 GMT
+      x-amzn-RequestId:
+      - afaf7812-0129-4ef6-8864-a3503aa85cfd
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4890'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 27 Nov 2019 22:12:21 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8ed4fdd19d7dac3a8be7657837a1f01f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - GaODZa-xLKDw1yTRovHGNCQtqmV6udyZlenFcbRYTf8kIZwMFB6HBQ==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - D1su5GO0oAMFwew=
+      x-amzn-Remapped-Content-Length:
+      - '4890'
+      x-amzn-Remapped-Date:
+      - Wed, 27 Nov 2019 22:12:21 GMT
+      x-amzn-RequestId:
+      - 6ad53612-3bfb-4635-827f-bd100fbe586e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"bOrder": {"device": "api", "orderType": {"idOrderType": 1},
+      "packageType": {"idPackageType": 1}, "paymentMethod": {"idPaymentMethod": 4},
+      "orderAddresses": [{"isPickup": 1, "isSource": 1, "comment": "N/A", "personApproved":
+      "Jon Doe", "phone": "5522334455", "address": {"idAddress": null, "externalNumber":
+      "36", "internalNumber": null, "latitude": "19.4245207", "longitude": "-99.1676911",
+      "neighborhood": "Juarez", "street": "Varsovia", "zipCode": "06600"}}, {"isPickup":
+      0, "isSource": 0, "comment": "N/A", "personApproved": "Lewis Hamilton", "phone":
+      "5566778899", "address": {"idAddress": null, "externalNumber": "180", "internalNumber":
+      "1", "latitude": "19.4133562", "longitude": "-99.1672142", "neighborhood": "Hipodromo",
+      "street": "Sonora", "zipCode": "06100"}}]}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '786'
+      Content-type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: PUT
+    uri: https://api.ivoy.dev/api/order/newOrder/json/web
+  response:
+    body:
+      string: "{\"code\":0,\"data\":{\"idOrder\":453361,\"dateAdd\":1574892742378,\"\
+        dateEdit\":1574892742607,\"device\":\"api\",\"discount\":0.0,\"distance\"\
+        :1.58,\"extraCharge\":0.0,\"orderChildCount\":1,\"packageValue\":0.0,\"price\"\
+        :35.0,\"eta\":28.0,\"rating\":0.0,\"total\":35.0,\"messengerFee\":0.0,\"ivoyCost\"\
+        :0.0,\"isBike\":true,\"client\":{\"idClient\":69171,\"cellPhone\":\"5540221690\"\
+        ,\"device\":\"web\",\"email\":\"integracion-express@ivoy.mx\",\"firstName\"\
+        :\"Integraci\xF3n\",\"isPaymentMandatory\":0,\"lastName\":\"Express\",\"nickname\"\
+        :\"Integraci\xF3n_0NHDV_c\",\"clientType\":{\"idClientType\":2,\"dateAdd\"\
+        :null,\"dateDelete\":null,\"dateEdit\":null,\"description\":\"Cliente con\
+        \ Prepago\",\"name\":\"client_prepaid\",\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null},\"gender\":{\"idGender\":1,\"dateAdd\":null,\"dateDelete\"\
+        :null,\"dateEdit\":null,\"description\":\"Hombre\",\"name\":\"male\",\"userAdd\"\
+        :null,\"userDelete\":null,\"userEdit\":null},\"clientInvoiceData\":[{\"idClientInvoiceData\"\
+        :69171,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"name\":\"\
+        INTEGRACI\xD3N EXPRESS\",\"rfc\":null,\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null,\"client\":null,\"address\":{\"latitude\":0.0,\"longitude\"\
+        :0.0}}],\"parent\":false},\"paymentMethod\":{\"idPaymentMethod\":4},\"zone\"\
+        :{\"idZone\":1},\"orderStatus\":{\"idOrderStatus\":4,\"description\":\"Pendiente\
+        \ de Mensajero\"},\"orderType\":{\"idOrderType\":1},\"packageType\":{\"idPackageType\"\
+        :1},\"paymentStatus\":{\"idPaymentStatus\":1},\"orderAddresses\":[{\"idOrderAddress\"\
+        :1065211,\"isPickup\":0,\"isSource\":1,\"comment\":\"N/A\",\"personApproved\"\
+        :\"Jon Doe\",\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5522334455\",\"\
+        distance\":0.0,\"eta\":0.0,\"price\":0.0,\"address\":{\"idAddress\":43178,\"\
+        externalNumber\":\"36\",\"latitude\":19.424422,\"longitude\":-99.16791699999999,\"\
+        neighborhood\":\"JU\xC1REZ\",\"street\":\"VARSOVIA\",\"zipCode\":\"6600\"\
+        },\"orderStatus\":{\"idOrderStatus\":2,\"description\":\"Orden creada\"},\"\
+        paymentStatus\":{\"idPaymentStatus\":2},\"paymentMethod\":{\"idPaymentMethod\"\
+        :4},\"cancelationReason\":{},\"orderAddressType\":{\"idOrderAddressType\"\
+        :1},\"pack\":{\"price\":0.0,\"height\":0.0,\"width\":0.0,\"length\":0.0,\"\
+        volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":0,\"similarity\":0.0,\"newVisitReason\"\
+        :0,\"numGuides\":0},\"source\":true},{\"idOrderAddress\":1065212,\"isPickup\"\
+        :0,\"isSource\":0,\"comment\":\"N/A\",\"personApproved\":\"Lewis Hamilton\"\
+        ,\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5566778899\",\"distance\":1.58,\"\
+        eta\":8.0,\"price\":0.0,\"address\":{\"idAddress\":303061,\"externalNumber\"\
+        :\"180\",\"latitude\":19.4133562,\"longitude\":-99.1672142,\"neighborhood\"\
+        :\"Hipodromo\",\"street\":\"Sonora\"},\"orderStatus\":{\"idOrderStatus\":2,\"\
+        description\":\"Orden creada\"},\"paymentStatus\":{\"idPaymentStatus\":2},\"\
+        paymentMethod\":{\"idPaymentMethod\":4},\"cancelationReason\":{},\"orderAddressType\"\
+        :{\"idOrderAddressType\":3},\"pack\":{\"price\":0.0,\"height\":0.0,\"width\"\
+        :0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":0,\"\
+        similarity\":0.0,\"newVisitReason\":0,\"numGuides\":0},\"source\":false}],\"\
+        promoCodeBalance\":0.0,\"referralBalance\":0.0,\"prepaidBalance\":35.0,\"\
+        creditBalance\":0.0,\"othersBalance\":0.0,\"clientCreditcard\":{\"idClientCreditcard\"\
+        :null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"cardHolderName\"\
+        :null,\"expMonth\":null,\"expYear\":null,\"isDefault\":0,\"metadata\":null,\"\
+        number\":null,\"publicNumber\":null,\"token\":null,\"cvv\":null,\"userAdd\"\
+        :null,\"userDelete\":null,\"userEdit\":null,\"client\":null,\"creditcardType\"\
+        :null,\"status\":null},\"clientInvoice\":{\"idClientInvoice\":null,\"dateAdd\"\
+        :null,\"dateDelete\":null,\"dateEdit\":null,\"serie\":null,\"sheet\":null,\"\
+        urlPdf\":null,\"urlPdfFile\":null,\"urlXml\":null,\"urlXmlFile\":null,\"userAdd\"\
+        :null,\"userDelete\":null,\"userEdit\":null,\"client\":null,\"order\":null},\"\
+        vehicle\":{\"idVehicle\":3,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"description\":null,\"name\":null,\"zones\":null,\"maxPackageWeight\"\
+        :0.0,\"maxPackageWidth\":0.0,\"maxPackageLength\":0.0,\"maxPackageHeight\"\
+        :0.0,\"maxPackageVolumetric\":0.0,\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null},\"revenueHotZone\":0.0}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3807'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 27 Nov 2019 22:12:22 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8ed4fdd19d7dac3a8be7657837a1f01f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - UGPq3Wni8KD-xZp311VNCtAollF_M6utKXC3T6vn1Y77Qifo48fVtw==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - D1su9E66IAMFuQQ=
+      x-amzn-Remapped-Content-Length:
+      - '3807'
+      x-amzn-Remapped-Date:
+      - Wed, 27 Nov 2019 22:12:22 GMT
+      x-amzn-RequestId:
+      - 133d0673-5ea9-46cd-ba1a-73ce59ba2286
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"bOrder": {"idOrder": 453361}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+      Content-type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: PUT
+    uri: https://api.ivoy.dev/api/order/cancelOrder/json/web
+  response:
+    body:
+      string: "{\"code\":0,\"data\":{\"idOrder\":453361,\"dateAdd\":1574892742378,\"\
+        dateEdit\":1574892742870,\"discount\":0.0,\"distance\":0.0,\"extraCharge\"\
+        :0.0,\"orderChildCount\":1,\"packageValue\":0.0,\"price\":0.0,\"eta\":0.0,\"\
+        rating\":0.0,\"total\":0.0,\"messengerFee\":0.0,\"ivoyCost\":0.0,\"isBike\"\
+        :true,\"client\":{\"idClient\":69171,\"cellPhone\":\"5540221690\",\"email\"\
+        :\"integracion-express@ivoy.mx\",\"firstName\":\"Integraci\xF3n\",\"isPaymentMandatory\"\
+        :0,\"lastName\":\"Express\",\"code\":\"0294dcf9-a8e4-11e9-8504-0242ac110004\"\
+        ,\"org\":\"0294dcf9-a8e4-11e9-8504-0242ac110004\",\"group\":\"0294dcf9-a8e4-11e9-8504-0242ac110004\"\
+        ,\"parent\":false},\"paymentMethod\":{\"idPaymentMethod\":4},\"orderStatus\"\
+        :{\"idOrderStatus\":7},\"orderType\":{\"idOrderType\":1},\"orderAddresses\"\
+        :[{\"idOrderAddress\":1065211,\"isPickup\":0,\"isSource\":1,\"comment\":\"\
+        N/A\",\"personApproved\":\"Jon Doe\",\"priceBusiness\":0.0,\"tip\":0.0,\"\
+        phone\":\"5522334455\",\"distance\":0.0,\"eta\":0.0,\"price\":0.0,\"address\"\
+        :{\"idAddress\":43178,\"externalNumber\":\"36\",\"latitude\":19.424422,\"\
+        longitude\":-99.16791699999999,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"\
+        VARSOVIA\",\"zipCode\":\"6600\"},\"orderStatus\":{\"idOrderStatus\":18},\"\
+        paymentMethod\":{\"idPaymentMethod\":4},\"orderAddressType\":{\"idOrderAddressType\"\
+        :1,\"description\":\"Punto de Origen\"},\"pointPackages\":[],\"source\":true},{\"\
+        idOrderAddress\":1065212,\"isPickup\":0,\"isSource\":0,\"comment\":\"N/A\"\
+        ,\"personApproved\":\"Lewis Hamilton\",\"priceBusiness\":0.0,\"tip\":0.0,\"\
+        phone\":\"5566778899\",\"distance\":1.58,\"eta\":0.0,\"price\":0.0,\"address\"\
+        :{\"idAddress\":303061,\"externalNumber\":\"180\",\"internalNumber\":\"1\"\
+        ,\"latitude\":19.4133562,\"longitude\":-99.1672142,\"neighborhood\":\"HIPODROMO\"\
+        ,\"street\":\"SONORA\",\"zipCode\":\"6100\"},\"orderStatus\":{\"idOrderStatus\"\
+        :18},\"paymentMethod\":{\"idPaymentMethod\":4},\"orderAddressType\":{\"idOrderAddressType\"\
+        :3,\"description\":\"Punto de Entrega\"},\"pointPackages\":[],\"source\":false}],\"\
+        orderHistories\":[{\"offLine\":false}],\"promoCodeBalance\":0.0,\"referralBalance\"\
+        :0.0,\"prepaidBalance\":0.0,\"creditBalance\":0.0,\"othersBalance\":0.0,\"\
+        revenueHotZone\":0.0}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1958'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 27 Nov 2019 22:12:23 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8ed4fdd19d7dac3a8be7657837a1f01f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - L2s1fGopCT3DdWauZwRX25NzQTS0Li4CbrN5tc7pprhG12G9RMEFBg==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - D1svFHnnoAMFXwg=
+      x-amzn-Remapped-Content-Length:
+      - '1958'
+      x-amzn-Remapped-Date:
+      - Wed, 27 Nov 2019 22:12:23 GMT
+      x-amzn-RequestId:
+      - ff838732-a5f7-4b71-b558-6f3c5858171d
+    status:
+      code: 200
+      message: OK
+version: 1

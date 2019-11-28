@@ -57,7 +57,7 @@ class OrderAddress:
     neighborhood: str
     street: str
     zip_code: str
-    comment: str = "N/A"
+    comment: str = 'N/A'
     internal_number: Optional[str] = None
     person_approved: Optional[str] = None
     id_address: Optional[int] = None

@@ -1,24 +1,22 @@
 import pytest
 
 from ivoy import Client
-from ivoy.resources import OrderSharing
+from ivoy.exc import IvoyException
+from ivoy.resources import Budget, Order, OrderSharing
 
 
 @pytest.mark.vcr
-def test_order_sharing():
-    client = Client(
-        auth_user="auth_user",
-        auth_password="auth_password",
-        web_auth_user="web_auth_user",
-        web_auth_password="web_auth_password",
-        ivoy_user="ivoy_user",
-        ivoy_password="ivoy_password",
-    )
-    order_sharing = client.order_sharing.get_tracking_url(1437397)
-    assert order_sharing
-    assert type(order_sharing) == OrderSharing
-    assert order_sharing.id == 1437397
-    assert (
-        order_sharing.tracking_url
-        == "https://v2.ivoy.mx/client/app/share/ABCDEG="
-    )
+def test_client():
+    client = Client()
+    assert client
+    assert client.budget == Budget
+    assert client.order == Order
+    assert client.order_sharing == OrderSharing
+
+
+@pytest.mark.vcr
+def test_client_fail():
+    try:
+        Client('wrong', 'creds', 'for', 'ivoy', 'api', 'validation')
+    except IvoyException as ivoy_exc:
+        assert ivoy_exc.code == -192

@@ -11,7 +11,7 @@ class Budget(Resource):
     Based on: http://docs.ivoy.mx/express/#cotización
     """
 
-    _endpoint: ClassVar[str] = "/api/order/validZipCode/json/web"
+    _endpoint: ClassVar[str] = '/api/order/validZipCode/json/web'
     _response: Dict[str, Any]
     distance: float
     price: float
@@ -24,7 +24,7 @@ class Budget(Resource):
     @classmethod
     def create(
         cls, origin: OrderAddress, destiny: OrderAddress, **metadata
-    ) -> "Budget":
+    ) -> 'Budget':
         body = dict(
             data=dict(
                 bOrder=dict(
@@ -33,14 +33,14 @@ class Budget(Resource):
             )
         )
         resp = cls._client.post(cls._endpoint, json=body)
-        data = resp["data"]
+        data = resp['data']
         return cls(
             _response=resp,
-            distance=data["distance"],
-            price=data["price"],
-            eta=data["eta"],
-            zone=data["zone"]["idZone"],
-            package_type=data["packageType"]["idPackageType"],
+            distance=data['distance'],
+            price=data['price'],
+            eta=data['eta'],
+            zone=CoverageZone(data['zone']['idZone']),
+            package_type=Package(data['packageType']['idPackageType']),
             origin=origin,
             destiny=destiny,
         )

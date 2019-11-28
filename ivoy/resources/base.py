@@ -1,7 +1,6 @@
-from typing import ClassVar, Optional
+from typing import ClassVar
 
 
 class Resource:
-    _client: ClassVar["ivoy.Client"]  # type: ignore
+    _client: ClassVar['ivoy.Client']  # type: ignore
     _endpoint: ClassVar[str]
-    _token_score: ClassVar[Optional[str]] = None

@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '64'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code":-192,"message":"Correo Invalido"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 27 Nov 2019 19:16:17 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 49b3b3bca8c1a893d1cd36619612ed05.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - kD_ZXZ8sT3EKNuqY5fGK7mCrfJS-0ji6agAiWOVwPjcMseM1d0_-1Q==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - D1S8LEWSoAMF3Lg=
+      x-amzn-Remapped-Content-Length:
+      - '41'
+      x-amzn-Remapped-Date:
+      - Wed, 27 Nov 2019 19:16:17 GMT
+      x-amzn-RequestId:
+      - f6ef8156-f2f3-4abc-a674-dfc14e79e7c0
+    status:
+      code: 200
+      message: OK
+version: 1
