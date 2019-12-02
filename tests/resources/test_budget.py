@@ -1,6 +1,7 @@
 import pytest
 
 from ivoy import Client
+from ivoy.exc import NotEnoughAddresses
 from ivoy.resources import Budget
 from ivoy.types import OrderAddress
 
@@ -37,14 +38,25 @@ def order_info():
         street='Sonora',
         zip_code='06100',
     )
-    return dict(origin=origin, destiny=destiny)
+    return dict(addresses=[origin, destiny], bad_addresses=[origin])
 
 
 @pytest.mark.vcr
 def test_budget_create():
     client = Client()
     info = order_info()
-    budget = client.budget.create(info['origin'], info['destiny'])
+    budget = client.budget.create(info['addresses'])
     assert budget
     assert type(budget) == Budget
     assert budget.price
+
+
+@pytest.mark.vcr
+def test_budget_create_fail():
+    client = Client()
+    bad_addresses = order_info()['bad_addresses']
+    try:
+        client.budget.create(bad_addresses)
+    except NotEnoughAddresses as e:
+        assert e.code == -111
+        assert client

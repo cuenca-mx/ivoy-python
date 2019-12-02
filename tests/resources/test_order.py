@@ -1,7 +1,7 @@
 import pytest
 
 from ivoy import Client
-from ivoy.exc import IvoyException
+from ivoy.exc import IvoyException, NotEnoughAddresses
 from ivoy.resources import Order
 from ivoy.types import OrderAddress, OrderStatus, Package, PaymentMethod
 
@@ -38,10 +38,16 @@ def order_info():
         street='Sonora',
         zip_code='06100',
     )
+    adresses = [origin, destiny]
+    bad_addresses = [origin]
     payment = PaymentMethod.credit_prepaid
     package = Package.envelope
+
     return dict(
-        origin=origin, destiny=destiny, payment=payment, package=package
+        adresses=adresses,
+        bad_addresses=bad_addresses,
+        payment=payment,
+        package=package,
     )
 
 
@@ -50,7 +56,7 @@ def test_order_create():
     client = Client()
     info = order_info()
     order = client.order.create(
-        info['origin'], info['destiny'], info['package'], info['payment']
+        info['adresses'], info['package'], info['payment']
     )
     assert order
     assert type(order) == Order
@@ -58,11 +64,24 @@ def test_order_create():
 
 
 @pytest.mark.vcr
+def test_order_create_fail():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['bad_addresses'], info['package'], info['payment']
+        )
+    except NotEnoughAddresses as e:
+        assert client
+        assert e.code == -111
+
+
+@pytest.mark.vcr
 def test_order_retrieve():
     client = Client()
     info = order_info()
     order_created = client.order.create(
-        info['origin'], info['destiny'], info['package'], info['payment']
+        info['adresses'], info['package'], info['payment']
     )
     order = client.order.retrieve(order_created.id)
     assert order
@@ -87,7 +106,7 @@ def test_order_cancel():
     client = Client()
     info = order_info()
     order_created = client.order.create(
-        info['origin'], info['destiny'], info['package'], info['payment']
+        info['adresses'], info['package'], info['payment']
     )
     order = client.order.cancel(order_created.id)
     assert order
