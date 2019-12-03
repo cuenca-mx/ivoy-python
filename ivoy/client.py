@@ -100,6 +100,7 @@ class Client:
             response = self.session.request(
                 method, url, headers=headers, **kwargs
             )
+            self._check_response(response)
         except IvoyException as ivoyexc:
             raise IvoyException(ivoyexc.code, ivoyexc.message)
         except Exception as e:
