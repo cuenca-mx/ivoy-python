@@ -1,7 +1,8 @@
 import datetime as dt
 from dataclasses import dataclass
-from typing import Any, ClassVar, Dict, Optional
+from typing import Any, ClassVar, Dict, List, Optional
 
+from ..exc import NotEnoughAddresses
 from .base import Resource
 
 from ..types import (  # noqa isort:skip
@@ -29,8 +30,7 @@ class Order(Resource):
     price: float
     eta: float
     total: float
-    origin: OrderAddress
-    destiny: OrderAddress
+    addresses: List[OrderAddress]
     payment_method: PaymentMethod
     zone: Optional[CoverageZone]
     order_status: OrderStatus
@@ -42,15 +42,17 @@ class Order(Resource):
     @classmethod
     def create(
         cls,
-        origin: OrderAddress,
-        destiny: OrderAddress,
+        addresses: List[OrderAddress],
         package: Package,
         payment: PaymentMethod,
     ) -> 'Order':
+        if len(addresses) < 2:
+            raise NotEnoughAddresses(-111, "2 addresses minimum per order.")
         endpoint = f'{cls._endpoint}/newOrder/json/web'
-        json_data = cls._create_json(origin, destiny, package, payment)
+        address_array = [address.to_dict() for address in addresses]
+        json_data = cls._create_json(address_array, package, payment)
         resp = cls._client.put(endpoint, json=json_data)
-        return cls._to_object(resp, origin, destiny)
+        return cls._to_object(resp, addresses)
 
     @classmethod
     def retrieve(cls, identity_id: str) -> 'Order':
@@ -68,41 +70,28 @@ class Order(Resource):
 
     @staticmethod
     def _to_object(
-        response: dict,
-        origin: OrderAddress = None,
-        destiny: OrderAddress = None,
+        response: dict, addresses: List[OrderAddress] = [],
     ) -> 'Order':
         data = response['data']
-        if origin is None:
-            source_address = data['orderAddresses'][0]
-            origin = OrderAddress(
-                is_pickup=source_address['isPickup'],
-                is_source=source_address['isSource'],
-                phone=source_address['phone'],
-                external_number=source_address['address']['externalNumber'],
-                latitude=source_address['address']['latitude'],
-                longitude=source_address['address']['longitude'],
-                neighborhood=source_address['address']['neighborhood'],
-                street=source_address['address']['street'],
-                zip_code=source_address['address']['zipCode'],
-                person_approved=source_address['personApproved'],
-                id_address=source_address['address']['idAddress'],
-            )
-        if destiny is None:
-            destiny_address = data['orderAddresses'][-1]
-            destiny = OrderAddress(
-                is_pickup=destiny_address['isPickup'],
-                is_source=destiny_address['isSource'],
-                phone=destiny_address['phone'],
-                external_number=destiny_address['address']['externalNumber'],
-                latitude=destiny_address['address']['latitude'],
-                longitude=destiny_address['address']['longitude'],
-                neighborhood=destiny_address['address']['neighborhood'],
-                street=destiny_address['address']['street'],
-                zip_code=destiny_address['address']['zipCode'],
-                person_approved=destiny_address['personApproved'],
-                id_address=destiny_address['address']['idAddress'],
-            )
+        if addresses == []:
+            for order_addr in data['orderAddresses']:
+                addresses.append(
+                    OrderAddress(
+                        is_pickup=order_addr['isPickup'],
+                        is_source=order_addr['isSource'],
+                        phone=order_addr['phone'],
+                        external_number=order_addr['address'][
+                            'externalNumber'
+                        ],
+                        latitude=order_addr['address']['latitude'],
+                        longitude=order_addr['address']['longitude'],
+                        neighborhood=order_addr['address']['neighborhood'],
+                        street=order_addr['address']['street'],
+                        zip_code=order_addr['address']['zipCode'],
+                        person_approved=order_addr['personApproved'],
+                        id_address=order_addr['address']['idAddress'],
+                    )
+                )
         return Order(
             _response=response,
             id=data['idOrder'],
@@ -112,8 +101,7 @@ class Order(Resource):
             price=data['price'],
             eta=data['eta'],
             total=data['total'],
-            origin=origin,
-            destiny=destiny,
+            addresses=addresses,
             payment_method=PaymentMethod(
                 data['paymentMethod']['idPaymentMethod']
             ),
@@ -135,10 +123,7 @@ class Order(Resource):
 
     @staticmethod
     def _create_json(
-        origin: OrderAddress,
-        destiny: OrderAddress,
-        package: Package,
-        payment: PaymentMethod,
+        address_array: list, package: Package, payment: PaymentMethod,
     ) -> dict:
         json_data = dict(
             data=dict(
@@ -147,7 +132,7 @@ class Order(Resource):
                     orderType=dict(idOrderType=1),
                     packageType=dict(idPackageType=package.value),
                     paymentMethod=dict(idPaymentMethod=payment.value),
-                    orderAddresses=[origin.to_dict(), destiny.to_dict()],
+                    orderAddresses=address_array,
                 )
             )
         )

@@ -11,3 +11,7 @@ class IvoyException(Exception):
 
 class ExpiredTokens(IvoyException):
     """API Tokens Expired"""
+
+
+class NotEnoughAddresses(IvoyException):
+    """Addresses Needed to create Budget/Order"""

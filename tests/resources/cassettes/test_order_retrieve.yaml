@@ -29,17 +29,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 22:11:58 GMT
+      - Mon, 02 Dec 2019 19:03:31 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ac955328262e5b8562e8121240b8dfb.cloudfront.net (CloudFront)
+      - 1.1 3844a554993ef7edabea082622b10c45.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - QufVXAt_Oyf1cZkvmHYlZoSJWh057Jz-6LE03teOzLTSS1H3e-gmiw==
+      - 0pYSlm79SdxPJLJxg70aJ9VDugclHcA3_oWmLEVxmtGtub7aY3R57g==
       X-Amz-Cf-Pop:
-      - IAH50-C3
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -51,13 +51,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - D1srQG4EIAMFZoA=
+      - EFvwmGmEoAMFuHQ=
       x-amzn-Remapped-Content-Length:
       - '4891'
       x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 22:11:58 GMT
+      - Mon, 02 Dec 2019 19:03:31 GMT
       x-amzn-RequestId:
-      - 11ded4f3-58a1-43cb-b2ad-a614a50e294a
+      - 28ea7ab2-4df2-4e48-b707-d5ff2c0330bf
     status:
       code: 200
       message: OK
@@ -91,17 +91,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 22:11:58 GMT
+      - Mon, 02 Dec 2019 19:03:31 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ac955328262e5b8562e8121240b8dfb.cloudfront.net (CloudFront)
+      - 1.1 3844a554993ef7edabea082622b10c45.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - BYcyJmKAr1pSQ4HOK-hgYvxMl_E95kFQ88lYDfarLwXtTt_ksTmNHQ==
+      - dpNwlMLrXpPtKb0CxUrH4M9z6wjoTf9R_HUczwbvUYWC-cS0ohU3uw==
       X-Amz-Cf-Pop:
-      - IAH50-C3
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -113,13 +113,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - D1srTHREoAMF0iw=
+      - EFvwoF3CIAMFiSA=
       x-amzn-Remapped-Content-Length:
       - '4890'
       x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 22:11:58 GMT
+      - Mon, 02 Dec 2019 19:03:31 GMT
       x-amzn-RequestId:
-      - 99ac761d-9f99-4837-b352-fb83dcde4fe7
+      - a9fcdda1-865a-40e8-8ae8-52d5be3aad8b
     status:
       code: 200
       message: OK
@@ -151,8 +151,8 @@ interactions:
     uri: https://api.ivoy.dev/api/order/newOrder/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idOrder\":453360,\"dateAdd\":1574892719036,\"\
-        dateEdit\":1574892719124,\"device\":\"api\",\"discount\":0.0,\"distance\"\
+      string: "{\"code\":0,\"data\":{\"idOrder\":454381,\"dateAdd\":1575313412263,\"\
+        dateEdit\":1575313412396,\"device\":\"api\",\"discount\":0.0,\"distance\"\
         :1.58,\"extraCharge\":0.0,\"orderChildCount\":1,\"packageValue\":0.0,\"price\"\
         :35.0,\"eta\":28.0,\"rating\":0.0,\"total\":35.0,\"messengerFee\":0.0,\"ivoyCost\"\
         :0.0,\"isBike\":true,\"client\":{\"idClient\":69171,\"cellPhone\":\"5540221690\"\
@@ -171,7 +171,7 @@ interactions:
         :{\"idZone\":1},\"orderStatus\":{\"idOrderStatus\":4,\"description\":\"Pendiente\
         \ de Mensajero\"},\"orderType\":{\"idOrderType\":1},\"packageType\":{\"idPackageType\"\
         :1},\"paymentStatus\":{\"idPaymentStatus\":1},\"orderAddresses\":[{\"idOrderAddress\"\
-        :1065209,\"isPickup\":0,\"isSource\":1,\"comment\":\"N/A\",\"personApproved\"\
+        :1067575,\"isPickup\":0,\"isSource\":1,\"comment\":\"N/A\",\"personApproved\"\
         :\"Jon Doe\",\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5522334455\",\"\
         distance\":0.0,\"eta\":0.0,\"price\":0.0,\"address\":{\"idAddress\":43178,\"\
         externalNumber\":\"36\",\"latitude\":19.424422,\"longitude\":-99.16791699999999,\"\
@@ -181,7 +181,7 @@ interactions:
         :4},\"cancelationReason\":{},\"orderAddressType\":{\"idOrderAddressType\"\
         :1},\"pack\":{\"price\":0.0,\"height\":0.0,\"width\":0.0,\"length\":0.0,\"\
         volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":0,\"similarity\":0.0,\"newVisitReason\"\
-        :0,\"numGuides\":0},\"source\":true},{\"idOrderAddress\":1065210,\"isPickup\"\
+        :0,\"numGuides\":0},\"source\":true},{\"idOrderAddress\":1067576,\"isPickup\"\
         :0,\"isSource\":0,\"comment\":\"N/A\",\"personApproved\":\"Lewis Hamilton\"\
         ,\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5566778899\",\"distance\":1.58,\"\
         eta\":8.0,\"price\":0.0,\"address\":{\"idAddress\":303061,\"externalNumber\"\
@@ -217,17 +217,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 22:11:59 GMT
+      - Mon, 02 Dec 2019 19:03:32 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ac955328262e5b8562e8121240b8dfb.cloudfront.net (CloudFront)
+      - 1.1 3844a554993ef7edabea082622b10c45.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - gokedB8oIm5sDv1QfLSUZxfdU2RSGti55LyuHUECPv_wOpxf-8WR_A==
+      - USdrJR_xHufZflFF4IZKhsD2icVgPNCyxHQjrclty6ywfq6YKWa_kw==
       X-Amz-Cf-Pop:
-      - IAH50-C3
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -239,18 +239,18 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - D1srVEf-IAMFXdw=
+      - EFvwpGuvIAMFivA=
       x-amzn-Remapped-Content-Length:
       - '3807'
       x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 22:11:59 GMT
+      - Mon, 02 Dec 2019 19:03:32 GMT
       x-amzn-RequestId:
-      - be025def-166a-4981-b3ca-384c38b00735
+      - ad9f4d79-5c3b-4414-acb4-09805ba01c77
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": 453360}}}'
+    body: '{"data": {"bOrder": {"idOrder": 454381}}}'
     headers:
       Accept:
       - '*/*'
@@ -268,8 +268,8 @@ interactions:
     uri: https://api.ivoy.dev/api/order/getById/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idOrder\":453360,\"dateAdd\":1574892719036,\"\
-        dateEdit\":1574892719000,\"device\":\"api\",\"discount\":0.0,\"distance\"\
+      string: "{\"code\":0,\"data\":{\"idOrder\":454381,\"dateAdd\":1575313412263,\"\
+        dateEdit\":1575313412000,\"device\":\"api\",\"discount\":0.0,\"distance\"\
         :1.58,\"extraCharge\":0.0,\"orderChildCount\":1,\"packageValue\":0.0,\"price\"\
         :35.0,\"eta\":28.0,\"rating\":0.0,\"total\":35.0,\"messengerFee\":0.0,\"ivoyCost\"\
         :0.0,\"isBike\":true,\"client\":{\"idClient\":69171,\"cellPhone\":\"5540221690\"\
@@ -293,7 +293,7 @@ interactions:
         |1|2|3|\"},\"packageType\":{\"idPackageType\":1,\"name\":\"envelope\",\"description\"\
         :\"Sobre\",\"zones\":\"|1|2|3|\"},\"paymentStatus\":{\"idPaymentStatus\":1,\"\
         description\":\"Pagado\",\"name\":\"paid\"},\"orderAddresses\":[{\"idOrderAddress\"\
-        :1065209,\"isPickup\":0,\"isSource\":1,\"comment\":\"N/A\",\"personApproved\"\
+        :1067575,\"isPickup\":0,\"isSource\":1,\"comment\":\"N/A\",\"personApproved\"\
         :\"Jon Doe\",\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5522334455\",\"\
         distance\":0.0,\"eta\":0.0,\"price\":0.0,\"address\":{\"idAddress\":43178,\"\
         externalNumber\":\"36\",\"latitude\":19.424422,\"longitude\":-99.16791699999999,\"\
@@ -306,7 +306,7 @@ interactions:
         idOrderAddressType\":1,\"description\":\"Punto de Origen\"},\"pack\":{\"price\"\
         :0.0,\"height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
         :0.0,\"validInfo\":0,\"similarity\":0.0,\"newVisitReason\":0,\"numGuides\"\
-        :0},\"evidences\":[],\"source\":true},{\"idOrderAddress\":1065210,\"isPickup\"\
+        :0},\"evidences\":[],\"source\":true},{\"idOrderAddress\":1067576,\"isPickup\"\
         :0,\"isSource\":0,\"comment\":\"N/A\",\"personApproved\":\"Lewis Hamilton\"\
         ,\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5566778899\",\"distance\":1.58,\"\
         eta\":8.0,\"price\":0.0,\"address\":{\"idAddress\":303061,\"externalNumber\"\
@@ -321,10 +321,10 @@ interactions:
         :0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"\
         validInfo\":0,\"similarity\":0.0,\"newVisitReason\":0,\"numGuides\":0},\"\
         evidences\":[],\"source\":false}],\"orderHistories\":[{\"idOrderHistory\"\
-        :3524452,\"dateAdd\":1574892719036,\"nameOrderStatus\":\"Orden creada\",\"\
-        idOrder\":453360,\"idOrderStatus\":2,\"offLine\":false},{\"idOrderHistory\"\
-        :3524453,\"dateAdd\":1574892719124,\"nameOrderStatus\":\"Pendiente de Mensajero\"\
-        ,\"idOrder\":453360,\"idOrderStatus\":4,\"offLine\":false}],\"orderMovements\"\
+        :3526586,\"dateAdd\":1575313412263,\"nameOrderStatus\":\"Orden creada\",\"\
+        idOrder\":454381,\"idOrderStatus\":2,\"offLine\":false},{\"idOrderHistory\"\
+        :3526587,\"dateAdd\":1575313412396,\"nameOrderStatus\":\"Pendiente de Mensajero\"\
+        ,\"idOrder\":454381,\"idOrderStatus\":4,\"offLine\":false}],\"orderMovements\"\
         :[],\"promoCodeBalance\":0.0,\"referralBalance\":0.0,\"prepaidBalance\":35.0,\"\
         creditBalance\":0.0,\"othersBalance\":0.0,\"clientCreditcard\":{\"idClientCreditcard\"\
         :null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"cardHolderName\"\
@@ -351,17 +351,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 22:12:01 GMT
+      - Mon, 02 Dec 2019 19:03:35 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ac955328262e5b8562e8121240b8dfb.cloudfront.net (CloudFront)
+      - 1.1 3844a554993ef7edabea082622b10c45.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uczxoomPOJ9eSc-E7tu-DKoxtiHhl7uL0W6dUYkCvyBL9VPmtcQXQQ==
+      - sTjh17LweCxRYvLlbLccok35VxF53aC_VObQRpt0z6BSfYYdcfqJ1Q==
       X-Amz-Cf-Pop:
-      - IAH50-C3
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -373,13 +373,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - D1sraGGiIAMF4jA=
+      - EFvwuHXqIAMFXCg=
       x-amzn-Remapped-Content-Length:
       - '4945'
       x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 22:12:01 GMT
+      - Mon, 02 Dec 2019 19:03:35 GMT
       x-amzn-RequestId:
-      - 531f7956-2106-462d-bacc-6b8c4b80e317
+      - bd811d61-4d3a-42af-9644-0672baa0c25a
     status:
       code: 200
       message: OK

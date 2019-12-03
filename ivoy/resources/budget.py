@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from typing import Any, ClassVar, Dict
+from typing import Any, ClassVar, Dict, List
 
+from ..exc import NotEnoughAddresses
 from ..types import CoverageZone, OrderAddress, Package
 from .base import Resource
 
@@ -16,22 +17,16 @@ class Budget(Resource):
     distance: float
     price: float
     eta: float
-    origin: OrderAddress
-    destiny: OrderAddress
+    addresses: List[OrderAddress]
     zone: CoverageZone
     package_type: Package
 
     @classmethod
-    def create(
-        cls, origin: OrderAddress, destiny: OrderAddress, **metadata
-    ) -> 'Budget':
-        body = dict(
-            data=dict(
-                bOrder=dict(
-                    orderAddresses=[origin.to_dict(), destiny.to_dict()]
-                )
-            )
-        )
+    def create(cls, addresses: List[OrderAddress], **metadata) -> 'Budget':
+        if len(addresses) < 2:
+            raise NotEnoughAddresses(-111, "2 addresses minimum per budget.")
+        address_array = [address.to_dict() for address in addresses]
+        body = dict(data=dict(bOrder=dict(orderAddresses=address_array)))
         resp = cls._client.post(cls._endpoint, json=body)
         data = resp['data']
         return cls(
@@ -41,6 +36,5 @@ class Budget(Resource):
             eta=data['eta'],
             zone=CoverageZone(data['zone']['idZone']),
             package_type=Package(data['packageType']['idPackageType']),
-            origin=origin,
-            destiny=destiny,
+            addresses=addresses,
         )
