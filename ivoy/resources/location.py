@@ -15,10 +15,12 @@ class LocationSharing(Resource):
     clientName: str
 
     @classmethod
-    def get_location(cls, order_id: str) -> 'OrderSharing':
+    def get_location(cls, order_id: str) -> 'LocationSharing':
         json_data = dict(data=dict(bOrder=dict(idOrder=order_id)))
         resp = cls._client.post(cls._endpoint, json=json_data)
-        return cls(id=order_id, location_points=resp['data']['points'],
-                   messengerLocation=resp['data']['messengerLocation'],
-                   clientName=resp['data']['clientName'])
-
+        return cls(
+            id=order_id,
+            location_points=resp['data']['points'],
+            messengerLocation=resp['data']['messengerLocation'],
+            clientName=resp['data']['clientName'],
+        )

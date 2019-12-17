@@ -2,7 +2,7 @@ import pytest
 
 from ivoy import Client
 from ivoy.exc import IvoyException
-from ivoy.resources import Budget, Order, OrderSharing
+from ivoy.resources import Budget, LocationSharing, Order, OrderSharing
 
 
 @pytest.mark.vcr
@@ -12,6 +12,7 @@ def test_client():
     assert client.budget == Budget
     assert client.order == Order
     assert client.order_sharing == OrderSharing
+    assert client.location_sharing == LocationSharing
 
 
 @pytest.mark.vcr
