@@ -124,6 +124,68 @@ interactions:
       code: 200
       message: OK
 - request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4890'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Dec 2019 19:03:31 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 3844a554993ef7edabea082622b10c45.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - dpNwlMLrXpPtKb0CxUrH4M9z6wjoTf9R_HUczwbvUYWC-cS0ohU3uw==
+      X-Amz-Cf-Pop:
+      - IAH50-C1
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - EFvwoF3CIAMFiSA=
+      x-amzn-Remapped-Content-Length:
+      - '4890'
+      x-amzn-Remapped-Date:
+      - Mon, 02 Dec 2019 19:03:31 GMT
+      x-amzn-RequestId:
+      - a9fcdda1-865a-40e8-8ae8-52d5be3aad8b
+    status:
+      code: 200
+      message: OK
+- request:
     body: '{"data": {"bOrder": {"device": "api", "orderType": {"idOrderType": 1},
       "packageType": {"idPackageType": 1}, "paymentMethod": {"idPaymentMethod": 4},
       "orderAddresses": [{"isPickup": 1, "isSource": 1, "comment": "N/A", "personApproved":
