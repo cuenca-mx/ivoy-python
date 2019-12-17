@@ -4,7 +4,7 @@ from typing import Any, ClassVar, Dict, Optional
 from requests import Response, Session
 
 from .exc import ExpiredTokens, IvoyException
-from .resources import Budget, Order, OrderSharing, Resource
+from .resources import Budget, LocationSharing, Order, OrderSharing, Resource
 
 API_URL = os.environ['IVOY_URL']
 WEB_URL = os.environ['IVOY_WEB_URL']
@@ -28,6 +28,7 @@ class Client:
     budget: ClassVar = Budget
     order: ClassVar = Order
     order_sharing: ClassVar = OrderSharing
+    location_sharing: ClassVar = LocationSharing
 
     def __init__(
         self,
