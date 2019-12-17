@@ -100,7 +100,7 @@ class Client:
         if not self.token or force:
             self.token = self.get_token()
         if not self.web_token or force:
-            self.token = self.get_token(web_token=True)
+            self.web_token = self.get_token(web_token=True)
 
     def create_headers(self, endpoint: str) -> Dict[str, Any]:
         if 'orderSharing' in endpoint:
