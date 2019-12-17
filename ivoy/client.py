@@ -11,7 +11,6 @@ WEB_URL = os.environ['IVOY_WEB_URL']
 
 
 class Client:
-
     base_url: ClassVar[str] = API_URL
     web_url: ClassVar[str] = WEB_URL
     auth_user: str
@@ -47,8 +46,8 @@ class Client:
         )
         self.ivoy_user = ivoy_user or os.environ['IVOY_USER']
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
-        self.token = self.get_token()
-        self.web_token = self.get_token(True)
+        self.token = None
+        self.web_token = None
         Resource._client = self
 
     def get_token(self, web_token: bool = False) -> str:
@@ -57,19 +56,14 @@ class Client:
             auth = (self.web_auth_user, self.web_auth_password)
         else:
             auth = (self.auth_user, self.auth_password)
-        response = self.session.request(
-            'POST',
-            url,
-            auth=auth,
-            json={
-                'data': {
-                    'systemRequest': {
-                        'user': self.ivoy_user,
-                        'password': self.ivoy_password,
-                    }
-                }
-            },
+        json_data = dict(
+            data=dict(
+                systemRequest=dict(
+                    user=self.ivoy_user, password=self.ivoy_password,
+                ),
+            ),
         )
+        response = self.session.request('POST', url, auth=auth, json=json_data)
         self._check_response(response)
         data = response.json()
         return data['token']['access_token']
@@ -87,26 +81,26 @@ class Client:
             url = self.web_url + endpoint
         else:
             url = self.base_url + endpoint
+        self.init_tokens()
         headers = self.create_headers(endpoint)
         response = self.session.request(method, url, headers=headers, **kwargs)
-
         try:
             self._check_response(response)
         except ExpiredTokens:
             # Try to generate Tokens again and retry request
-            self.token = self.get_token()
-            self.web_token = self.get_token(True)
+            self.init_tokens(force=True)
             headers = self.create_headers(endpoint)
             response = self.session.request(
                 method, url, headers=headers, **kwargs
             )
             self._check_response(response)
-        except IvoyException as ivoyexc:
-            raise IvoyException(ivoyexc.code, ivoyexc.message)
-        except Exception as e:
-            raise Exception(e)
-
         return response.json()
+
+    def init_tokens(self, force: bool = False) -> None:
+        if not self.token or force:
+            self.token = self.get_token()
+        if not self.web_token or force:
+            self.web_token = self.get_token(web_token=True)
 
     def create_headers(self, endpoint: str) -> Dict[str, Any]:
         if 'orderSharing' in endpoint:

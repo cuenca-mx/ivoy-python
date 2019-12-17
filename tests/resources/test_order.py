@@ -1,4 +1,5 @@
 import pytest
+from requests import HTTPError
 
 from ivoy import Client
 from ivoy.exc import IvoyException, NotEnoughAddresses
@@ -87,6 +88,16 @@ def test_order_retrieve():
     assert order
     assert type(order) == Order
     assert order.id == order_created.id
+
+
+@pytest.mark.vcr
+def test_order_retrieve_http_500_error():
+    client = Client()
+    info = order_info()
+
+    with pytest.raises(HTTPError) as ex:
+        client.order.create(info['adresses'], info['package'], info['payment'])
+    assert ex.value.response.status_code == 500
 
 
 @pytest.mark.vcr
