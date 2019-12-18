@@ -8,6 +8,6 @@ __all__ = [
 
 from .base import Resource
 from .budget import Budget
-from .location_sharing import CarrierLocation
+from .carrier_location import CarrierLocation
 from .order import Order
 from .order_sharing import OrderSharing
