@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: "\n\n<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <title>Error</title>\n
+        \       <link rel=\"shortcut icon\" href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAlFJREFUeNqUU8tOFEEUPVVdNV3dPe8xYRBnjGhmBgKjKzCIiQvBoIaNbly5Z+PSv3Aj7DSiP2B0rwkLGVdGgxITSCRIJGSMEQWZR3eVt5sEFBgTb/dN1yvnnHtPNTPG4PqdHgCMXnPRSZrpSuH8vUJu4DE4rYHDGAZDX62BZttHqTiIayM3gGiXQsgYLEvATaqxU+dy1U13YXapXptpNHY8iwn8KyIAzm1KBdtRZWErpI5lEWTXp5Z/vHpZ3/wyKKwYGGOdAYwR0EZwoezTYApBEIObyELl/aE1/83cp40Pt5mxqCKrE4Ck+mVWKKcI5tA8BLEhRBKJLjez6a7MLq7XZtp+yyOawwCBtkiBVZDKzRk4NN7NQBMYPHiZDFhXY+p9ff7F961vVcnl4R5I2ykJ5XFN7Ab7Gc61VoipNBKF+PDyztu5lfrSLT/wIwCxq0CAGtXHZTzqR2jtwQiXONma6hHpj9sLT7YaPxfTXuZdBGA02Wi7FS48YiTfj+i2NhqtdhP5RC8mh2/Op7y0v6eAcWVLFT8D7kWX5S9mepp+C450MV6aWL1cGnvkxbwHtLW2B9AOkLeUd9KEDuh9fl/7CEj7YH5g+3r/lWfF9In7tPz6T4IIwBJOr1SJyIGQMZQbsh5P9uBq5VJtqHh2mo49pdw5WFoEwKWqWHacaWOjQXWGcifKo6vj5RGS6zykI587XeUIQDqJSmAp+lE4qt19W5P9o8+Lma5DcjsC8JiT607lMVkdqQ0Vyh3lHhmh52tfNy78ajXv0rgYzv8nfwswANuk+7sD/Q0aAAAAAElFTkSuQmCC\">\n
+        \       <style>\n            html, body, pre {\n                margin: 0;\n
+        \               padding: 0;\n                font-family: Monaco, 'Lucida
+        Console', monospace;\n                background: #ECECEC;\n            }\n
+        \           h1 {\n                margin: 0;\n                background:
+        #A31012;\n                padding: 20px 45px;\n                color: #fff;\n
+        \               text-shadow: 1px 1px 1px rgba(0,0,0,.3);\n                border-bottom:
+        1px solid #690000;\n                font-size: 28px;\n            }\n            p#detail
+        {\n                margin: 0;\n                padding: 15px 45px;\n                background:
+        #F5A0A0;\n                border-top: 4px solid #D36D6D;\n                color:
+        #730000;\n                text-shadow: 1px 1px 1px rgba(255,255,255,.3);\n
+        \               font-size: 14px;\n                border-bottom: 1px solid
+        #BA7A7A;\n            }\n        </style>\n    </head>\n    <body>\n        <h1>Oops,
+        an error occurred</h1>\n\n        <p id=\"detail\">\n            This exception
+        has been logged with id <strong>7e7ihpj2l</strong>.\n        </p>\n\n    </body>\n</html>\n\n\n\n\n\n\n\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2162'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 17 Dec 2019 21:48:10 GMT
+      Via:
+      - 1.1 f64865fd293616a3a0aa4e4880182899.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 5fZtCGLOlO7oWSgHGBeNp8VOEC6ic6v2wE2Yvx8GIJ_LZCeIL2f4ug==
+      X-Amz-Cf-Pop:
+      - IAH50-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - E3j8KGQyIAMFoRQ=
+      x-amzn-Remapped-Content-Length:
+      - '2162'
+      x-amzn-Remapped-Date:
+      - Tue, 17 Dec 2019 21:48:10 GMT
+      x-amzn-RequestId:
+      - 5c712ebf-da55-41de-a901-b7aae8f8a8b3
+    status:
+      code: 500
+      message: Internal Server Error
+version: 1
