@@ -1,0 +1,173 @@
+interactions:
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4891'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Dec 2019 00:36:57 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 cd95edab6af9e155d29dc1b1149a5a71.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 4sR0YJBvB5tI3kTYuYwm2YEZEu75WfICjFZ0QhMNToTKhr694mavzQ==
+      X-Amz-Cf-Pop:
+      - DFW53-C1
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - E38qhFfPIAMFd3A=
+      x-amzn-Remapped-Content-Length:
+      - '4891'
+      x-amzn-Remapped-Date:
+      - Wed, 18 Dec 2019 00:36:57 GMT
+      x-amzn-RequestId:
+      - 6232060b-301e-41c2-8f10-07fe48444c88
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4890'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Dec 2019 00:36:58 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 cd95edab6af9e155d29dc1b1149a5a71.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - VCKElMdmP66OKidpMhywwswI4I7kIPix3PST8dhflOiqmSk5pUEdmw==
+      X-Amz-Cf-Pop:
+      - DFW53-C1
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - E38qjExkIAMFbUQ=
+      x-amzn-Remapped-Content-Length:
+      - '4890'
+      x-amzn-Remapped-Date:
+      - Wed, 18 Dec 2019 00:36:58 GMT
+      x-amzn-RequestId:
+      - f79d9e7b-a833-488b-ad50-678e6aba6706
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"bOrder": {"idOrder": 1502057}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '42'
+      Content-type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://data.alb.api.ivoy.mx/api/orderSharing/getOrderSharing/json/web
+  response:
+    body:
+      string: '{"code":0,"data":{"idOrder":1502057,"points":[{"latitude":19.424422,"longitude":-99.16791699999999,"location":"19.424422,-99.16791699999999","distance":0.0,"duration":0.0,"order":0},{"latitude":19.517968,"longitude":-99.04116649999997,"location":"19.517968,-99.04116649999997","distance":0.0,"duration":0.0,"order":1}],"messengerLocation":{"latitude":19.5134,"longitude":-99.0315,"location":"19.5134,-99.0315","distance":0.0,"duration":0.0,"order":1},"clientName":"Daniel
+        Monterde CUENCA","messengerName":"Marco Antonio Garcia Simon","messengerRate":4.92}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '556'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Dec 2019 00:36:58 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

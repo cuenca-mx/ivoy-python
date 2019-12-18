@@ -10,9 +10,8 @@ class LocationSharing(Resource):
     _endpoint: ClassVar[str] = '/api/orderSharing/getOrderSharing/json/web'
 
     id: str
-    location_points: list
-    messengerLocation: dict
-    clientName: str
+    latitude: float
+    longitude: float
 
     @classmethod
     def get_location(cls, order_id: str) -> 'LocationSharing':
@@ -20,7 +19,6 @@ class LocationSharing(Resource):
         resp = cls._client.post(cls._endpoint, json=json_data)
         return cls(
             id=order_id,
-            location_points=resp['data']['points'],
-            messengerLocation=resp['data']['messengerLocation'],
-            clientName=resp['data']['clientName'],
+            latitude=resp['data']['messengerLocation']['latitude'],
+            longitude=resp['data']['messengerLocation']['longitude'],
         )
