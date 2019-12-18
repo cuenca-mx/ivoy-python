@@ -4,7 +4,7 @@ from typing import Any, ClassVar, Dict, Optional
 from requests import Response, Session
 
 from .exc import ExpiredTokens, IvoyException
-from .resources import Budget, Order, OrderSharing, Resource
+from .resources import Budget, CarrierLocation, Order, OrderSharing, Resource
 
 API_URL = os.environ['IVOY_URL']
 WEB_URL = os.environ['IVOY_WEB_URL']
@@ -27,6 +27,7 @@ class Client:
     budget: ClassVar = Budget
     order: ClassVar = Order
     order_sharing: ClassVar = OrderSharing
+    carrier_location: ClassVar = CarrierLocation
 
     def __init__(
         self,
@@ -38,11 +39,11 @@ class Client:
         web_auth_password: Optional[str] = None,
     ):
         self.session = Session()
-        self.auth_user = auth_user or os.environ['AUTH_USER']
-        self.auth_password = auth_password or os.environ['AUTH_PASS']
-        self.web_auth_user = web_auth_user or os.environ['WEB_AUTH_USER']
+        self.auth_user = auth_user or os.environ['IVOY_AUTH_USER']
+        self.auth_password = auth_password or os.environ['IVOY_AUTH_PASS']
+        self.web_auth_user = web_auth_user or os.environ['IVOY_WEB_AUTH_USER']
         self.web_auth_password = (
-            web_auth_password or os.environ['WEB_AUTH_PASS']
+            web_auth_password or os.environ['IVOY_WEB_AUTH_PASS']
         )
         self.ivoy_user = ivoy_user or os.environ['IVOY_USER']
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
