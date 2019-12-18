@@ -17,11 +17,9 @@ def test_location_sharing_success():
 
 @pytest.mark.vcr
 def test_location_sharing_failed():
-    client = Client()
-    location_sharing = None
-    try:
-        location_sharing = client.location_sharing.get_location(1502057)
-    except IvoyException as e:
+    with pytest.raises(IvoyException):
+        client = Client()
+        location_sharing = client.location_sharing.get_location(123)
         assert client
-        assert e.code == -283
+        assert IvoyException.code == -111
         assert location_sharing is None

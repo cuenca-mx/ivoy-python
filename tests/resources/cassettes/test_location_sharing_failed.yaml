@@ -29,15 +29,15 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Dec 2019 00:36:57 GMT
+      - Wed, 18 Dec 2019 01:41:26 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 cd95edab6af9e155d29dc1b1149a5a71.cloudfront.net (CloudFront)
+      - 1.1 46cf8c846d441a6db760cf4a1563952f.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 4sR0YJBvB5tI3kTYuYwm2YEZEu75WfICjFZ0QhMNToTKhr694mavzQ==
+      - K7NIhvVdvixo43uGLOaJbQPLa7gCUJx8neZzWFO9OJAY-mtoGZvULg==
       X-Amz-Cf-Pop:
       - DFW53-C1
       X-Cache:
@@ -51,13 +51,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - E38qhFfPIAMFd3A=
+      - E4GHEHWiIAMFulw=
       x-amzn-Remapped-Content-Length:
       - '4891'
       x-amzn-Remapped-Date:
-      - Wed, 18 Dec 2019 00:36:57 GMT
+      - Wed, 18 Dec 2019 01:41:26 GMT
       x-amzn-RequestId:
-      - 6232060b-301e-41c2-8f10-07fe48444c88
+      - 55029ec0-09c0-4029-b9f1-49a44a810cbe
     status:
       code: 200
       message: OK
@@ -91,15 +91,15 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Dec 2019 00:36:58 GMT
+      - Wed, 18 Dec 2019 01:41:27 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 cd95edab6af9e155d29dc1b1149a5a71.cloudfront.net (CloudFront)
+      - 1.1 46cf8c846d441a6db760cf4a1563952f.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - VCKElMdmP66OKidpMhywwswI4I7kIPix3PST8dhflOiqmSk5pUEdmw==
+      - BwQC_CFiwLMgOUTqle6Ggl4Wt__Si_gU_4D4-x8nS-1g6tMlW-lA4g==
       X-Amz-Cf-Pop:
       - DFW53-C1
       X-Cache:
@@ -113,18 +113,18 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - E38qjExkIAMFbUQ=
+      - E4GHHGinoAMF-Qw=
       x-amzn-Remapped-Content-Length:
       - '4890'
       x-amzn-Remapped-Date:
-      - Wed, 18 Dec 2019 00:36:58 GMT
+      - Wed, 18 Dec 2019 01:41:27 GMT
       x-amzn-RequestId:
-      - f79d9e7b-a833-488b-ad50-678e6aba6706
+      - 965ad398-00cf-4687-a58a-e2b2c2d1b738
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": 1502057}}}'
+    body: '{"data": {"bOrder": {"idOrder": 123}}}'
     headers:
       Accept:
       - '*/*'
@@ -133,7 +133,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '42'
+      - '38'
       Content-type:
       - application/json
       User-Agent:
@@ -142,19 +142,18 @@ interactions:
     uri: https://data.alb.api.ivoy.mx/api/orderSharing/getOrderSharing/json/web
   response:
     body:
-      string: '{"code":0,"data":{"idOrder":1502057,"points":[{"latitude":19.424422,"longitude":-99.16791699999999,"location":"19.424422,-99.16791699999999","distance":0.0,"duration":0.0,"order":0},{"latitude":19.517968,"longitude":-99.04116649999997,"location":"19.517968,-99.04116649999997","distance":0.0,"duration":0.0,"order":1}],"messengerLocation":{"latitude":19.5134,"longitude":-99.0315,"location":"19.5134,-99.0315","distance":0.0,"duration":0.0,"order":1},"clientName":"Bob
-        Marley CUENCA","messengerName":"Peter Parker","messengerRate":4.92}}'
+      string: '{"code":-111,"message":"Informacion invalida: Datos de la Orden"}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '556'
+      - '65'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Dec 2019 00:36:58 GMT
+      - Wed, 18 Dec 2019 01:41:27 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
