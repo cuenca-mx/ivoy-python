@@ -13,10 +13,10 @@ venv:
 		pip3 install -qU pip
 
 install-test:
-		pip3 install -q .[test]
+		pip install -q .[test]
 
 test: clean install-test lint
-		python3 setup.py test
+		python setup.py test
 
 format:
 		$(isort)
@@ -26,7 +26,7 @@ lint:
 		$(isort) --check-only
 		$(black) --check
 		flake8 $(PROJECT) tests setup.py
-		mypy $(PROJECT) tests --ignore-missing-imports
+		mypy $(PROJECT) tests
 
 clean:
 		find . -name '*.pyc' -exec rm -f {} +

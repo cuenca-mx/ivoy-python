@@ -1,7 +1,7 @@
 import json
 
 import pytest
-from vcr.request import Request
+from vcr.request import Request  # type: ignore
 
 
 @pytest.fixture(scope='module')

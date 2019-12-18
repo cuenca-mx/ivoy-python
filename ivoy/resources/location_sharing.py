@@ -5,7 +5,7 @@ from .base import Resource
 
 
 @dataclass
-class LocationSharing(Resource):
+class CarrierLocation(Resource):
 
     _endpoint: ClassVar[str] = '/api/orderSharing/getOrderSharing/json/web'
 
@@ -14,7 +14,7 @@ class LocationSharing(Resource):
     longitude: float
 
     @classmethod
-    def get_location(cls, order_id: str) -> 'LocationSharing':
+    def get_location(cls, order_id: str) -> 'CarrierLocation':
         json_data = dict(data=dict(bOrder=dict(idOrder=order_id)))
         resp = cls._client.post(cls._endpoint, json=json_data)
         return cls(
