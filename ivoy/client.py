@@ -40,11 +40,11 @@ class Client:
         web_auth_password: Optional[str] = None,
     ):
         self.session = Session()
-        self.auth_user = auth_user or os.environ['AUTH_USER']
-        self.auth_password = auth_password or os.environ['AUTH_PASS']
-        self.web_auth_user = web_auth_user or os.environ['WEB_AUTH_USER']
+        self.auth_user = auth_user or os.environ['IVOY_AUTH_USER']
+        self.auth_password = auth_password or os.environ['IVOY_AUTH_PASS']
+        self.web_auth_user = web_auth_user or os.environ['IVOY_WEB_AUTH_USER']
         self.web_auth_password = (
-            web_auth_password or os.environ['WEB_AUTH_PASS']
+            web_auth_password or os.environ['IVOY_WEB_AUTH_PASS']
         )
         self.ivoy_user = ivoy_user or os.environ['IVOY_USER']
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
