@@ -207,3 +207,48 @@ def test_missing_incomplete_information():
         assert client
         assert e.code == -199
         assert e.message == f'Incomplete or missing information'
+
+
+@pytest.mark.vcr
+def test_insufficient_founds():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InsufficientFunds as e:
+        assert client
+        assert e.code == -139
+        assert e.message == f'Insufficient Founds'
+
+
+@pytest.mark.vcr
+def test_not_found_or_not_exists():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.DoesNotExists as e:
+        assert client
+        assert e.code == -193
+        assert (
+            e.message
+            == f'Could not find anything with the information provided'
+        )
+
+
+@pytest.mark.vcr
+def test_unable_to_create():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.UnableToCreate as e:
+        assert client
+        assert e.code == -251
+        assert e.message == f'Unable to create or process try again later'
