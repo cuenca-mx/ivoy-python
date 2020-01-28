@@ -310,3 +310,17 @@ def test_already_exists():
         assert client
         assert e.code == -208
         assert e.message == f'User with this information already exists'
+
+
+@pytest.mark.vcr
+def test_out_of_range():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.OutOFRange as e:
+        assert client
+        assert e.code == -114
+        assert e.message == f'Address is out of range'
