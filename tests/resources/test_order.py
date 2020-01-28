@@ -252,3 +252,61 @@ def test_unable_to_create():
         assert client
         assert e.code == -251
         assert e.message == f'Unable to create or process try again later'
+
+
+@pytest.mark.vcr
+def test_not_registered():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.NotRegistered as e:
+        assert client
+        assert e.code == -144
+        assert (
+            e.message == f'Found not registered with the information provided'
+        )
+
+
+@pytest.mark.vcr
+def test_invalid_date():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvalidDate as e:
+        assert client
+        assert e.code == -112
+        assert e.message == f'Invalid date try a different date'
+
+
+@pytest.mark.vcr
+def test_invoice_error():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvoiceError as e:
+        assert client
+        assert e.code == -157
+        assert e.message == f'Invoice cannot be created for this order'
+
+
+@pytest.mark.vcr
+def test_already_exists():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.AlreadyExists as e:
+        assert client
+        assert e.code == -208
+        assert e.message == f'User with this information already exists'
