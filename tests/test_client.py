@@ -10,4 +10,4 @@ def test_client_fail():
         client.init_tokens()
     except exc.InvalidInformation as ivoy_exc:
         assert ivoy_exc.code == -192
-        assert ivoy_exc.message == f'Invalid Information Provided'
+        assert ivoy_exc.message == 'Invalid Information Provided'

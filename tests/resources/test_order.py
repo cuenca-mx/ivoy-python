@@ -150,7 +150,7 @@ def test_order_create_bad_phone_number():
     except exc.InvalidPhone as e:
         assert client
         assert e.code == -101
-        assert e.message == f'Invalid or incomplete Phone Number'
+        assert e.message == 'Invalid or incomplete Phone Number'
 
 
 @pytest.mark.vcr
@@ -164,7 +164,7 @@ def test_not_available():
     except exc.NotAvailable as e:
         assert client
         assert e.code == -160
-        assert e.message == f'System Not Available, try again later'
+        assert e.message == 'System Not Available, try again later'
 
 
 @pytest.mark.vcr
@@ -178,7 +178,7 @@ def test_invalid_code():
     except exc.InvalidCode as e:
         assert client
         assert e.code == -124
-        assert e.message == f'This code is not valid or already used'
+        assert e.message == 'This code is not valid or already used'
 
 
 @pytest.mark.vcr
@@ -192,7 +192,7 @@ def test_invalid_vehicle():
     except exc.InvalidVehicle as e:
         assert client
         assert e.code == -258
-        assert e.message == f'Error on vehicle or not available'
+        assert e.message == 'Error on vehicle or not available'
 
 
 @pytest.mark.vcr
@@ -206,7 +206,7 @@ def test_missing_incomplete_information():
     except exc.MissingInformation as e:
         assert client
         assert e.code == -199
-        assert e.message == f'Incomplete or missing information'
+        assert e.message == 'Incomplete or missing information'
 
 
 @pytest.mark.vcr
@@ -236,7 +236,7 @@ def test_not_found_or_not_exists():
         assert e.code == -193
         assert (
             e.message
-            == f'Could not find anything with the information provided'
+            == 'Could not find anything with the information provided'
         )
 
 
@@ -251,7 +251,7 @@ def test_unable_to_create():
     except exc.UnableToCreate as e:
         assert client
         assert e.code == -251
-        assert e.message == f'Unable to create or process try again later'
+        assert e.message == 'Unable to create or process try again later'
 
 
 @pytest.mark.vcr
@@ -266,7 +266,7 @@ def test_not_registered():
         assert client
         assert e.code == -144
         assert (
-            e.message == f'Found not registered with the information provided'
+            e.message == 'Found not registered with the information provided'
         )
 
 
@@ -281,7 +281,7 @@ def test_invalid_date():
     except exc.InvalidDate as e:
         assert client
         assert e.code == -112
-        assert e.message == f'Invalid date try a different date'
+        assert e.message == 'Invalid date try a different date'
 
 
 @pytest.mark.vcr
@@ -295,7 +295,7 @@ def test_invoice_error():
     except exc.InvoiceError as e:
         assert client
         assert e.code == -157
-        assert e.message == f'Invoice cannot be created for this order'
+        assert e.message == 'Invoice cannot be created for this order'
 
 
 @pytest.mark.vcr
@@ -309,7 +309,7 @@ def test_already_exists():
     except exc.AlreadyExists as e:
         assert client
         assert e.code == -208
-        assert e.message == f'User with this information already exists'
+        assert e.message == 'User with this information already exists'
 
 
 @pytest.mark.vcr
@@ -323,4 +323,4 @@ def test_out_of_range():
     except exc.OutOFRange as e:
         assert client
         assert e.code == -114
-        assert e.message == f'Address is out of range'
+        assert e.message == 'Address is out of range'
