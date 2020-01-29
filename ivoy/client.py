@@ -3,7 +3,7 @@ from typing import Any, ClassVar, Dict, Optional
 
 from requests import Response, Session
 
-from .exc import ExpiredTokens, IvoyException
+from .exc import ExpiredTokens, raise_ivoy_exception
 from .resources import Budget, CarrierLocation, Order, OrderSharing, Resource
 
 API_URL = os.environ['IVOY_URL']
@@ -126,7 +126,5 @@ class Client:
                 # All error codes come from API as negative numbers.
                 raise ExpiredTokens(156, 'Tokens have expired.')
             else:
-                raise IvoyException(
-                    json['code'], 'iVoy API error: {}'.format(json['message'])
-                )
+                raise_ivoy_exception(json['code'], json['message'])
         response.raise_for_status()

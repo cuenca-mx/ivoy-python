@@ -1,8 +1,7 @@
 import pytest
 from requests import HTTPError
 
-from ivoy import Client
-from ivoy.exc import IvoyException, NotEnoughAddresses
+from ivoy import Client, exc
 from ivoy.resources import Order
 from ivoy.types import OrderAddress, OrderStatus, Package, PaymentMethod
 
@@ -12,7 +11,7 @@ def order_info():
         is_pickup=1,
         is_source=1,
         person_approved='Jon Doe',
-        phone='5522334455',
+        phone='not a number',
         id_address=None,
         external_number='36',
         internal_number=None,
@@ -39,13 +38,13 @@ def order_info():
         street='Sonora',
         zip_code='06100',
     )
-    adresses = [origin, destiny]
+    addresses = [origin, destiny]
     bad_addresses = [origin]
     payment = PaymentMethod.credit_prepaid
     package = Package.envelope
 
     return dict(
-        adresses=adresses,
+        addresses=addresses,
         bad_addresses=bad_addresses,
         payment=payment,
         package=package,
@@ -57,7 +56,7 @@ def test_order_create():
     client = Client()
     info = order_info()
     order = client.order.create(
-        info['adresses'], info['package'], info['payment']
+        info['addresses'], info['package'], info['payment']
     )
     assert order
     assert type(order) == Order
@@ -72,7 +71,7 @@ def test_order_create_fail():
         client.order.create(
             info['bad_addresses'], info['package'], info['payment']
         )
-    except NotEnoughAddresses as e:
+    except exc.NotEnoughAddresses as e:
         assert client
         assert e.code == -111
 
@@ -82,7 +81,7 @@ def test_order_retrieve():
     client = Client()
     info = order_info()
     order_created = client.order.create(
-        info['adresses'], info['package'], info['payment']
+        info['addresses'], info['package'], info['payment']
     )
     order = client.order.retrieve(order_created.id)
     assert order
@@ -96,7 +95,9 @@ def test_order_retrieve_http_500_error():
     info = order_info()
 
     with pytest.raises(HTTPError) as ex:
-        client.order.create(info['adresses'], info['package'], info['payment'])
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
     assert ex.value.response.status_code == 500
 
 
@@ -106,7 +107,7 @@ def test_order_retrieve_fail():
     order = None
     try:
         order = client.order.retrieve('wrong')
-    except IvoyException as e:
+    except exc.IvoyException as e:
         assert client
         assert e.code == -100
         assert order is None
@@ -117,7 +118,7 @@ def test_order_cancel():
     client = Client()
     info = order_info()
     order_created = client.order.create(
-        info['adresses'], info['package'], info['payment']
+        info['addresses'], info['package'], info['payment']
     )
     order = client.order.cancel(order_created.id)
     assert order
@@ -132,7 +133,194 @@ def test_order_cancel_fail():
     order = None
     try:
         order = client.order.cancel('wrong')
-    except IvoyException as e:
+    except exc.IvoyException as e:
         assert client
         assert e.code == -100
         assert order is None
+
+
+@pytest.mark.vcr
+def test_order_create_bad_phone_number():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvalidPhone as e:
+        assert client
+        assert e.code == -101
+        assert e.message == 'Invalid or incomplete Phone Number'
+
+
+@pytest.mark.vcr
+def test_not_available():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.NotAvailable as e:
+        assert client
+        assert e.code == -160
+        assert e.message == 'System Not Available, try again later'
+
+
+@pytest.mark.vcr
+def test_invalid_code():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvalidCode as e:
+        assert client
+        assert e.code == -124
+        assert e.message == 'This code is not valid or already used'
+
+
+@pytest.mark.vcr
+def test_invalid_vehicle():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvalidVehicle as e:
+        assert client
+        assert e.code == -258
+        assert e.message == 'Error on vehicle or not available'
+
+
+@pytest.mark.vcr
+def test_missing_incomplete_information():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.MissingInformation as e:
+        assert client
+        assert e.code == -199
+        assert e.message == 'Incomplete or missing information'
+
+
+@pytest.mark.vcr
+def test_insufficient_founds():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InsufficientFunds as e:
+        assert client
+        assert e.code == -139
+        assert e.message == f'Insufficient Founds'
+
+
+@pytest.mark.vcr
+def test_not_found_or_not_exists():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.DoesNotExists as e:
+        assert client
+        assert e.code == -193
+        assert (
+            e.message
+            == 'Could not find anything with the information provided'
+        )
+
+
+@pytest.mark.vcr
+def test_unable_to_create():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.UnableToCreate as e:
+        assert client
+        assert e.code == -251
+        assert e.message == 'Unable to create or process try again later'
+
+
+@pytest.mark.vcr
+def test_not_registered():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.NotRegistered as e:
+        assert client
+        assert e.code == -144
+        assert (
+            e.message == 'Found not registered with the information provided'
+        )
+
+
+@pytest.mark.vcr
+def test_invalid_date():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvalidDate as e:
+        assert client
+        assert e.code == -112
+        assert e.message == 'Invalid date try a different date'
+
+
+@pytest.mark.vcr
+def test_invoice_error():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.InvoiceError as e:
+        assert client
+        assert e.code == -157
+        assert e.message == 'Invoice cannot be created for this order'
+
+
+@pytest.mark.vcr
+def test_already_exists():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.AlreadyExists as e:
+        assert client
+        assert e.code == -208
+        assert e.message == 'User with this information already exists'
+
+
+@pytest.mark.vcr
+def test_out_of_range():
+    client = Client()
+    info = order_info()
+    try:
+        client.order.create(
+            info['addresses'], info['package'], info['payment']
+        )
+    except exc.OutOFRange as e:
+        assert client
+        assert e.code == -114
+        assert e.message == 'Address is out of range'

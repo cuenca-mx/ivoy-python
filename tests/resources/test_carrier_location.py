@@ -23,3 +23,4 @@ def test_location_sharing_failed():
         assert client
         assert IvoyException.code == -111
         assert location_sharing is None
+        assert IvoyException.message == 'Invalid Information Provided'
