@@ -105,7 +105,6 @@ class OrderAddress:
 
 @dataclass
 class PackageAddress:
-    id: Optional[int]
     external_number: str
     neighborhood: str
     street: str
@@ -115,10 +114,10 @@ class PackageAddress:
     internal_number: Optional[str] = ''
     latitude: Optional[str] = ''
     longitude: Optional[str] = ''
+    id: Optional[int] = None
 
     def to_dict(self) -> dict:
         return dict(
-            idAddress=self.id,
             externalNumber=self.external_number,
             internalNumber=self.internal_number,
             latitude=self.latitude,
@@ -128,6 +127,7 @@ class PackageAddress:
             municipality=self.municipality,
             state=self.state,
             zipCode=self.zip_code,
+            idAddress=self.id
         )
 
     def to_json(self) -> str:
@@ -136,41 +136,44 @@ class PackageAddress:
 
 @dataclass
 class PackageContact:
-    id: Optional[int]
     name: str
     phone: str
     email: str = ''
+    id: Optional[int] = None
 
     def to_dict(self) -> dict:
         return dict(
-            idContact=self.id,
             name=self.name,
             phone=self.phone,
             email=self.email,
+            idContact=self.id
         )
 
     def to_json(self) -> str:
         return json.dumps(self.to_dict())
 
 
-'''
 @dataclass
 class PackageInfo:
     address: PackageAddress
     contact: PackageContact
-    package_type: Package = Package.envelope
-    comment: str = ''
-    guide: str = ''
-    is_office: bool = False
+    ivoy_guide: Optional[str] = None
+    comment: Optional[str] = None
+    guide: Optional[str] = None
     num_guides: Optional[int] = None
     guides: Optional[List[str]] = None
+    package_type: Package = Package.envelope
+    is_office: bool = False
     height: Optional[int] = None
     width: Optional[int] = None
     length: Optional[int] = None
     real_weight: Optional[int] = None
+    id: Optional[int] = None
 
     def to_dict(self) -> dict:
         return dict(
+            idPackage=self.id,
+            ivoyGuide=self.ivoy_guide,
             comment=self.comment,
             guide=self.guide,
             numGuides=self.num_guides,
@@ -187,4 +190,3 @@ class PackageInfo:
 
     def to_json(self) -> str:
         return json.dumps(self.to_dict())
-'''

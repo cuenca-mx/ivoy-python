@@ -4,7 +4,15 @@ from typing import Any, ClassVar, Dict, Optional
 from requests import Response, Session
 
 from .exc import ExpiredTokens, raise_ivoy_exception
-from .resources import Budget, CarrierLocation, Order, OrderSharing, Resource
+from .resources import (
+    Budget,
+    CarrierLocation,
+    Order,
+    OrderSharing,
+    Package,
+    Resource,
+    Waybill,
+)
 
 API_URL = os.environ['IVOY_URL']
 WEB_URL = os.environ['IVOY_WEB_URL']
@@ -21,13 +29,16 @@ class Client:
     ivoy_password: str
     token: Optional[str]
     web_token: Optional[str]
+    id_client: Optional[str]
     session: Session
 
     # resources
     budget: ClassVar = Budget
+    carrier_location: ClassVar = CarrierLocation
     order: ClassVar = Order
     order_sharing: ClassVar = OrderSharing
-    carrier_location: ClassVar = CarrierLocation
+    package: ClassVar = Package
+    waybill: ClassVar = Waybill
 
     def __init__(
         self,
@@ -67,6 +78,10 @@ class Client:
         response = self.session.request('POST', url, auth=auth, json=json_data)
         self._check_response(response)
         data = response.json()
+        print('pase y guarde')
+        self.id_client = data['data']['idClient']
+        print('clarooo')
+        print(self.id_client)
         return data['token']['access_token']
 
     def post(self, endpoint: str, **kwargs: Any) -> Dict[str, Any]:
