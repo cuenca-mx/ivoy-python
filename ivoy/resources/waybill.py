@@ -26,7 +26,7 @@ class Waybill(Resource):
         ivoy_guide_list: Optional[List[str]] = None,
     ):
         if not any([id_package_list, guide_list, ivoy_guide_list]):
-            raise ValueError("Any kind of id's is needed for waybills.")
+            raise ValueError("Any kind of id's are needed for waybills.")
         json_data = cls._download_json(
             id_package_list, guide_list, ivoy_guide_list
         )
@@ -35,12 +35,11 @@ class Waybill(Resource):
 
     @staticmethod
     def _download_json(
-        cls,
         id_package_list: Optional[List[int]] = None,
         guide_list: Optional[List[str]] = None,
         ivoy_guide_list: Optional[List[str]] = None,
     ):
-        json_data = dict(data=dict(packageRequest=dict()))
+        json_data = dict(data=dict(packageRequest=dict()))  # type: dict
         if id_package_list:
             json_data['data']['packageRequest'].update(
                 dict(idPackageList=id_package_list)
@@ -54,6 +53,6 @@ class Waybill(Resource):
                 dict(guideIvoyList=ivoy_guide_list)
             )
         else:
-            raise ValueError("Any kind of id's is needed for waybills.")
+            raise ValueError("Any kind of id's are needed for waybills.")
 
         return json_data

@@ -60,6 +60,7 @@ class Client:
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
         self.token = None
         self.web_token = None
+        self.id_client = None
         Resource._client = self
 
     def get_token(self, web_token: bool = False) -> str:
@@ -78,10 +79,7 @@ class Client:
         response = self.session.request('POST', url, auth=auth, json=json_data)
         self._check_response(response)
         data = response.json()
-        print('pase y guarde')
         self.id_client = data['data']['idClient']
-        print('clarooo')
-        print(self.id_client)
         return data['token']['access_token']
 
     def post(self, endpoint: str, **kwargs: Any) -> Dict[str, Any]:

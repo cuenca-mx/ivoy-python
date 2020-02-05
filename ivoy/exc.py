@@ -77,6 +77,12 @@ class InvalidVehicle(IvoyException):
         super().__init__(message=message, **kwargs)
 
 
+class InvalidWarehouse(IvoyException):
+    def __init__(self, **kwargs):
+        message = f'Invalid Warehouse id'
+        super().__init__(message=message, **kwargs)
+
+
 class DoesNotExists(IvoyException):
     def __init__(self, **kwargs):
         message = f'Could not find anything with the information provided'
@@ -174,6 +180,7 @@ IVOY_EXCEPTIONS = {
     -251: UnableToCreate,
     -252: InvalidVehicle,
     -258: InvalidVehicle,
+    -327: InvalidWarehouse,
 }
 
 

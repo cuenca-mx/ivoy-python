@@ -127,7 +127,7 @@ class PackageAddress:
             municipality=self.municipality,
             state=self.state,
             zipCode=self.zip_code,
-            idAddress=self.id
+            idAddress=self.id,
         )
 
     def to_json(self) -> str:
@@ -146,7 +146,7 @@ class PackageContact:
             name=self.name,
             phone=self.phone,
             email=self.email,
-            idContact=self.id
+            idContact=self.id,
         )
 
     def to_json(self) -> str:
@@ -169,6 +169,7 @@ class PackageInfo:
     length: Optional[int] = None
     real_weight: Optional[int] = None
     id: Optional[int] = None
+    price: Optional[int] = None
 
     def to_dict(self) -> dict:
         return dict(
@@ -186,6 +187,7 @@ class PackageInfo:
             width=self.width,
             length=self.length,
             realWeight=self.real_weight,
+            price=self.price,
         )
 
     def to_json(self) -> str:

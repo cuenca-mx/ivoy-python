@@ -13,16 +13,14 @@ class Package(Resource):
 
     _endpoint: ClassVar[str] = '/public'
     _response: Dict[str, Any]
-    id_client: Optional[int]
     id_warehouse: Optional[int]
     package_list: List[PackageInfo]
 
     @classmethod
-    def create(
-        cls, id_client: int, id_warehouse: int, package_list: List[PackageInfo]
-    ):
+    def create(cls, package_list: List[PackageInfo], id_warehouse: int = None):
+        id_client = cls._client.id_client
         endpoint = f'{cls._endpoint}/packages/setData/newPackage/json/web'
-        json_data = cls._create_json(id_client, id_warehouse, package_list)
+        json_data = cls._create_json(package_list, id_client, id_warehouse)
         resp = cls._client.put(endpoint, json=json_data)
         return resp
 
@@ -51,21 +49,25 @@ class Package(Resource):
         return resp
 
     @classmethod
-    def edit(cls):
+    def update(cls, package_info: PackageInfo):
         endpoint = f'{cls._endpoint}/package/editPackage/json/web'
+        json_data = cls._update_json(package_info)
         resp = cls._client.put(endpoint, json=json_data)
         return resp
 
     @classmethod
-    def delete(cls, identity_ids: List[int], id_client: int):
+    def delete(cls, identity_ids: List[int]):
+        id_client = cls._client.id_client
         endpoint = f'{cls._endpoint}/packages/setData/deletePackage/json/web'
-        json_data = cls._delete_json(identity_id, id_client)
+        json_data = cls._delete_json(identity_ids, id_client)
         resp = cls._client.put(endpoint, json=json_data)
         return resp
 
     @staticmethod
     def _create_json(
-        id_client: int, id_warehouse: int, package_list: List[PackageInfo]
+        package_list: List[PackageInfo],
+        id_client: int = None,
+        id_warehouse: int = None,
     ) -> dict:
         json_data = dict(
             data=dict(
@@ -91,13 +93,18 @@ class Package(Resource):
         if from_date:
             package_request.update(dict(fromDate=from_date))
         if until_date:
-            package_request.update(dict(fromDate=until_date))
+            package_request.update(dict(untilDate=until_date))
         json_data = dict(data=dict(packageRequest=package_request))
         return json_data
 
     @staticmethod
     def _retrieve_json(identity_id: int) -> dict:
         return dict(data=dict(bPackage=dict(idPackage=identity_id)))
+
+    @staticmethod
+    def _update_json(package_info: PackageInfo) -> dict:
+        json_data = dict(data=dict(bPackage=package_info.to_dict()))
+        return json_data
 
     @staticmethod
     def _delete_json(identity_ids: List[int], id_client: int) -> dict:
