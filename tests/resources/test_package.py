@@ -46,12 +46,24 @@ def test_package_create():
 def test_package_retrieve():
     client = Client()
     resp = client.package.retrieve(40871)
-    print(resp)
     assert resp
     assert resp['data']['idPackage'] == 40871
     assert resp['data']['guideIvoy']
     assert resp['data']['price']
     assert Package(resp['data']['packageType']['idPackageType'])
+
+
+@pytest.mark.vcr
+def test_package_retrieve_with_filters():
+    client = Client()
+    resp = client.package.retrieve_from_dates(
+        from_date=1580855097790, until_date=1580925884950
+    )
+    assert resp
+    assert 0 <= len(resp['data']['packages']) <= resp['data']['elementsByPage']
+    assert resp['data']['fromDate'] == 1580855097790
+    assert resp['data']['untilDate'] == 1580925884950
+    assert resp['data']['idClient'] == client.id_client
 
 
 @pytest.mark.vcr

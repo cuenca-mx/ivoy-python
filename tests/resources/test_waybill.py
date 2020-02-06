@@ -10,6 +10,8 @@ def test_waybill_by_id():
     resp = client.waybill.download(id_package_list=[40868])
     assert resp
     assert type(resp) == Waybill
+    assert resp.id_package_list == [40868]
+    assert resp.byte_content
 
 
 @pytest.mark.vcr
@@ -18,6 +20,8 @@ def test_waybill_by_guide():
     resp = client.waybill.download(guide_list=['000303389P000040868'])
     assert resp
     assert type(resp) == Waybill
+    assert resp.guide_list == ['000303389P000040868']
+    assert resp.byte_content
 
 
 @pytest.mark.vcr
@@ -26,3 +30,5 @@ def test_waybill_by_ivoy_guide():
     resp = client.waybill.download(ivoy_guide_list=['000303389P000040868'])
     assert resp
     assert type(resp) == Waybill
+    assert resp.ivoy_guide_list == ['000303389P000040868']
+    assert resp.byte_content

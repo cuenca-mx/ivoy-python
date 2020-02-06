@@ -109,7 +109,7 @@ class Package(Resource):
     @staticmethod
     def _update_json(id_client: int, package_info: PackageInfo) -> dict:
         json_data = dict(data=dict(bPackage=package_info.to_dict()))
-        json_data['data']['bPackage']['idClient'] = id_client
+        json_data['data']['bPackage']['client'] = dict(idClient=id_client)
         return json_data
 
     @staticmethod

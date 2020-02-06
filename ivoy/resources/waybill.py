@@ -33,7 +33,7 @@ class Waybill(Resource):
         resp = cls._client.post(cls._endpoint, json=json_data)
         return cls(
             id_package_list=id_package_list,
-            guide_list=ivoy_guide_list,
+            guide_list=guide_list,
             ivoy_guide_list=ivoy_guide_list,
             byte_content=resp.content,
         )
