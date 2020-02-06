@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
@@ -18,28 +18,29 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '4891'
+      - '5916'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Tue, 28 Jan 2020 17:26:10 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
+      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 8RhwsWZGQTNlt3gYApfIXK1Ct6dwtfNNs_tRb9sabxSKadh3nWnV4w==
+      - ve52B1r6d8JZvFGcSD4pR04Jggg4b_-xV7BbNl7frYHO_SggDMF9Mg==
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -51,13 +52,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HBY74FwOoAMFRmg=
+      - HbzltF5AoAMFudg=
       x-amzn-Remapped-Content-Length:
-      - '4891'
+      - '5916'
       x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 17:26:10 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       x-amzn-RequestId:
-      - 2fcf69b7-6cb9-4482-b4e1-ca98cabf0c71
+      - d2f0e3ba-f1e1-45bc-9459-7647458361e4
     status:
       code: 200
       message: OK
@@ -71,7 +72,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
@@ -80,28 +81,29 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '4890'
+      - '5915'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Tue, 28 Jan 2020 17:26:10 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
+      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - IOTiqtqvygWY4t1O5eOlbzcRycqiknHr9-uchHzfzftwjyImfUWsfA==
+      - KORmO0Be_7owCXJTr-WD0ZXN2bi4oUfnNhTIxGyts4wpUf1DgaoybA==
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -113,18 +115,19 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HBY77GbVoAMFyaQ=
+      - HbzlvGStIAMFQWg=
       x-amzn-Remapped-Content-Length:
-      - '4890'
+      - '5915'
       x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 17:26:10 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       x-amzn-RequestId:
-      - 263a9874-1383-4a16-a9ba-bfe67a0efd20
+      - 87e09361-5b67-4f1a-a2ca-b6553d6c234e
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": "wrong"}}}'
+    body: '{"data": {"packageRequest": {"idClient": null, "packageList": [{"idPackage":
+      40867}]}}}'
     headers:
       Accept:
       - '*/*'
@@ -133,37 +136,37 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '788'
+      - '87'
       Content-type:
       - application/json
       User-Agent:
       - python-requests/2.22.0
     method: PUT
-    uri: https://api.ivoy.dev/api/order/newOrder/json/web
+    uri: https://api.ivoy.dev/public/packages/setData/deletePackage/json/web
   response:
     body:
-      string: '{"code":-258,"message":"Vehiculo invalido"}'
+      string: '{"code":0,"data":true}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '3859'
+      - '22'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Tue, 28 Jan 2020 17:26:11 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
+      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 8sI1bCi9uja7EI0Hf4t9gj30lbWBLKwZnA1O3V6PGQRyCdI_z5LkAQ==
+      - 66heQECWHaJtv3N1upo-KeOtXyV2SC4amhnDhZ_t_DjUhP0hgWkjUQ==
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - IAH50-C1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -175,13 +178,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HBY78FBCoAMF4DA=
+      - HbzlxGwDIAMFaBQ=
       x-amzn-Remapped-Content-Length:
-      - '3859'
+      - '22'
       x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 17:26:11 GMT
+      - Wed, 05 Feb 2020 17:47:42 GMT
       x-amzn-RequestId:
-      - 57785abe-eb95-43e4-93b1-9cefd118de25
+      - e22f8023-d4a2-41f5-b1f5-c0b148462286
     status:
       code: 200
       message: OK

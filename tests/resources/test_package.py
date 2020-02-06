@@ -45,9 +45,10 @@ def test_package_create():
 @pytest.mark.vcr
 def test_package_retrieve():
     client = Client()
-    resp = client.package.retrieve(40867)
+    resp = client.package.retrieve(40871)
+    print(resp)
     assert resp
-    assert resp['data']['idPackage'] == 40867
+    assert resp['data']['idPackage'] == 40871
     assert resp['data']['guideIvoy']
     assert resp['data']['price']
     assert Package(resp['data']['packageType']['idPackageType'])
@@ -56,7 +57,7 @@ def test_package_retrieve():
 @pytest.mark.vcr
 def test_package_delete():
     client = Client()
-    resp = client.package.delete([40867])
+    resp = client.package.delete([40870])
     assert resp
     assert resp['code'] == 0
     assert resp['data'] is True

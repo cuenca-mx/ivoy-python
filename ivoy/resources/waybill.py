@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import ClassVar, List, Optional
 
 from .base import Resource
 
@@ -13,10 +13,10 @@ class Waybill(Resource):
     _endpoint: ClassVar[
         str
     ] = '/public/packages/getData/getMassiveTags/json/web'
-    _response: Dict[str, Any]
-    id_package_list: Optional[List[int]]
-    guide_list: Optional[List[str]]
-    ivoy_guide_list: Optional[List[str]]
+    id_package_list: Optional[List[int]] = None
+    guide_list: Optional[List[str]] = None
+    ivoy_guide_list: Optional[List[str]] = None
+    byte_content: Optional[bytes] = None
 
     @classmethod
     def download(
@@ -30,15 +30,20 @@ class Waybill(Resource):
         json_data = cls._download_json(
             id_package_list, guide_list, ivoy_guide_list
         )
-        resp = cls._client.put(cls._endpoint, json=json_data)
-        return resp
+        resp = cls._client.post(cls._endpoint, json=json_data)
+        return cls(
+            id_package_list=id_package_list,
+            guide_list=ivoy_guide_list,
+            ivoy_guide_list=ivoy_guide_list,
+            byte_content=resp.content,
+        )
 
     @staticmethod
     def _download_json(
         id_package_list: Optional[List[int]] = None,
         guide_list: Optional[List[str]] = None,
         ivoy_guide_list: Optional[List[str]] = None,
-    ):
+    ) -> dict:
         json_data = dict(data=dict(packageRequest=dict()))  # type: dict
         if id_package_list:
             json_data['data']['packageRequest'].update(

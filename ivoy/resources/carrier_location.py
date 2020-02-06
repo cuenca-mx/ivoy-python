@@ -17,6 +17,7 @@ class CarrierLocation(Resource):
     def get_location(cls, order_id: str) -> 'CarrierLocation':
         json_data = dict(data=dict(bOrder=dict(idOrder=order_id)))
         resp = cls._client.post(cls._endpoint, json=json_data)
+        resp = resp.json()
         return cls(
             id=order_id,
             latitude=resp['data']['messengerLocation']['latitude'],

@@ -18,7 +18,7 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}}'
+      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
     headers:
       Connection:
       - keep-alive
@@ -80,7 +80,8 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}}'
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
     headers:
       Connection:
       - keep-alive

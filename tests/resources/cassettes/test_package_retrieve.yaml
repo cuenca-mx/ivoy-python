@@ -1,0 +1,227 @@
+interactions:
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5916'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2020 18:07:48 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 1e7c8e0b556ec29f3f59b4495fb42853.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Ys0B_ENyu6k5Dvw8Jezm3R3RYjA23FfqUj35zPdtsFI53SaVTPbjFg==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - Hb2iPHMQoAMFqLg=
+      x-amzn-Remapped-Content-Length:
+      - '5916'
+      x-amzn-Remapped-Date:
+      - Wed, 05 Feb 2020 18:07:48 GMT
+      x-amzn-RequestId:
+      - f4d6b3f4-a85e-4412-8c7f-211e18574657
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5915'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2020 18:07:48 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 1e7c8e0b556ec29f3f59b4495fb42853.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - V9N8FX21vZp0dgaWF3BZrFs5-S_IEYceMpph6dM-Q_PC3arRPYtm9Q==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - Hb2iQF-joAMFlDQ=
+      x-amzn-Remapped-Content-Length:
+      - '5915'
+      x-amzn-Remapped-Date:
+      - Wed, 05 Feb 2020 18:07:48 GMT
+      x-amzn-RequestId:
+      - 55c6bac6-fe0c-4f17-9310-9f37ef6bb651
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"bPackage": {"idPackage": 40871}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '44'
+      Content-type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/public/package/selectPackage/json/web
+  response:
+    body:
+      string: "{\"code\":0,\"data\":{\"idPackage\":40871,\"comment\":\"Churrer\xED\
+        a El Moro\",\"price\":50.0,\"address\":{\"idAddress\":303389,\"externalNumber\"\
+        :\"27\",\"latitude\":19.41042803794819,\"longitude\":-99.16771385476989,\"\
+        neighborhood\":\"HIP\xD3DROMO\",\"street\":\"MICHOAC\xC1N\",\"municipality\"\
+        :\"CUAUHTEMOC\",\"state\":\"CDMX\",\"zipCode\":\"6100\"},\"client\":{\"idClient\"\
+        :69319,\"cellPhone\":\"5500550000\",\"email\":\"cuenca.dev@cuenca.com\",\"\
+        firstName\":\"Cuenca\",\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"clientReferral\"\
+        :{\"idClientReferral\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\",\"userAdd\":null,\"\
+        userDelete\":null,\"userEdit\":null,\"client\":null,\"clientReferring\":null},\"\
+        parent\":false},\"contact\":{\"idContact\":687452,\"name\":\"Andres Hernandez\"\
+        ,\"phone\":\"5529372492\",\"email\":\"andres@cuenca.com\"},\"packageStatus\"\
+        :{\"idPackageStatus\":1,\"description\":\"Paquete creado\",\"name\":\"created\"\
+        },\"packageType\":{\"idPackageType\":1,\"name\":\"envelope\",\"description\"\
+        :\"Sobre\",\"zones\":\"|1|2|3|\"},\"isOffice\":true,\"guide\":\"000303389P000040871\"\
+        ,\"guideIvoy\":\"000303389P000040871\",\"packageVisitCount\":0,\"packageHistory\"\
+        :[{\"idPackageHistory\":201307,\"idPackage\":40871,\"packageStatus\":{\"idPackageStatus\"\
+        :1,\"description\":\"Paquete creado\",\"name\":\"created\"},\"namePackageStatus\"\
+        :\"Paquete creado\",\"dateAdd\":1580925884946,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"\
+        offLine\":false}],\"height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\"\
+        :0.0,\"realWeight\":0.0,\"smdClientPricing\":{\"idSmdClientPricing\":45,\"\
+        dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"price\":50.0,\"revenue\"\
+        :40.0,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
+        :69319,\"tillWeight\":2.0,\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"\
+        description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}},\"clientWarehouse\"\
+        :{\"idClientWarehouse\":1388,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"description\":\"Cuenca Dev\",\"isMain\":true,\"name\":\"Almac\xE9\
+        n\",\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"address\":{\"\
+        idAddress\":301668,\"externalNumber\":\"36\",\"latitude\":19.4244499,\"longitude\"\
+        :-99.16771389999997,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"VARSOVIA\"\
+        ,\"state\":\"CDMX\",\"zipCode\":\"6600\"},\"idClient\":69319,\"contact\":{\"\
+        name\":\"cuenca\",\"phone\":\"5555555555\",\"email\":\"cuenca.dev@cuenca.com\"\
+        },\"warehouseInternalId\":null,\"useSenderContact\":false},\"validInfo\":2,\"\
+        similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\\
+        n C. P. 06100\",\"newVisitReason\":0,\"packageProcess\":{\"idPackageProcess\"\
+        :1,\"description\":\"Recolecci\xF3n\",\"name\":\"collection\"},\"numGuides\"\
+        :0}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2521'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2020 18:07:49 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 1e7c8e0b556ec29f3f59b4495fb42853.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - X1RpROOEioZ3c7QMkoZ62phPEJ2kvoMmNvibqmE_HPypiD_GPuB9jQ==
+      X-Amz-Cf-Pop:
+      - IAH50-C3
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - Hb2iTHKVIAMFqOw=
+      x-amzn-Remapped-Content-Length:
+      - '2521'
+      x-amzn-Remapped-Date:
+      - Wed, 05 Feb 2020 18:07:49 GMT
+      x-amzn-RequestId:
+      - c4ad2045-b957-4df5-93f3-5f02c74ecd42
+    status:
+      code: 200
+      message: OK
+version: 1

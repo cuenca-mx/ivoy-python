@@ -52,21 +52,21 @@ class Order(Resource):
         address_array = [address.to_dict() for address in addresses]
         json_data = cls._create_json(address_array, package, payment)
         resp = cls._client.put(endpoint, json=json_data)
-        return cls._to_object(resp, addresses)
+        return cls._to_object(resp.json(), addresses)
 
     @classmethod
     def retrieve(cls, identity_id: str) -> 'Order':
         endpoint = f'{cls._endpoint}/getById/json/web'
         json_data = cls._update_json(identity_id)
         resp = cls._client.post(endpoint, json=json_data)
-        return cls._to_object(resp)
+        return cls._to_object(resp.json())
 
     @classmethod
     def cancel(cls, identity_id: str) -> 'Order':
         endpoint = f'{cls._endpoint}/cancelOrder/json/web'
         json_data = cls._update_json(identity_id)
         resp = cls._client.put(endpoint, json=json_data)
-        return cls._to_object(resp)
+        return cls._to_object(resp.json())
 
     @staticmethod
     def _to_object(

@@ -60,7 +60,7 @@ class Client:
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
         self.token = None
         self.web_token = None
-        self.id_client = None
+        self.id_client = os.environ['IVOY_ID_CLIENT'] or None
         Resource._client = self
 
     def get_token(self, web_token: bool = False) -> str:
@@ -82,24 +82,25 @@ class Client:
         self.id_client = data['data']['idClient']
         return data['token']['access_token']
 
-    def post(self, endpoint: str, **kwargs: Any) -> Dict[str, Any]:
+    def post(self, endpoint: str, **kwargs: Any) -> 'Response':
         return self.request('post', endpoint, **kwargs)
 
-    def put(self, endpoint: str, **kwargs: Any) -> Dict[str, Any]:
+    def put(self, endpoint: str, **kwargs: Any) -> 'Response':
         return self.request('put', endpoint, **kwargs)
 
     def request(
         self, method: str, endpoint: str, **kwargs: Any,
-    ) -> Dict[str, Any]:
+    ) -> 'Response':
         if 'orderSharing' in endpoint:
             url = self.web_url + endpoint
         else:
             url = self.base_url + endpoint
+        is_waybill = 'getMassiveTags' in endpoint
         self.init_tokens()
         headers = self.create_headers(endpoint)
         response = self.session.request(method, url, headers=headers, **kwargs)
         try:
-            self._check_response(response)
+            self._check_response(response, is_waybill)
         except ExpiredTokens:
             # Try to generate Tokens again and retry request
             self.init_tokens(force=True)
@@ -107,8 +108,8 @@ class Client:
             response = self.session.request(
                 method, url, headers=headers, **kwargs
             )
-            self._check_response(response)
-        return response.json()
+            self._check_response(response, is_waybill)
+        return response
 
     def init_tokens(self, force: bool = False) -> None:
         if not self.token or force:
@@ -129,8 +130,10 @@ class Client:
             }
 
     @staticmethod
-    def _check_response(response: Response) -> None:
+    def _check_response(response: Response, is_waybill: bool = False) -> None:
         if response.ok:
+            if is_waybill:
+                return
             json = response.json()
             if 'code' in json and json['code'] == 0:
                 return
