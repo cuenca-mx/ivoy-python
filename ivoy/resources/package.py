@@ -46,7 +46,7 @@ class Package(Resource):
             id_client, start_page, elements_by_page, from_date, until_date
         )
         resp = cls._client.post(endpoint, json=json_data)
-        return resp.json()
+        return cls._to_object(resp.json(), comes_from='filters')
 
     @classmethod
     def retrieve(cls, identity_id: int):
@@ -141,19 +141,58 @@ class Package(Resource):
 
     @staticmethod
     def _to_object(
-        response: dict,
-        packages: List[PackageInfo] = [],
-        comes_from: str = 'create/edit',
+        response: dict, comes_from: str = 'create/edit',
     ) -> 'Package':
-        print(response)
-        if packages == []:
-
+        packages = list()
+        if comes_from == 'filters':
+            data = response['data']['packages']
+            for package in data:
+                full_address = package['address'].split(',')
+                street_info = (
+                    full_address[0].split('int')[0].strip().split(' ')
+                )
+                street = ' '.join(street_info[:-1])
+                external_number = street_info[-1]
+                address = PackageAddress(
+                    id=package['idAddress'],
+                    external_number=external_number,
+                    neighborhood=full_address[1].strip(),
+                    street=street,
+                    municipality=package['municipality'],
+                    state=full_address[-1].strip(),
+                    zip_code=package['zipCode'],
+                    internal_number=package.get('internalNumber', ''),
+                    latitude=package.get('latitude', ''),
+                    longitude=package.get('longitude', ''),
+                )
+                contact = PackageContact(
+                    name=package['contact'],
+                    phone=package['phoneContact'],
+                    email=package['emailContact'],
+                )
+                packages.append(
+                    PackageInfo(
+                        id=package['idPackage'],
+                        comment=package['comment'],
+                        address=address,
+                        contact=contact,
+                        status=PackageStatus(package['idPackageStatus']),
+                        ivoy_guide=package['guideIvoy'],
+                        guide=package['guide'],
+                        is_office=package['office'],
+                        height=package['height'],
+                        width=package['width'],
+                        length=package['length'],
+                        real_weight=package['realWeight'],
+                    )
+                )
+        else:
             if comes_from == 'create/edit':
                 data = response['data']
-            elif comes_from == 'filters':
-                data = response['data']['packages']
-            else:
+            elif comes_from == 'retrieve':
                 data = [response['data']]
+            else:
+                raise ValueError(f'{comes_from} is not valid')
 
             for package in data:
                 data_address = package['address']
@@ -165,7 +204,7 @@ class Package(Resource):
                     municipality=data_address['municipality'],
                     state=data_address['state'],
                     zip_code=data_address['zipCode'],
-                    internal_number=data_address.get('internalNumber', None),
+                    internal_number=data_address.get('internalNumber', ''),
                     latitude=data_address['latitude'],
                     longitude=data_address['longitude'],
                 )

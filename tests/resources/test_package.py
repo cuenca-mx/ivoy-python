@@ -56,7 +56,7 @@ def test_package_retrieve():
     resp = client.package.retrieve(40871)
     assert resp
     assert type(resp) == Package
-    assert resp.package_list[0].id == 40869
+    assert resp.package_list[0].id == 40871
     assert resp.package_list[0].ivoy_guide
     assert resp.package_list[0].price
     assert type(resp.package_list[0].package_type) == PackageType
@@ -69,10 +69,14 @@ def test_package_retrieve_with_filters():
         from_date=1580855097790, until_date=1580925884950
     )
     assert resp
-    assert 0 <= len(resp['data']['packages']) <= resp['data']['elementsByPage']
-    assert resp['data']['fromDate'] == 1580855097790
-    assert resp['data']['untilDate'] == 1580925884950
-    assert resp['data']['idClient'] == client.id_client
+    assert type(resp) == Package
+    num_packages = len(resp._response['data']['packages'])
+    max_page = resp._response['data']['elementsByPage']
+    assert 0 <= num_packages <= max_page
+    assert len(resp.package_list) == num_packages
+    assert resp._response['data']['fromDate'] == 1580855097790
+    assert resp._response['data']['untilDate'] == 1580925884950
+    assert resp._response['data']['idClient'] == client.id_client
 
 
 def test_package_update_without_necessary_fields():
@@ -115,3 +119,14 @@ def test_package_delete():
     assert resp
     assert resp['code'] == 0
     assert resp['data'] is True
+
+
+def test_to_object_wrong_comes_from():
+    client = Client()
+    info = package_info()
+    try:
+        client.package._to_object(info.to_dict(), comes_from='wrong')
+    except ValueError:
+        pass
+    else:
+        assert False
