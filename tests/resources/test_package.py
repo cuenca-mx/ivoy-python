@@ -1,14 +1,21 @@
 import pytest
 
 from ivoy import Client
-from ivoy.types import Package, PackageAddress, PackageContact, PackageInfo
+from ivoy.exc import NecessaryFields
+from ivoy.resources import Package
+from ivoy.types import (
+    Package as PackageType,
+    PackageAddress,
+    PackageContact,
+    PackageInfo,
+)
 
 
 def package_info():
     contact = PackageContact(
         name='Andres Hernandez', phone='5529372492', email='andres@cuenca.com',
     )
-    package_type = Package.envelope
+    package_type = PackageType.envelope
     address = PackageAddress(
         external_number='27',
         neighborhood='Hipódromo',
@@ -36,10 +43,11 @@ def test_package_create():
     info = package_info()
     resp = client.package.create([info])
     assert resp
-    assert resp['data'][0]['idPackage']
-    assert resp['data'][0]['guideIvoy']
-    assert resp['data'][0]['price']
-    assert Package(resp['data'][0]['packageType']['idPackageType'])
+    assert type(resp) == Package
+    assert resp.package_list[0].id
+    assert resp.package_list[0].ivoy_guide
+    assert resp.package_list[0].price
+    assert type(resp.package_list[0].package_type) == PackageType
 
 
 @pytest.mark.vcr
@@ -47,10 +55,11 @@ def test_package_retrieve():
     client = Client()
     resp = client.package.retrieve(40871)
     assert resp
-    assert resp['data']['idPackage'] == 40871
-    assert resp['data']['guideIvoy']
-    assert resp['data']['price']
-    assert Package(resp['data']['packageType']['idPackageType'])
+    assert type(resp) == Package
+    assert resp.package_list[0].id == 40869
+    assert resp.package_list[0].ivoy_guide
+    assert resp.package_list[0].price
+    assert type(resp.package_list[0].package_type) == PackageType
 
 
 @pytest.mark.vcr
@@ -64,6 +73,39 @@ def test_package_retrieve_with_filters():
     assert resp['data']['fromDate'] == 1580855097790
     assert resp['data']['untilDate'] == 1580925884950
     assert resp['data']['idClient'] == client.id_client
+
+
+def test_package_update_without_necessary_fields():
+    client = Client()
+    info = package_info()
+    info.ivoy_guide = '000303389P000040874'
+    info.id = 40874
+    info.contact.id = 687452
+    info.address.id = 303421
+    info.comment = 'EDITADISIMA'
+    try:
+        client.package.update(info)
+    except NecessaryFields as e:
+        assert e.code == -111
+
+
+@pytest.mark.vcr
+def test_package_update():
+    client = Client()
+    info = package_info()
+    info.ivoy_guide = '000303389P000040874'
+    info.guide = '000303389P000040874'
+    info.id = 40874
+    info.contact.id = 687452
+    info.address.id = 303421
+    info.comment = 'EDITADISIMA'
+    resp = client.package.update(info)
+    assert resp
+    assert type(resp) == Package
+    assert resp.package_list[0].id
+    assert resp.package_list[0].ivoy_guide
+    assert resp.package_list[0].price
+    assert type(resp.package_list[0].package_type) == PackageType
 
 
 @pytest.mark.vcr

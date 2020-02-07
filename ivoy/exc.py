@@ -17,6 +17,10 @@ class NotEnoughAddresses(IvoyException):
     """Addresses Needed to create Budget/Order"""
 
 
+class NecessaryFields(IvoyException):
+    """Necessary Fields needed to create/edit Packages"""
+
+
 class InvalidPhone(IvoyException):
     def __init__(self, **kwargs):
         message = f'Invalid or incomplete Phone Number'

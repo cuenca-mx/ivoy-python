@@ -1,7 +1,14 @@
 from dataclasses import dataclass
 from typing import Any, ClassVar, Dict, List, Optional
 
-from ..types import PackageInfo
+from ..exc import NecessaryFields
+from ..types import (
+    Package as PackageType,
+    PackageAddress,
+    PackageContact,
+    PackageInfo,
+    PackageStatus,
+)
 from .base import Resource
 
 
@@ -13,7 +20,6 @@ class Package(Resource):
 
     _endpoint: ClassVar[str] = '/public'
     _response: Dict[str, Any]
-    id_warehouse: Optional[int]
     package_list: List[PackageInfo]
 
     @classmethod
@@ -22,7 +28,7 @@ class Package(Resource):
         endpoint = f'{cls._endpoint}/packages/setData/newPackage/json/web'
         json_data = cls._create_json(package_list, id_client, id_warehouse)
         resp = cls._client.put(endpoint, json=json_data)
-        return resp.json()
+        return cls._to_object(resp.json(), comes_from='create/edit')
 
     @classmethod
     def retrieve_from_dates(
@@ -47,15 +53,22 @@ class Package(Resource):
         endpoint = f'{cls._endpoint}/package/selectPackage/json/web'
         json_data = cls._retrieve_json(identity_id)
         resp = cls._client.post(endpoint, json=json_data)
-        return resp.json()
+        return cls._to_object(resp.json(), comes_from='retrieve')
 
     @classmethod
     def update(cls, package_info: PackageInfo):
         id_client = cls._client.id_client
         endpoint = f'{cls._endpoint}/package/editPackage/json/web'
+        necessary_values = [
+            package_info.id,
+            package_info.guide,
+            package_info.ivoy_guide,
+        ]
+        if not all(necessary_values):
+            raise NecessaryFields(-111, 'Values needed to update package')
         json_data = cls._update_json(id_client, package_info)
         resp = cls._client.put(endpoint, json=json_data)
-        return resp.json()
+        return cls._to_object(resp.json(), comes_from='create/edit')
 
     @classmethod
     def delete(cls, identity_ids: List[int]):
@@ -125,3 +138,64 @@ class Package(Resource):
                 )
             )
         )
+
+    @staticmethod
+    def _to_object(
+        response: dict,
+        packages: List[PackageInfo] = [],
+        comes_from: str = 'create/edit',
+    ) -> 'Package':
+        print(response)
+        if packages == []:
+
+            if comes_from == 'create/edit':
+                data = response['data']
+            elif comes_from == 'filters':
+                data = response['data']['packages']
+            else:
+                data = [response['data']]
+
+            for package in data:
+                data_address = package['address']
+                address = PackageAddress(
+                    id=data_address['idAddress'],
+                    external_number=data_address['externalNumber'],
+                    neighborhood=data_address['neighborhood'],
+                    street=data_address['street'],
+                    municipality=data_address['municipality'],
+                    state=data_address['state'],
+                    zip_code=data_address['zipCode'],
+                    internal_number=data_address.get('internalNumber', None),
+                    latitude=data_address['latitude'],
+                    longitude=data_address['longitude'],
+                )
+                data_contact = package['contact']
+                contact = PackageContact(
+                    id=data_contact['idContact'],
+                    name=data_contact['name'],
+                    phone=data_contact['phone'],
+                    email=data_contact['email'],
+                )
+                packages.append(
+                    PackageInfo(
+                        id=package['idPackage'],
+                        comment=package['comment'],
+                        price=package['price'],
+                        address=address,
+                        contact=contact,
+                        package_type=PackageType(
+                            package['packageType']['idPackageType']
+                        ),
+                        status=PackageStatus(
+                            package['packageStatus']['idPackageStatus']
+                        ),
+                        ivoy_guide=package['guideIvoy'],
+                        guide=package['guide'],
+                        is_office=package['isOffice'],
+                        height=package['height'],
+                        width=package['width'],
+                        length=package['length'],
+                        real_weight=package['realWeight'],
+                    )
+                )
+        return Package(_response=response, package_list=packages,)

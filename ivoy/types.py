@@ -170,9 +170,10 @@ class PackageInfo:
     real_weight: Optional[int] = None
     id: Optional[int] = None
     price: Optional[int] = None
+    status: Optional[PackageStatus] = None
 
     def to_dict(self) -> dict:
-        return dict(
+        data = dict(
             idPackage=self.id,
             ivoyGuide=self.ivoy_guide,
             comment=self.comment,
@@ -189,6 +190,10 @@ class PackageInfo:
             realWeight=self.real_weight,
             price=self.price,
         )
+        for key in list(data):
+            if data[key] is None:
+                del data[key]
+        return data
 
     def to_json(self) -> str:
         return json.dumps(self.to_dict())
