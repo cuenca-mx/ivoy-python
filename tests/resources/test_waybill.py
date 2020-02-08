@@ -32,3 +32,13 @@ def test_waybill_by_ivoy_guide():
     assert type(resp) == Waybill
     assert resp.ivoy_guide_list == ['000303389P000040868']
     assert resp.byte_content
+
+
+def test_waybill_no_info():
+    client = Client()
+    try:
+        client.waybill.download()
+    except ValueError:
+        pass
+    else:
+        assert False

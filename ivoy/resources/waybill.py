@@ -53,11 +53,9 @@ class Waybill(Resource):
             json_data['data']['packageRequest'].update(
                 dict(guideList=guide_list)
             )
-        elif ivoy_guide_list:
+        else:
             json_data['data']['packageRequest'].update(
                 dict(guideIvoyList=ivoy_guide_list)
             )
-        else:
-            raise ValueError("Any kind of id's are needed for waybills.")
 
         return json_data
