@@ -98,15 +98,13 @@ class Client:
         self.id_client = data['data']['idClient']
         return data['token']['access_token']
 
-    def post(self, endpoint: str, **kwargs: Any) -> 'Response':
+    def post(self, endpoint: str, **kwargs: Any) -> Response:
         return self.request('post', endpoint, **kwargs)
 
-    def put(self, endpoint: str, **kwargs: Any) -> 'Response':
+    def put(self, endpoint: str, **kwargs: Any) -> Response:
         return self.request('put', endpoint, **kwargs)
 
-    def request(
-        self, method: str, endpoint: str, **kwargs: Any,
-    ) -> 'Response':
+    def request(self, method: str, endpoint: str, **kwargs: Any,) -> Response:
         if 'orderSharing' in endpoint:
             url = self.web_url + endpoint
         else:

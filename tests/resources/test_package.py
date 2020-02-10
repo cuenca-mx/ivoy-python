@@ -66,7 +66,7 @@ def test_package_retrieve():
 def test_package_retrieve_with_filters():
     client = Client()
     resp = client.package.retrieve_from_dates(
-        from_date=1580855097790, until_date=1580925884950
+        from_date=1580855097799, until_date=1581033404458
     )
     assert resp
     assert type(resp) == Package
@@ -74,8 +74,8 @@ def test_package_retrieve_with_filters():
     max_page = resp._response['data']['elementsByPage']
     assert 0 <= num_packages <= max_page
     assert len(resp.package_list) == num_packages
-    assert resp._response['data']['fromDate'] == 1580855097790
-    assert resp._response['data']['untilDate'] == 1580925884950
+    assert resp._response['data']['fromDate'] == 1580855097799
+    assert resp._response['data']['untilDate'] == 1581033404458
     assert resp._response['data']['idClient'] == client.id_client
 
 
