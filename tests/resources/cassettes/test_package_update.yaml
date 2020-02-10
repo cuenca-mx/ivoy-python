@@ -18,105 +18,29 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
-        ,\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\"\
-        ,\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\"\
-        :\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"dateAdd\":null,\"\
-        dateDelete\":null,\"dateEdit\":null,\"description\":\"Clientes Credito/Prepago\"\
-        ,\"name\":\"client_c_p\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
-        :null,\"clientModules\":[{\"idClientModule\":33,\"isMain\":null,\"dateAdd\"\
-        :null,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\":null,\"userDelete\"\
-        :null,\"userEdit\":null,\"clientModule\":null,\"clientModules\":null,\"module\"\
-        :{\"idModule\":54,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
-        description\":null,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
-        ,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null}},{\"idClientModule\"\
-        :53,\"isMain\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
-        userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"clientModule\":null,\"\
-        clientModules\":null,\"module\":{\"idModule\":57,\"dateAdd\":null,\"dateDelete\"\
-        :null,\"dateEdit\":null,\"description\":null,\"name\":\"client_internal_guide\"\
-        ,\"path\":\"/client/internal/guide\",\"userAdd\":null,\"userDelete\":null,\"\
-        userEdit\":null}}]},\"clientType\":{\"idClientType\":8,\"dateAdd\":null,\"\
-        dateDelete\":null,\"dateEdit\":null,\"description\":\"Cliente Same Day Credito\"\
-        ,\"name\":\"client_same_day_credit\",\"userAdd\":null,\"userDelete\":null,\"\
-        userEdit\":null},\"gender\":{\"idGender\":1,\"dateAdd\":null,\"dateDelete\"\
-        :null,\"dateEdit\":null,\"description\":\"Hombre\",\"name\":\"male\",\"userAdd\"\
-        :null,\"userDelete\":null,\"userEdit\":null},\"clientCreditcards\":[],\"clientInvoiceData\"\
-        :[{\"idClientInvoiceData\":69319,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
-        :null,\"name\":\"CUENCA DEV\",\"rfc\":null,\"userAdd\":null,\"userDelete\"\
-        :null,\"userEdit\":null,\"client\":null,\"address\":{\"latitude\":0.0,\"longitude\"\
-        :0.0},\"neighborhood\":null,\"street\":null,\"municipality\":null,\"zipCode\"\
-        :null,\"state\":null,\"country\":null}],\"smdClientPricings\":[{\"idSmdClientPricing\"\
-        :45,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"price\":50.0,\"\
-        revenue\":40.0,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :69319,\"tillWeight\":2.0,\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"\
-        description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\"\
-        :[{\"idPaymentMethod\":4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\"\
-        ,\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"\
-        dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"referralBalance\":0.0,\"\
-        referralCode\":\"SAP7R\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
-        :null,\"client\":null,\"clientReferring\":null},\"clientConfigurations\":[{\"\
-        idClientConfiguration\":636616,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
-        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
-        :1,\"idClient\":69319},{\"idClientConfiguration\":636617,\"dateAdd\":1575479743244,\"\
-        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"\
-        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
-        ,\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":636618,\"\
-        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"\
-        idClientConfiguration\":636619,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
-        :null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
-        idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":636620,\"\
-        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"\
-        idClientConfiguration\":636621,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
-        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
-        :6,\"idClient\":69319},{\"idClientConfiguration\":636622,\"dateAdd\":1575479743244,\"\
-        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"\
-        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
-        ,\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":636640,\"\
-        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"\
-        idClientConfiguration\":636641,\"dateAdd\":1580830574365,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
-        :null,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
-        idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":636642,\"\
-        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"\
-        zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"\
-        cdmx\"},\"isCompany\":true,\"senderContact\":{\"idSenderContact\":null,\"\
-        name\":null,\"description\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
-        :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJURVNUU0RBUEkiLCJleHAiOjE1ODExMjI4NjgsImRldmljZSI6IndlYiIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MiwiaWRab25lIjoxfQ.NDNNaSA9GkXG8yaDvBUrvEcz6ELL2otZRs8fiRwG5ZDrMuhppVEeiBdeW4w-E-KviTEsik5iqzdXKeOPkjt7VxwcB6cKFLK6pG6jjR5kVQiMHbsHyeGJYPyfz3Kg0Ja-GBSCuDLfDr8d6jdFWCBXNuJO3arM4J1YFuUt3PRLDh6eQMDGchjTsb2AKevZHcA0LegOVeDWyDhvdzseJv3kSPN8cEs9JNdPG_LJkpk67WsOkYiy4QmPslQ1xoj8bQD_k8Dzp5nrBM-jZ4B2_QIAKmyXceEeIye5NuOWuGvQ0uaTNQ3lwfV-Iiepcu3NpxvIGyyETvTK6q6ov9bgek1u8g\"\
-        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"08/02/20 00:47\"\
-        }}"
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '6015'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:36 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 a497eba714f030335fd7adebea6fe8b6.cloudfront.net (CloudFront)
+      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - LFem7cgmtRUH_72b7ybSNMtdFGnWufWiDNW2lejgqZvFrsxHSzTMMg==
+      - gn-Uxr6BF_hz5Eu8aDpIH-UQkJ7ASHgaVM4kco5cXoK1_uFuGBo-0Q==
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -128,13 +52,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HgEEKG8hoAMFgbw=
+      - Hsgw3GhDoAMFy6g=
       x-amzn-Remapped-Content-Length:
-      - '6015'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:36 GMT
       x-amzn-RequestId:
-      - ebbe8b9e-08a3-4411-bd83-07f470f832a5
+      - a1712088-78b7-480a-ba1d-902eb6505903
     status:
       code: 200
       message: OK
@@ -157,84 +81,8 @@ interactions:
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
-        ,\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\"\
-        ,\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\"\
-        :\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"dateAdd\":null,\"\
-        dateDelete\":null,\"dateEdit\":null,\"description\":\"Clientes Credito/Prepago\"\
-        ,\"name\":\"client_c_p\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
-        :null,\"clientModules\":[{\"idClientModule\":33,\"isMain\":null,\"dateAdd\"\
-        :null,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\":null,\"userDelete\"\
-        :null,\"userEdit\":null,\"clientModule\":null,\"clientModules\":null,\"module\"\
-        :{\"idModule\":54,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
-        description\":null,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
-        ,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null}},{\"idClientModule\"\
-        :53,\"isMain\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
-        userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"clientModule\":null,\"\
-        clientModules\":null,\"module\":{\"idModule\":57,\"dateAdd\":null,\"dateDelete\"\
-        :null,\"dateEdit\":null,\"description\":null,\"name\":\"client_internal_guide\"\
-        ,\"path\":\"/client/internal/guide\",\"userAdd\":null,\"userDelete\":null,\"\
-        userEdit\":null}}]},\"clientType\":{\"idClientType\":8,\"dateAdd\":null,\"\
-        dateDelete\":null,\"dateEdit\":null,\"description\":\"Cliente Same Day Credito\"\
-        ,\"name\":\"client_same_day_credit\",\"userAdd\":null,\"userDelete\":null,\"\
-        userEdit\":null},\"gender\":{\"idGender\":1,\"dateAdd\":null,\"dateDelete\"\
-        :null,\"dateEdit\":null,\"description\":\"Hombre\",\"name\":\"male\",\"userAdd\"\
-        :null,\"userDelete\":null,\"userEdit\":null},\"clientCreditcards\":[],\"clientInvoiceData\"\
-        :[{\"idClientInvoiceData\":69319,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
-        :null,\"name\":\"CUENCA DEV\",\"rfc\":null,\"userAdd\":null,\"userDelete\"\
-        :null,\"userEdit\":null,\"client\":null,\"address\":{\"latitude\":0.0,\"longitude\"\
-        :0.0},\"neighborhood\":null,\"street\":null,\"municipality\":null,\"zipCode\"\
-        :null,\"state\":null,\"country\":null}],\"smdClientPricings\":[{\"idSmdClientPricing\"\
-        :45,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"price\":50.0,\"\
-        revenue\":40.0,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :69319,\"tillWeight\":2.0,\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"\
-        description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\"\
-        :[{\"idPaymentMethod\":4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\"\
-        ,\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"\
-        dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"referralBalance\":0.0,\"\
-        referralCode\":\"SAP7R\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
-        :null,\"client\":null,\"clientReferring\":null},\"clientConfigurations\":[{\"\
-        idClientConfiguration\":636616,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
-        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
-        :1,\"idClient\":69319},{\"idClientConfiguration\":636617,\"dateAdd\":1575479743244,\"\
-        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"\
-        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
-        ,\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":636618,\"\
-        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"\
-        idClientConfiguration\":636619,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
-        :null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
-        idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":636620,\"\
-        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"\
-        idClientConfiguration\":636621,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
-        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
-        :6,\"idClient\":69319},{\"idClientConfiguration\":636622,\"dateAdd\":1575479743244,\"\
-        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"\
-        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
-        ,\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":636640,\"\
-        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"\
-        idClientConfiguration\":636641,\"dateAdd\":1580830574365,\"dateDelete\":null,\"\
-        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
-        :null,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
-        idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":636642,\"\
-        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
-        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
-        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"\
-        zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"\
-        cdmx\"},\"isCompany\":true,\"senderContact\":{\"idSenderContact\":null,\"\
-        name\":null,\"description\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
-        :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJJVk9ZQVBJIiwiZXhwIjoxNTgxMTIyODY4LCJkZXZpY2UiOiJ3ZWIiLCJlbWFpbCI6ImN1ZW5jYS5kZXZAY3VlbmNhLmNvbSIsImFwaVR5cGUiOjAsImlkWm9uZSI6MX0.i9-4-Hcq_gy8-YnXUPDpuAYByOCiBhXbD1Tm3fOuPa3XIHcBsMPixdgcKa9EfT6InI7KHLcAq79eoRexMFl1Icn02Tkix5bjVHDvCnphprKi7yFALpRalFbZSKdjkA6K75_a1Pnmlxt4YmX9jUO1WbswY3Dig3fRAyA3vbzpe9iIO1LCFUKab4Vq96bDhHSCvU0XAdHXxJp7kyqukbk6rUU3rPqg9-X8UK-MCg_VyDAqFD-omveTkyBD7JByx8Xlg3_CWrWKLPGd8BnVVOCeZokltSTlHRPcKpO88rAw80QzSXupw9GBxJw300vky7-lJBCEiggGsIDzn0074i0M4A\"\
-        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"08/02/20 00:47\"\
-        }}"
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
     headers:
       Connection:
       - keep-alive
@@ -245,17 +93,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:36 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 a497eba714f030335fd7adebea6fe8b6.cloudfront.net (CloudFront)
+      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - kJr6KFXkg1JuwgzgAo4XuKF_lDf1k7MUzDUK7PTWoSYYnUY4LOgDgQ==
+      - dAY-bs-6r2wUcP1LWoOzQmXexO0fxVHeDxrSK-56_4KUK4e5tTIboA==
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -267,13 +115,76 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HgEELGVNoAMFUdg=
+      - Hsgw9HipIAMFvJw=
       x-amzn-Remapped-Content-Length:
       - '6012'
       x-amzn-Remapped-Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:36 GMT
       x-amzn-RequestId:
-      - aed861de-59b4-4f53-ac05-99e527e7aafc
+      - e58171ac-fe0a-4064-b4a9-4d596bc08ab0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6015'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:37 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - rZx4OKhE5kFlRzHClBdOZ7jYyc8KT9aG1WSxSd9-p5uyUfuEQurYxw==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - Hsgw_HcYoAMFc4g=
+      x-amzn-Remapped-Content-Length:
+      - '6015'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:37 GMT
+      x-amzn-RequestId:
+      - f941937a-0c12-4b11-b579-e62e9a70fe5e
     status:
       code: 200
       message: OK
@@ -329,44 +240,78 @@ interactions:
         :null,\"userEdit\":null,\"offLine\":false},{\"idPackageHistory\":201321,\"\
         idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\":\"Paquete Editado\"\
         ,\"dateAdd\":1581036468587,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\"\
-        :\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"offLine\":false}],\"\
-        height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
-        :0.0,\"smdClientPricing\":{\"idSmdClientPricing\":45,\"dateAdd\":null,\"dateDelete\"\
-        :null,\"dateEdit\":null,\"price\":0.0,\"revenue\":0.0,\"userAdd\":null,\"\
-        userDelete\":null,\"userEdit\":null,\"idClient\":null,\"tillWeight\":0.0,\"\
-        multiGuidePricings\":[],\"zone\":{}},\"clientWarehouse\":{\"idClientWarehouse\"\
-        :1388,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"description\"\
-        :\"Cuenca Dev\",\"isMain\":true,\"name\":\"Almac\xE9n\",\"userAdd\":null,\"\
-        userDelete\":null,\"userEdit\":null,\"address\":{\"idAddress\":301668,\"externalNumber\"\
-        :\"36\",\"latitude\":19.4244499,\"longitude\":-99.16771389999997,\"neighborhood\"\
-        :\"JU\xC1REZ\",\"street\":\"VARSOVIA\",\"state\":\"CDMX\",\"zipCode\":\"6600\"\
-        },\"idClient\":69319,\"contact\":{\"name\":\"cuenca\",\"phone\":\"5555555555\"\
-        ,\"email\":\"cuenca.dev@cuenca.com\"},\"warehouseInternalId\":null,\"useSenderContact\"\
-        :false},\"validInfo\":2,\"similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1\
-        N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"newVisitReason\":0,\"packageProcess\"\
-        :{\"idPackageProcess\":1,\"description\":\"Recolecci\xF3n\",\"name\":\"collection\"\
-        },\"numGuides\":0,\"guideIvoyParent\":\"\"}]}"
+        :\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"offLine\":false},{\"\
+        idPackageHistory\":201322,\"idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\"\
+        :\"Paquete Editado\",\"dateAdd\":1581097257294,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"\
+        offLine\":false},{\"idPackageHistory\":201323,\"idPackage\":40874,\"packageStatus\"\
+        :{},\"namePackageStatus\":\"Paquete Editado\",\"dateAdd\":1581097917623,\"\
+        dateDelete\":null,\"dateEdit\":null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\"\
+        :null,\"userEdit\":null,\"offLine\":false},{\"idPackageHistory\":201324,\"\
+        idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\":\"Paquete Editado\"\
+        ,\"dateAdd\":1581098013270,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\"\
+        :\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"offLine\":false},{\"\
+        idPackageHistory\":201325,\"idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\"\
+        :\"Paquete Editado\",\"dateAdd\":1581098318501,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"\
+        offLine\":false},{\"idPackageHistory\":201326,\"idPackage\":40874,\"packageStatus\"\
+        :{},\"namePackageStatus\":\"Paquete Editado\",\"dateAdd\":1581098465825,\"\
+        dateDelete\":null,\"dateEdit\":null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\"\
+        :null,\"userEdit\":null,\"offLine\":false},{\"idPackageHistory\":201327,\"\
+        idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\":\"Paquete Editado\"\
+        ,\"dateAdd\":1581098527161,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\"\
+        :\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"offLine\":false},{\"\
+        idPackageHistory\":201328,\"idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\"\
+        :\"Paquete Editado\",\"dateAdd\":1581098691768,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"\
+        offLine\":false},{\"idPackageHistory\":201329,\"idPackage\":40874,\"packageStatus\"\
+        :{},\"namePackageStatus\":\"Paquete Editado\",\"dateAdd\":1581110129689,\"\
+        dateDelete\":null,\"dateEdit\":null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\"\
+        :null,\"userEdit\":null,\"offLine\":false},{\"idPackageHistory\":201332,\"\
+        idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\":\"Paquete Editado\"\
+        ,\"dateAdd\":1581360462084,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\"\
+        :\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"offLine\":false},{\"\
+        idPackageHistory\":201335,\"idPackage\":40874,\"packageStatus\":{},\"namePackageStatus\"\
+        :\"Paquete Editado\",\"dateAdd\":1581362797650,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":\"Cuenca_3CBL6_c\",\"userDelete\":null,\"userEdit\":null,\"\
+        offLine\":false}],\"height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\"\
+        :0.0,\"realWeight\":0.0,\"smdClientPricing\":{\"idSmdClientPricing\":45,\"\
+        dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"price\":0.0,\"revenue\"\
+        :0.0,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\":null,\"\
+        tillWeight\":0.0,\"multiGuidePricings\":[],\"zone\":{}},\"clientWarehouse\"\
+        :{\"idClientWarehouse\":1388,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"description\":\"Cuenca Dev\",\"isMain\":true,\"name\":\"Almac\xE9\
+        n\",\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"address\":{\"\
+        idAddress\":301668,\"externalNumber\":\"36\",\"latitude\":19.4244499,\"longitude\"\
+        :-99.16771389999997,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"VARSOVIA\"\
+        ,\"state\":\"CDMX\",\"zipCode\":\"6600\"},\"idClient\":69319,\"contact\":{\"\
+        name\":\"cuenca\",\"phone\":\"5555555555\",\"email\":\"cuenca.dev@cuenca.com\"\
+        },\"warehouseInternalId\":null,\"useSenderContact\":false},\"validInfo\":2,\"\
+        similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\\
+        n C. P. 06100\",\"newVisitReason\":0,\"packageProcess\":{\"idPackageProcess\"\
+        :1,\"description\":\"Recolecci\xF3n\",\"name\":\"collection\"},\"numGuides\"\
+        :0,\"guideIvoyParent\":\"\"}]}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2949'
+      - '5329'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 a497eba714f030335fd7adebea6fe8b6.cloudfront.net (CloudFront)
+      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - bPTNovl6owKyeXvV1K9PaHNx2C3Q4dEGy06FL5knriA6uGi-uvcLLQ==
+      - 3Txksz7vADIfjiUjfMWC22byWwDGkaNsDxD2_APt1ZrwdhI71BXKpQ==
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -378,13 +323,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HgEEOEPhoAMFugA=
+      - HsgxEFYloAMFwrA=
       x-amzn-Remapped-Content-Length:
-      - '2949'
+      - '5329'
       x-amzn-Remapped-Date:
-      - Fri, 07 Feb 2020 00:47:48 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       x-amzn-RequestId:
-      - f405097e-4e90-4baf-b6ea-be996cfe2ea6
+      - 35191a4b-896b-4b3e-a425-3067458c0138
     status:
       code: 200
       message: OK

@@ -9,69 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
-  response:
-    body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '4891'
-      Content-Security-Policy:
-      - default-src 'self'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 28 Jan 2020 18:40:29 GMT
-      Referrer-Policy:
-      - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
-      - Origin
-      Via:
-      - 1.1 ecb0f083d3785b9dbd558c63ab24bb2d.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - Q4ZEpzV2ETjpXGWcNbYlyd2DLGYRUU_0xNaZCV9qdlyhYpz_8SGSHQ==
-      X-Amz-Cf-Pop:
-      - IAH50-C1
-      X-Cache:
-      - Miss from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      X-Permitted-Cross-Domain-Policies:
-      - all
-      X-XSS-Protection:
-      - 1; mode=block
-      x-amz-apigw-id:
-      - HBj0gEPboAMFz-w=
-      x-amzn-Remapped-Content-Length:
-      - '4891'
-      x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 18:40:29 GMT
-      x-amzn-RequestId:
-      - 27b392c0-401c-4b76-82ce-0cfb2f5729be
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
@@ -86,23 +24,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4890'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Tue, 28 Jan 2020 18:40:30 GMT
+      - Mon, 10 Feb 2020 19:26:19 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 ecb0f083d3785b9dbd558c63ab24bb2d.cloudfront.net (CloudFront)
+      - 1.1 8bb88b543ab91bf8a0d9b079f18a4e1e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - EzHRqqSo7fs4kGBWBUegj68GPLDdk0SG0NU4SGoSEsb9GpzZsq7a9g==
+      - pbC1sbgGPilydkndk28cN9DY2iohdMywaUTKqbnbwY3sgXvSNNBXZg==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -114,18 +52,153 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HBj0nEvcIAMF8Ow=
+      - Hsgs-F-8IAMFYng=
       x-amzn-Remapped-Content-Length:
-      - '4890'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 18:40:30 GMT
+      - Mon, 10 Feb 2020 19:26:19 GMT
       x-amzn-RequestId:
-      - 87b51e4b-a2f4-488e-9d9c-3d76def58871
+      - e4a3e9ff-4fdc-4029-b86a-b046bc2356f5
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": "wrong"}}}'
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6012'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:19 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8bb88b543ab91bf8a0d9b079f18a4e1e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ELL9C8yYJmI1kFX3rguqOtzdc9Ic3-RV1WxBRGhh3UNQS4kuTPadfQ==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - HsguSFdKIAMFz4Q=
+      x-amzn-Remapped-Content-Length:
+      - '6012'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:19 GMT
+      x-amzn-RequestId:
+      - e6c03158-64bb-4372-9b7a-b1a8c9671855
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6015'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:20 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 8bb88b543ab91bf8a0d9b079f18a4e1e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 71Xf-RTILfccCA_mQlp6JlW_G6OzlEOGE40k5bOaw5RkiOjthLy3nA==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - HsguTEnkIAMFQBA=
+      x-amzn-Remapped-Content-Length:
+      - '6015'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:20 GMT
+      x-amzn-RequestId:
+      - dd4372ca-8699-4e3f-bf69-743d78d4e7ea
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"bOrder": {"device": "api", "orderType": {"idOrderType": 1},
+      "packageType": {"idPackageType": 1}, "paymentMethod": {"idPaymentMethod": 4},
+      "orderAddresses": [{"isPickup": 1, "isSource": 1, "comment": "N/A", "personApproved":
+      "Jon Doe", "phone": "not a number", "address": {"idAddress": null, "externalNumber":
+      "36", "internalNumber": null, "latitude": "19.4245207", "longitude": "-99.1676911",
+      "neighborhood": "Juarez", "street": "Varsovia", "zipCode": "06600"}}, {"isPickup":
+      0, "isSource": 0, "comment": "N/A", "personApproved": "Lewis Hamilton", "phone":
+      "5566778899", "address": {"idAddress": null, "externalNumber": "180", "internalNumber":
+      "1", "latitude": "19.4133562", "longitude": "-99.1672142", "neighborhood": "Hipodromo",
+      "street": "Sonora", "zipCode": "06100"}}]}}}'
     headers:
       Accept:
       - '*/*'
@@ -143,28 +216,85 @@ interactions:
     uri: https://api.ivoy.dev/api/order/newOrder/json/web
   response:
     body:
-      string: '{"code":-251,"message":"Token no pudo ser creado"}'
+      string: "{\"code\":0,\"data\":{\"idOrder\":464945,\"dateAdd\":1581362785512,\"\
+        dateEdit\":1581362787407,\"device\":\"api\",\"discount\":0.0,\"distance\"\
+        :1.93,\"extraCharge\":0.0,\"orderChildCount\":1,\"packageValue\":0.0,\"price\"\
+        :35.0,\"eta\":28.0,\"rating\":0.0,\"total\":35.0,\"messengerFee\":0.0,\"ivoyCost\"\
+        :0.0,\"isBike\":true,\"client\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
+        ,\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\"\
+        ,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\"\
+        ,\"clientType\":{\"idClientType\":8,\"dateAdd\":null,\"dateDelete\":null,\"\
+        dateEdit\":null,\"description\":\"Cliente Same Day Credito\",\"name\":\"client_same_day_credit\"\
+        ,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null},\"gender\":{\"idGender\"\
+        :1,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"description\"\
+        :\"Hombre\",\"name\":\"male\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
+        :null},\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"dateAdd\":null,\"\
+        dateDelete\":null,\"dateEdit\":null,\"name\":\"CUENCA DEV\",\"rfc\":null,\"\
+        userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"client\":null,\"address\"\
+        :{\"latitude\":0.0,\"longitude\":0.0},\"neighborhood\":null,\"street\":null,\"\
+        municipality\":null,\"zipCode\":null,\"state\":null,\"country\":null}],\"\
+        isCompany\":true,\"parent\":false},\"paymentMethod\":{\"idPaymentMethod\"\
+        :4},\"zone\":{\"idZone\":1},\"orderStatus\":{\"idOrderStatus\":4,\"description\"\
+        :\"Pendiente de Mensajero\"},\"orderType\":{\"idOrderType\":1},\"packageType\"\
+        :{\"idPackageType\":1},\"paymentStatus\":{\"idPaymentStatus\":1},\"orderAddresses\"\
+        :[{\"idOrderAddress\":1088943,\"dateEdit\":1581362786010,\"isPickup\":0,\"\
+        isSource\":1,\"comment\":\"N/A\",\"personApproved\":\"Jon Doe\",\"priceBusiness\"\
+        :0.0,\"tip\":0.0,\"phone\":\"not a number\",\"distance\":0.0,\"eta\":0.0,\"\
+        price\":0.0,\"address\":{\"idAddress\":43178,\"externalNumber\":\"36\",\"\
+        latitude\":19.424422,\"longitude\":-99.16791699999999,\"neighborhood\":\"\
+        JU\xC1REZ\",\"street\":\"VARSOVIA\",\"zipCode\":\"6600\"},\"orderStatus\"\
+        :{\"idOrderStatus\":2,\"description\":\"Orden creada\"},\"paymentStatus\"\
+        :{\"idPaymentStatus\":2},\"paymentMethod\":{\"idPaymentMethod\":4},\"cancelationReason\"\
+        :{},\"orderAddressType\":{\"idOrderAddressType\":1},\"pack\":{\"price\":0.0,\"\
+        height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
+        :0.0,\"validInfo\":0,\"similarity\":0.0,\"newVisitReason\":0,\"numGuides\"\
+        :0},\"source\":true},{\"idOrderAddress\":1088944,\"dateEdit\":1581362786116,\"\
+        isPickup\":0,\"isSource\":0,\"comment\":\"N/A\",\"personApproved\":\"Lewis\
+        \ Hamilton\",\"priceBusiness\":0.0,\"tip\":0.0,\"phone\":\"5566778899\",\"\
+        distance\":1.93,\"eta\":8.0,\"price\":0.0,\"address\":{\"idAddress\":303061,\"\
+        externalNumber\":\"180\",\"latitude\":19.4133562,\"longitude\":-99.1672142,\"\
+        neighborhood\":\"Hipodromo\",\"street\":\"Sonora\"},\"orderStatus\":{\"idOrderStatus\"\
+        :2,\"description\":\"Orden creada\"},\"paymentStatus\":{\"idPaymentStatus\"\
+        :2},\"paymentMethod\":{\"idPaymentMethod\":4},\"cancelationReason\":{},\"\
+        orderAddressType\":{\"idOrderAddressType\":3},\"pack\":{\"price\":0.0,\"height\"\
+        :0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"\
+        validInfo\":0,\"similarity\":0.0,\"newVisitReason\":0,\"numGuides\":0},\"\
+        source\":false}],\"promoCodeBalance\":0.0,\"referralBalance\":0.0,\"prepaidBalance\"\
+        :35.0,\"creditBalance\":0.0,\"othersBalance\":0.0,\"clientCreditcard\":{\"\
+        idClientCreditcard\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"cardHolderName\":null,\"expMonth\":null,\"expYear\":null,\"isDefault\"\
+        :0,\"metadata\":null,\"number\":null,\"publicNumber\":null,\"token\":null,\"\
+        cvv\":null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"client\"\
+        :null,\"creditcardType\":null,\"status\":null},\"clientInvoice\":{\"idClientInvoice\"\
+        :null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"serie\":null,\"\
+        sheet\":null,\"urlPdf\":null,\"urlPdfFile\":null,\"urlXml\":null,\"urlXmlFile\"\
+        :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"client\":null,\"\
+        order\":null},\"vehicle\":{\"idVehicle\":3,\"dateAdd\":null,\"dateDelete\"\
+        :null,\"dateEdit\":null,\"description\":null,\"name\":null,\"zones\":null,\"\
+        maxPackageWeight\":0.0,\"maxPackageWidth\":0.0,\"maxPackageLength\":0.0,\"\
+        maxPackageHeight\":0.0,\"maxPackageVolumetric\":0.0,\"userAdd\":null,\"userDelete\"\
+        :null,\"userEdit\":null},\"revenueHotZone\":0.0}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '3859'
+      - '3954'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Tue, 28 Jan 2020 18:40:31 GMT
+      - Mon, 10 Feb 2020 19:26:28 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 ecb0f083d3785b9dbd558c63ab24bb2d.cloudfront.net (CloudFront)
+      - 1.1 8bb88b543ab91bf8a0d9b079f18a4e1e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - ORYJJCzUey5p_NOvYTwz1vM9vlKZ0DmTT2jXu44wVkT0lXPtcej58g==
+      - ZyF1dqR_c0UWGMF61wa7kv_k90e5le6FoRGDMrdCpct3neflshZAFQ==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -176,13 +306,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HBj0wGZEIAMF-cA=
+      - HsgubE3zoAMFTjQ=
       x-amzn-Remapped-Content-Length:
-      - '3859'
+      - '3954'
       x-amzn-Remapped-Date:
-      - Tue, 28 Jan 2020 18:40:31 GMT
+      - Mon, 10 Feb 2020 19:26:28 GMT
       x-amzn-RequestId:
-      - 78fd32ca-c231-4b7f-9595-52ac9c1d1750
+      - 930bc3a9-ad45-442c-b0c6-931940389066
     status:
       code: 200
       message: OK

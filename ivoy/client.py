@@ -25,10 +25,13 @@ class Client:
     auth_password: str
     web_auth_user: str
     web_auth_password: str
+    same_day_auth_user: str
+    same_day_auth_password: str
     ivoy_user: str
     ivoy_password: str
     token: Optional[str]
     web_token: Optional[str]
+    same_day_token: Optional[str]
     id_client: Optional[str]
     session: Session
 
@@ -48,6 +51,8 @@ class Client:
         ivoy_password: Optional[str] = None,
         web_auth_user: Optional[str] = None,
         web_auth_password: Optional[str] = None,
+        same_day_auth_user: Optional[str] = None,
+        same_day_auth_password: Optional[str] = None,
     ):
         self.session = Session()
         self.auth_user = auth_user or os.environ['IVOY_AUTH_USER']
@@ -56,17 +61,28 @@ class Client:
         self.web_auth_password = (
             web_auth_password or os.environ['IVOY_WEB_AUTH_PASS']
         )
+        self.same_day_auth_user = (
+            same_day_auth_user or os.environ['IVOY_SAME_DAY_AUTH_USER']
+        )
+        self.same_day_auth_password = (
+            same_day_auth_password or os.environ['IVOY_SAME_DAY_AUTH_PASS']
+        )
         self.ivoy_user = ivoy_user or os.environ['IVOY_USER']
         self.ivoy_password = ivoy_password or os.environ['IVOY_PASS']
         self.token = None
         self.web_token = None
+        self.same_day_token = None
         self.id_client = os.environ['IVOY_ID_CLIENT'] or None
         Resource._client = self
 
-    def get_token(self, web_token: bool = False) -> str:
+    def get_token(
+        self, web_token: bool = False, same_day_token: bool = False
+    ) -> str:
         url = f'{self.base_url}/api/login/loginClient/json/web'
         if web_token:
             auth = (self.web_auth_user, self.web_auth_password)
+        elif same_day_token:
+            auth = (self.same_day_auth_user, self.same_day_auth_password)
         else:
             auth = (self.auth_user, self.auth_password)
         json_data = dict(
@@ -97,7 +113,10 @@ class Client:
             url = self.base_url + endpoint
         is_waybill = 'getMassiveTags' in endpoint
         self.init_tokens()
-        headers = self.create_headers(endpoint)
+        if 'Package' in endpoint or 'MassiveTags' in endpoint:
+            headers = self.create_headers(endpoint, same_day=True)
+        else:
+            headers = self.create_headers(endpoint)
         response = self.session.request(method, url, headers=headers, **kwargs)
         try:
             self._check_response(response, is_waybill)
@@ -116,18 +135,28 @@ class Client:
             self.token = self.get_token()
         if not self.web_token or force:
             self.web_token = self.get_token(web_token=True)
+        if not self.same_day_token or force:
+            self.same_day_token = self.get_token(same_day_token=True)
 
-    def create_headers(self, endpoint: str) -> Dict[str, Any]:
+    def create_headers(
+        self, endpoint: str, same_day: bool = False
+    ) -> Dict[str, Any]:
         if 'orderSharing' in endpoint:
             return {
                 'Content-type': 'application/json',
                 'Token': self.web_token,
             }
         else:
-            return {
-                'Content-type': 'application/json',
-                'Token': self.token,
-            }
+            if same_day:
+                return {
+                    'Content-type': 'application/json',
+                    'Token': self.same_day_token,
+                }
+            else:
+                return {
+                    'Content-type': 'application/json',
+                    'Token': self.token,
+                }
 
     @staticmethod
     def _check_response(response: Response, is_waybill: bool = False) -> None:

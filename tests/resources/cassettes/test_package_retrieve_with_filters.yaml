@@ -93,28 +93,28 @@ interactions:
         cdmx\"},\"isCompany\":true,\"senderContact\":{\"idSenderContact\":null,\"\
         name\":null,\"description\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
         :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJURVNUU0RBUEkiLCJleHAiOjE1ODEwNDEyMDUsImRldmljZSI6IndlYiIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MiwiaWRab25lIjoxfQ.IThhnsHVOxgn9iTUP3OSWJ5onpqj_sZPa3SEvwdPSyTKvPP0jPRNQZkmGQe3pGc2VQgQGkayhqfm5JCc9WAw8coUbnJ4IFiGlmobPgXeL2PcKNEO659wDS9vFQjxaed9vNPiBIZobqUo1dflfX9iaQcCLsK2DytgAKI0K-dScLlLK05Kd3ud_aQibsDkPNpdjECfaegUibFvMzuqFrXkvlCnGEFmklncgMqx4eLehnE0RQJYJ-H46s4H5pto35XlYMloG1vlo9TiJmFY1IL2GtXYd8Ln8nta0mcw7XrK26zRlrHZp2WXjav3cZfhzKbZle-pD-8Bay7GFildhh9Unw\"\
-        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"07/02/20 02:06\"\
+        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJURVNUVEVTVCIsImV4cCI6MTU4MTQ1NjM0NywiZGV2aWNlIjoid2ViIiwiZW1haWwiOiJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iLCJhcGlUeXBlIjowLCJpZFpvbmUiOjF9.PztSopBAutTJK4-jwOuGikS3I_HiDM68aBdRRsbDHWp8Nd80Qh6oktdtw-gECdQVTjUvsaEK8tYfWlAqsDqK3ojXv90JEaX93F_C0taiD2TCbeRN0G39TeWuNUzaIGbBcJqqQJRIKDlGdtialNDJ0NcupUh-vB4gZPcmN-xsy6gM6wwX_Tdp73ZoE_EYcTpZRU42nXEKWbjXqZQzC5xkJqb2jrwa4eQ7zYadQN5bDrpJfDAzUNM1jYlnA8q77REGU07IT8XhrQAeGxU9FpFF1S__QYRtOY3_O_gVdDnrJCG4bf0Q8l67VPmf-xUd5RkwwAMc50bJQunIqZLFinrEuA\"\
+        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"11/02/20 21:25\"\
         }}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '6015'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Thu, 06 Feb 2020 02:06:45 GMT
+      - Mon, 10 Feb 2020 21:25:47 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ee4a1508956c1e99adaba15bfc591a7.cloudfront.net (CloudFront)
+      - 1.1 2201de1d81683eaa0fc38bd9382cd761.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - EgxZPLPbi4zpmwpmSOlUiBsejuJ1Ur7eeT2Z8pcDzSRqN1CYXM9G1Q==
+      - aK4bx-HXZIgu251aIKukbauVG3znBzuoSwYiFeKShjXXzoxC2CqCnw==
       X-Amz-Cf-Pop:
       - IAH50-C4
       X-Cache:
@@ -128,13 +128,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - Hc8sYHKIIAMFs6w=
+      - HsyOSHycIAMF3_A=
       x-amzn-Remapped-Content-Length:
-      - '6015'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Thu, 06 Feb 2020 02:06:45 GMT
+      - Mon, 10 Feb 2020 21:25:47 GMT
       x-amzn-RequestId:
-      - 59eb004d-0b22-444f-abad-6acc9c32869a
+      - f1ba4d00-57c3-433e-afa0-b5cc88992cb5
     status:
       code: 200
       message: OK
@@ -232,8 +232,8 @@ interactions:
         cdmx\"},\"isCompany\":true,\"senderContact\":{\"idSenderContact\":null,\"\
         name\":null,\"description\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
         :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
-        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJJVk9ZQVBJIiwiZXhwIjoxNTgxMDQxMjA2LCJkZXZpY2UiOiJ3ZWIiLCJlbWFpbCI6ImN1ZW5jYS5kZXZAY3VlbmNhLmNvbSIsImFwaVR5cGUiOjAsImlkWm9uZSI6MX0.fYNf9gCHPR4fUrsDh5_AFtuPoxb0BjD5sD8e3N3EhzjbwkeRYU5-jzGbD4lB2gGCgI8A5x5VYQLUnJWqvTHliEaBpLVy906t5Z5l0843-oYGn6ORyJkeCl0e9abX-kvxtTfBA5mVoZsRYwXonyzcoMWbE45kDBYXUtZWldgJp3IEoolAOiSo_6AsLsRwChpP2fhC7FJtK63-97Yb_oVbtghnBCnbS8dYTLaBiWbJD_WzGi5PDmAlKOmvGV2e21ajHoHcuB8ze_u5BLFkEpRKmadokg01sjzWTbiPT0dVLZCednsNxcvbLJH0W5ExYcgl1oDJ4cQjjPH67OlntRpXig\"\
-        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"07/02/20 02:06\"\
+        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJJVk9ZQVBJIiwiZXhwIjoxNTgxNDU2MzQ3LCJkZXZpY2UiOiJ3ZWIiLCJlbWFpbCI6ImN1ZW5jYS5kZXZAY3VlbmNhLmNvbSIsImFwaVR5cGUiOjAsImlkWm9uZSI6MX0.BxiqhJtFguALS1ByyIxoJy4dM7TqGIruTxIVevaxDIk3pxIDTy06aEQdi_FPE78pFJYgO7irYlueI0AY8DxrFAVS0rcGiZYIkZ7IISk8skybMCWuTvXpk9B0oBHx7pNfm2JML-QdhHJ9h4XiD8JmmEfuLEl_vMiV3OMUvsuUTg3op0bMmJv5JTMcWjdQvdW-SB-09ig8gIMr2HWLUn8J6vvnTxe1EjtrcCDeqpW-9v0KVtW4U7LMCuH8DTu0hiISMn1dcx-ukZCGrzN4SV90foZbj5dPlFjqlg8AAXKLP8YK8JArNfrWrGHt-MbjoPz-D3imnT-Uz4cWABpdm_ZG8Q\"\
+        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"11/02/20 21:25\"\
         }}"
     headers:
       Connection:
@@ -245,15 +245,15 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 06 Feb 2020 02:06:46 GMT
+      - Mon, 10 Feb 2020 21:25:47 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ee4a1508956c1e99adaba15bfc591a7.cloudfront.net (CloudFront)
+      - 1.1 2201de1d81683eaa0fc38bd9382cd761.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - eWNAeSs7zqGdSjE-X_YjhOz1RqA64yQQwcPnPrY9hvOG1cvieUAcvg==
+      - kGFyPHyAu7NCFF6x3CirbxVVuTQaF3tDWt2GjJBx1Mctr0XX5da9cw==
       X-Amz-Cf-Pop:
       - IAH50-C4
       X-Cache:
@@ -267,19 +267,158 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - Hc8scHkxIAMFbUg=
+      - HsyOVGyhIAMFqkg=
       x-amzn-Remapped-Content-Length:
       - '6012'
       x-amzn-Remapped-Date:
-      - Thu, 06 Feb 2020 02:06:46 GMT
+      - Mon, 10 Feb 2020 21:25:47 GMT
       x-amzn-RequestId:
-      - 3169fe37-1697-45dc-804c-e1f985c637ba
+      - 1fd1eddb-9106-43f2-acd1-b51d89a6ef35
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
+        ,\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\"\
+        ,\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\"\
+        :\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"dateAdd\":null,\"\
+        dateDelete\":null,\"dateEdit\":null,\"description\":\"Clientes Credito/Prepago\"\
+        ,\"name\":\"client_c_p\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
+        :null,\"clientModules\":[{\"idClientModule\":33,\"isMain\":null,\"dateAdd\"\
+        :null,\"dateDelete\":null,\"dateEdit\":null,\"userAdd\":null,\"userDelete\"\
+        :null,\"userEdit\":null,\"clientModule\":null,\"clientModules\":null,\"module\"\
+        :{\"idModule\":54,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
+        description\":null,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
+        ,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null}},{\"idClientModule\"\
+        :53,\"isMain\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"\
+        userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"clientModule\":null,\"\
+        clientModules\":null,\"module\":{\"idModule\":57,\"dateAdd\":null,\"dateDelete\"\
+        :null,\"dateEdit\":null,\"description\":null,\"name\":\"client_internal_guide\"\
+        ,\"path\":\"/client/internal/guide\",\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null}}]},\"clientType\":{\"idClientType\":8,\"dateAdd\":null,\"\
+        dateDelete\":null,\"dateEdit\":null,\"description\":\"Cliente Same Day Credito\"\
+        ,\"name\":\"client_same_day_credit\",\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null},\"gender\":{\"idGender\":1,\"dateAdd\":null,\"dateDelete\"\
+        :null,\"dateEdit\":null,\"description\":\"Hombre\",\"name\":\"male\",\"userAdd\"\
+        :null,\"userDelete\":null,\"userEdit\":null},\"clientCreditcards\":[],\"clientInvoiceData\"\
+        :[{\"idClientInvoiceData\":69319,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"name\":\"CUENCA DEV\",\"rfc\":null,\"userAdd\":null,\"userDelete\"\
+        :null,\"userEdit\":null,\"client\":null,\"address\":{\"latitude\":0.0,\"longitude\"\
+        :0.0},\"neighborhood\":null,\"street\":null,\"municipality\":null,\"zipCode\"\
+        :null,\"state\":null,\"country\":null}],\"smdClientPricings\":[{\"idSmdClientPricing\"\
+        :45,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"price\":50.0,\"\
+        revenue\":40.0,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
+        :69319,\"tillWeight\":2.0,\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"\
+        description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\"\
+        :[{\"idPaymentMethod\":4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\"\
+        ,\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"\
+        dateAdd\":null,\"dateDelete\":null,\"dateEdit\":null,\"referralBalance\":0.0,\"\
+        referralCode\":\"SAP7R\",\"userAdd\":null,\"userDelete\":null,\"userEdit\"\
+        :null,\"client\":null,\"clientReferring\":null},\"clientConfigurations\":[{\"\
+        idClientConfiguration\":636616,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
+        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
+        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
+        :1,\"idClient\":69319},{\"idClientConfiguration\":636617,\"dateAdd\":1575479743244,\"\
+        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"\
+        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
+        ,\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":636618,\"\
+        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
+        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"\
+        idClientConfiguration\":636619,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
+        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
+        :null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
+        idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":636620,\"\
+        dateAdd\":1575479743244,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
+        value\":null,\"isActive\":true,\"userDelete\":null,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"\
+        idClientConfiguration\":636621,\"dateAdd\":1575479743244,\"dateDelete\":null,\"\
+        dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"userDelete\":null,\"\
+        userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\"\
+        :6,\"idClient\":69319},{\"idClientConfiguration\":636622,\"dateAdd\":1575479743244,\"\
+        dateDelete\":null,\"dateEdit\":1580830861000,\"value\":null,\"isActive\":true,\"\
+        userDelete\":null,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\"\
+        ,\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":636640,\"\
+        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
+        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
+        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"\
+        idClientConfiguration\":636641,\"dateAdd\":1580830574365,\"dateDelete\":null,\"\
+        dateEdit\":1580830861000,\"value\":null,\"isActive\":false,\"userDelete\"\
+        :null,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"\
+        idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":636642,\"\
+        dateAdd\":1580830574365,\"dateDelete\":null,\"dateEdit\":1580830861000,\"\
+        value\":null,\"isActive\":false,\"userDelete\":null,\"userAdd\":\"Octavio_P5XUL_u\"\
+        ,\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"\
+        zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"\
+        cdmx\"},\"isCompany\":true,\"senderContact\":{\"idSenderContact\":null,\"\
+        name\":null,\"description\":null,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"userAdd\":null,\"userDelete\":null,\"userEdit\":null,\"idClient\"\
+        :null,\"contact\":null},\"parent\":false},\"token\":{\"access_token\":\"eyJvd25lciI6ImlWb3kiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOjY5MzE5LCJuYW1lVXNlciI6IkN1ZW5jYV8zQ0JMNl9jIiwibG9naW5UeXBlIjoyLCJpc3MiOiJURVNUU0RBUEkiLCJleHAiOjE1ODE0NTYzNDcsImRldmljZSI6IndlYiIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MiwiaWRab25lIjoxfQ.auwF0kX0JuA4Iq3I0NosTFQb7CcKVTi3bPjXZZYWzemw-fLMnNgRPXkEO5T5nBzklMMFsh1nnE_Q4Oqua0W4J2ewtn1zTKc_EdsqGMGEynVsZG83psBo9UBoW3E-5uUmtITCWL5-74OGQrWncTv5kna5js8NmR4pVnxHprLenYw0ExKnklAatrsHcC3ZdKFMTGZ_PUYYUIps6Qcmu1slkkvAy423LQaNJbERI1wUD5_yGonLyp4csUve0d6kzBCeGXEtp0XT3FAhONU-ywqZJKVoeY-EQLwbipwTZtAcjZQ_l9KcEA5cuSI44tzH1VnGz35zbKIqS3RGrDnTktkT4g\"\
+        ,\"scope\":null,\"token_type\":\"ivoyat\",\"expires_in\":\"11/02/20 21:25\"\
+        }}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6015'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 21:25:48 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 2201de1d81683eaa0fc38bd9382cd761.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - GA3Idm5oLMm8gpT_tbQYbq8dN1PG-RJr_87jRkx3uutBKWczwiMXvA==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - HsyOXGm4oAMFwWw=
+      x-amzn-Remapped-Content-Length:
+      - '6015'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 21:25:48 GMT
+      x-amzn-RequestId:
+      - e488ef3c-7d63-47c5-a6e5-23e58f60a742
     status:
       code: 200
       message: OK
 - request:
     body: '{"data": {"packageRequest": {"idClient": "69319", "startPage": 1, "elementsByPage":
-      10, "fromDate": 1580855097790, "untilDate": 1580925884950}}}'
+      10, "fromDate": 1580855097799, "untilDate": 1581033404458}}}'
     headers:
       Accept:
       - '*/*'
@@ -297,7 +436,7 @@ interactions:
     uri: https://api.ivoy.dev/public/packages/getData/getPackagesWithFilters/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"fromDate\":1580855097790,\"untilDate\":1580925884950,\"\
+      string: "{\"code\":0,\"data\":{\"fromDate\":1580855097799,\"untilDate\":1581033404458,\"\
         packages\":[{\"idPackage\":40857,\"idPackageStatus\":1,\"packageStatus\":\"\
         Paquete creado\",\"idAddress\":303389,\"address\":\"MICHOAC\xC1N 27, HIP\xD3\
         DROMO, 6100 CUAUHTEMOC, CDMX\",\"latitude\":19.41042803794819,\"longitude\"\
@@ -337,37 +476,25 @@ interactions:
         emailContact\":\"andres@cuenca.com\",\"phoneContact\":\"5529372492\",\"comment\"\
         :\"Churrer\xEDa El Moro\",\"inTransit\":false,\"office\":true},{\"idPackage\"\
         :40868,\"idPackageStatus\":1,\"packageStatus\":\"Paquete creado\",\"idAddress\"\
+        :303421,\"address\":\"AV. INSURGENTES SUR 3700, INSURGENTES CUICUILCO, 4530\
+        \ CIUDAD DE MEXICO, CIUDAD DE MEXICO\",\"latitude\":19.3074184,\"longitude\"\
+        :-99.186169,\"deliveryZone\":1,\"idClient\":69319,\"client\":\"Cuenca Dev\"\
+        ,\"dateAdd\":1580868627611,\"warehouse\":\"VARSOVIA 36, JU\xC1REZ, 6600 null,\
+        \ CDMX\",\"wLatitude\":19.4244499,\"wLongitude\":-99.16771389999997,\"guide\"\
+        :\"000303389P000040868\",\"guideIvoy\":\"000303389P000040868\",\"zipCode\"\
+        :\"4530\",\"municipality\":\"CIUDAD DE MEXICO\",\"packageVisitCount\":0,\"\
+        contact\":\"Andres Hernandez\",\"idZone\":1,\"height\":0.0,\"width\":0.0,\"\
+        length\":0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":2,\"similarity\"\
+        :0.0,\"originalAddress\":\"MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\n C. P. 06100\"\
+        ,\"emailContact\":\"andres@cuenca.com\",\"phoneContact\":\"5529372492\",\"\
+        comment\":\"Esta fue editada\",\"inTransit\":false,\"office\":true},{\"idPackage\"\
+        :40869,\"idPackageStatus\":1,\"packageStatus\":\"Paquete creado\",\"idAddress\"\
         :303389,\"address\":\"MICHOAC\xC1N 27, HIP\xD3DROMO, 6100 CUAUHTEMOC, CDMX\"\
         ,\"latitude\":19.41042803794819,\"longitude\":-99.16771385476989,\"deliveryZone\"\
-        :1,\"idClient\":69319,\"client\":\"Cuenca Dev\",\"dateAdd\":1580868627611,\"\
+        :1,\"idClient\":69319,\"client\":\"Cuenca Dev\",\"dateAdd\":1580924860724,\"\
         warehouse\":\"VARSOVIA 36, JU\xC1REZ, 6600 null, CDMX\",\"wLatitude\":19.4244499,\"\
-        wLongitude\":-99.16771389999997,\"guide\":\"000303389P000040868\",\"guideIvoy\"\
-        :\"000303389P000040868\",\"zipCode\":\"6100\",\"municipality\":\"CUAUHTEMOC\"\
-        ,\"packageVisitCount\":0,\"contact\":\"Andres Hernandez\",\"idZone\":1,\"\
-        height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
-        :0.0,\"validInfo\":2,\"similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1\
-        N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"emailContact\":\"andres@cuenca.com\"\
-        ,\"phoneContact\":\"5529372492\",\"comment\":\"Churrer\xEDa El Moro\",\"inTransit\"\
-        :false,\"office\":true},{\"idPackage\":40869,\"idPackageStatus\":1,\"packageStatus\"\
-        :\"Paquete creado\",\"idAddress\":303389,\"address\":\"MICHOAC\xC1N 27, HIP\xD3\
-        DROMO, 6100 CUAUHTEMOC, CDMX\",\"latitude\":19.41042803794819,\"longitude\"\
-        :-99.16771385476989,\"deliveryZone\":1,\"idClient\":69319,\"client\":\"Cuenca\
-        \ Dev\",\"dateAdd\":1580924860724,\"warehouse\":\"VARSOVIA 36, JU\xC1REZ,\
-        \ 6600 null, CDMX\",\"wLatitude\":19.4244499,\"wLongitude\":-99.16771389999997,\"\
-        guide\":\"000303389P000040869\",\"guideIvoy\":\"000303389P000040869\",\"zipCode\"\
-        :\"6100\",\"municipality\":\"CUAUHTEMOC\",\"packageVisitCount\":0,\"contact\"\
-        :\"Andres Hernandez\",\"idZone\":1,\"height\":0.0,\"width\":0.0,\"length\"\
-        :0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":2,\"similarity\":0.0,\"\
-        originalAddress\":\"MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"\
-        emailContact\":\"andres@cuenca.com\",\"phoneContact\":\"5529372492\",\"comment\"\
-        :\"Churrer\xEDa El Moro\",\"inTransit\":false,\"office\":true},{\"idPackage\"\
-        :40870,\"idPackageStatus\":1,\"packageStatus\":\"Paquete creado\",\"idAddress\"\
-        :303389,\"address\":\"MICHOAC\xC1N 27, HIP\xD3DROMO, 6100 CUAUHTEMOC, CDMX\"\
-        ,\"latitude\":19.41042803794819,\"longitude\":-99.16771385476989,\"deliveryZone\"\
-        :1,\"idClient\":69319,\"client\":\"Cuenca Dev\",\"dateAdd\":1580925740725,\"\
-        warehouse\":\"VARSOVIA 36, JU\xC1REZ, 6600 null, CDMX\",\"wLatitude\":19.4244499,\"\
-        wLongitude\":-99.16771389999997,\"guide\":\"000303389P000040870\",\"guideIvoy\"\
-        :\"000303389P000040870\",\"zipCode\":\"6100\",\"municipality\":\"CUAUHTEMOC\"\
+        wLongitude\":-99.16771389999997,\"guide\":\"000303389P000040869\",\"guideIvoy\"\
+        :\"000303389P000040869\",\"zipCode\":\"6100\",\"municipality\":\"CUAUHTEMOC\"\
         ,\"packageVisitCount\":0,\"contact\":\"Andres Hernandez\",\"idZone\":1,\"\
         height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
         :0.0,\"validInfo\":2,\"similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1\
@@ -385,32 +512,44 @@ interactions:
         :0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"validInfo\":2,\"similarity\":0.0,\"\
         originalAddress\":\"MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"\
         emailContact\":\"andres@cuenca.com\",\"phoneContact\":\"5529372492\",\"comment\"\
-        :\"Churrer\xEDa El Moro\",\"inTransit\":false,\"office\":true}],\"idClient\"\
-        :69319,\"idOrder\":null,\"idPackageStatus\":null,\"packageList\":null,\"idPackageList\"\
-        :null,\"guideList\":null,\"guideIvoyList\":null,\"guide\":null,\"guideIvoy\"\
-        :null,\"idPackage\":null,\"packageStatus\":null,\"startPage\":1,\"elementsByPage\"\
-        :10,\"totalPages\":4,\"validInfo\":0,\"toCheck\":false,\"idClientWarehouse\"\
-        :null,\"warehouses\":null,\"cancelationReason\":null,\"fileName\":null,\"\
-        lastStatus\":false}}"
+        :\"Churrer\xEDa El Moro\",\"inTransit\":false,\"office\":true},{\"idPackage\"\
+        :40874,\"idPackageStatus\":1,\"packageStatus\":\"Paquete creado\",\"idAddress\"\
+        :303389,\"address\":\"MICHOAC\xC1N 27, HIP\xD3DROMO, 6100 CUAUHTEMOC, CDMX\"\
+        ,\"latitude\":19.41042803794819,\"longitude\":-99.16771385476989,\"deliveryZone\"\
+        :1,\"idClient\":69319,\"client\":\"Cuenca Dev\",\"dateAdd\":1581033404458,\"\
+        warehouse\":\"VARSOVIA 36, JU\xC1REZ, 6600 null, CDMX\",\"wLatitude\":19.4244499,\"\
+        wLongitude\":-99.16771389999997,\"guide\":\"000303389P000040874\",\"guideIvoy\"\
+        :\"000303389P000040874\",\"zipCode\":\"6100\",\"municipality\":\"CUAUHTEMOC\"\
+        ,\"packageVisitCount\":0,\"contact\":\"Andres Hernandez\",\"idZone\":1,\"\
+        height\":0.0,\"width\":0.0,\"length\":0.0,\"volWeight\":0.0,\"realWeight\"\
+        :0.0,\"validInfo\":2,\"similarity\":0.0,\"originalAddress\":\"MICHOAC\xC1\
+        N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"emailContact\":\"andres@cuenca.com\"\
+        ,\"phoneContact\":\"5529372492\",\"comment\":\"EDITADISIMA\",\"inTransit\"\
+        :false,\"office\":true}],\"idClient\":69319,\"idOrder\":null,\"idPackageStatus\"\
+        :null,\"packageList\":null,\"idPackageList\":null,\"guideList\":null,\"guideIvoyList\"\
+        :null,\"guide\":null,\"guideIvoy\":null,\"idPackage\":null,\"packageStatus\"\
+        :null,\"startPage\":1,\"elementsByPage\":10,\"totalPages\":4,\"validInfo\"\
+        :0,\"toCheck\":false,\"idClientWarehouse\":null,\"warehouses\":null,\"cancelationReason\"\
+        :null,\"fileName\":null,\"lastStatus\":false}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '6514'
+      - '6536'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Thu, 06 Feb 2020 02:06:46 GMT
+      - Mon, 10 Feb 2020 21:25:48 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 6ee4a1508956c1e99adaba15bfc591a7.cloudfront.net (CloudFront)
+      - 1.1 2201de1d81683eaa0fc38bd9382cd761.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - fASQzIx8fcrB5S5h2VBqU9y3GhxkHrcMRdpvpConWZr4LpYA1BV6og==
+      - K8DPnVyEpq3FwxbQey8_QB9RvrFPZtb3ZOOR-cUnXCMmRgKxaEsmIw==
       X-Amz-Cf-Pop:
       - IAH50-C4
       X-Cache:
@@ -424,13 +563,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - Hc8sgE-4IAMF75w=
+      - HsyOaHMHoAMFudg=
       x-amzn-Remapped-Content-Length:
-      - '6514'
+      - '6536'
       x-amzn-Remapped-Date:
-      - Thu, 06 Feb 2020 02:06:46 GMT
+      - Mon, 10 Feb 2020 21:25:48 GMT
       x-amzn-RequestId:
-      - a06e1eca-eb45-4985-864a-6e5fb13c5d0d
+      - 661e3582-a329-4cd7-b1f5-4c54bfd902e5
     status:
       code: 200
       message: OK

@@ -24,23 +24,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5916'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - ve52B1r6d8JZvFGcSD4pR04Jggg4b_-xV7BbNl7frYHO_SggDMF9Mg==
+      - jTq7w82Uduil5dHCbPtyDg9HyPs5p7bgfOijUtB_K55dBoXBiBVkLQ==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -52,13 +52,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HbzltF5AoAMFudg=
+      - HsgxSFy8oAMFjkg=
       x-amzn-Remapped-Content-Length:
-      - '5916'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       x-amzn-RequestId:
-      - d2f0e3ba-f1e1-45bc-9459-7647458361e4
+      - c03865d0-0c76-4637-b131-f6840eb96d36
     status:
       code: 200
       message: OK
@@ -87,23 +87,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5915'
+      - '6012'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - KORmO0Be_7owCXJTr-WD0ZXN2bi4oUfnNhTIxGyts4wpUf1DgaoybA==
+      - RL8dHLUXie9_VUtbd9W4wWDeK7ym48XZe8cfI2cjsmWlqPHcTlxIzQ==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -115,19 +115,18 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HbzlvGStIAMFQWg=
+      - HsgxUHWfoAMF9Hg=
       x-amzn-Remapped-Content-Length:
-      - '5915'
+      - '6012'
       x-amzn-Remapped-Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       x-amzn-RequestId:
-      - 87e09361-5b67-4f1a-a2ca-b6553d6c234e
+      - 51b07c0c-5058-4b10-9e6e-e3e54d8bdbe8
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"packageRequest": {"idClient": null, "packageList": [{"idPackage":
-      40867}]}}}'
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
     headers:
       Accept:
       - '*/*'
@@ -136,7 +135,71 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '87'
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6015'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:39 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - sQVtv3PAAgPgLmQyBFusQbegsfxaRnOZ1wYzDsluI9x0h7X1wUzgXQ==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - HsgxZFGQIAMFjCQ=
+      x-amzn-Remapped-Content-Length:
+      - '6015'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:39 GMT
+      x-amzn-RequestId:
+      - c3d0a374-a433-4528-86ce-5d31c4f8755d
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"packageRequest": {"idClient": "69319", "packageList": [{"idPackage":
+      40870}]}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '90'
       Content-type:
       - application/json
       User-Agent:
@@ -156,17 +219,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 1a1e16f3138812ae8127e09c6e8e4536.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 66heQECWHaJtv3N1upo-KeOtXyV2SC4amhnDhZ_t_DjUhP0hgWkjUQ==
+      - kIaSORN9XjiiIUpWTl3FIX3j78X8Z_EYgGaPj0ztTtWpFzfkQlAXJg==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -178,13 +241,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - HbzlxGwDIAMFaBQ=
+      - HsgxfGRUIAMFRyw=
       x-amzn-Remapped-Content-Length:
       - '22'
       x-amzn-Remapped-Date:
-      - Wed, 05 Feb 2020 17:47:42 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       x-amzn-RequestId:
-      - e22f8023-d4a2-41f5-b1f5-c0b148462286
+      - aa116ee8-4eab-4484-ab8b-f97221922050
     status:
       code: 200
       message: OK
