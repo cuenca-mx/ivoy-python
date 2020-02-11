@@ -9,69 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
-  response:
-    body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '4891'
-      Content-Security-Policy:
-      - default-src 'self'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
-      Referrer-Policy:
-      - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
-      - Origin
-      Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - VC28C9TS60yjakbyylnfbMWXsZLEdcMAOxlXEANg9aUrV5N1mHowEw==
-      X-Amz-Cf-Pop:
-      - IAH50-C1
-      X-Cache:
-      - Miss from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      X-Permitted-Cross-Domain-Policies:
-      - all
-      X-XSS-Protection:
-      - 1; mode=block
-      x-amz-apigw-id:
-      - EFvxME4-oAMFWyw=
-      x-amzn-Remapped-Content-Length:
-      - '4891'
-      x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
-      x-amzn-RequestId:
-      - 08bff0ca-bd7c-43cb-a622-60c44b218af0
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
@@ -86,23 +24,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4890'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:29 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
+      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - DNIWJY1KDlPjwL6OlekCeeY96T4iHcO_4cppUgsy1v37y-THuCgtig==
+      - lx-OMKQDfo0rvENUjUctUEeKmS9w5RplVI4d30bVt7rFgJAm0FyyFw==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -114,13 +52,76 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - EFvxOF6NIAMF5yg=
+      - Hsgv3GYXoAMFl1w=
       x-amzn-Remapped-Content-Length:
-      - '4890'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:29 GMT
       x-amzn-RequestId:
-      - 7d515f88-8b6d-463f-ab8b-fd3f81602a17
+      - 470678c2-00b6-43ca-9a3e-68c2125f4e84
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6012'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:29 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - zrPjViYL9WtA3y-Fg7aD4e2P6svc4oYKLn_15-fUsb4_C4RO25pt2w==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - Hsgv4Fj4IAMF_Cw=
+      x-amzn-Remapped-Content-Length:
+      - '6012'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:29 GMT
+      x-amzn-RequestId:
+      - 46a790c1-7ebd-4c35-b6c4-41ec121897d4
     status:
       code: 200
       message: OK
@@ -188,7 +189,13 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": "wrong"}}}'
+    body: '{"data": {"packageRequest": {"idClient": "69319", "idClientWarehouse":
+      null, "packageList": [{"comment": "Churrer\u00eda El Moro", "address": {"externalNumber":
+      "27", "internalNumber": "", "latitude": "19.41042803794819", "longitude": "-99.16771385476989",
+      "neighborhood": "Hip\u00f3dromo", "street": "Michoac\u00e1n", "municipality":
+      "Cuauhtemoc", "state": "CDMX", "zipCode": "06100", "idAddress": null}, "contact":
+      {"name": "Andres Hernandez", "phone": "5529372492", "email": "andres@cuenca.com",
+      "idContact": null}, "packageType": {"idPackageType": 1}, "isOffice": true}]}}}'
     headers:
       Accept:
       - '*/*'
@@ -197,37 +204,54 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '42'
+      - '577'
       Content-type:
       - application/json
       User-Agent:
       - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/order/getById/json/web
+    method: PUT
+    uri: https://api.ivoy.dev/public/packages/setData/newPackage/json/web
   response:
     body:
-      string: '{"code":-100,"message":"Formato invalido"}'
+      string: "{\"code\":0,\"data\":[{\"idPackage\":40877,\"comment\":\"Churrer\xED\
+        a El Moro\",\"price\":50.0,\"address\":{\"idAddress\":303389,\"externalNumber\"\
+        :\"27\",\"latitude\":19.41042803794819,\"longitude\":-99.16771385476989,\"\
+        neighborhood\":\"HIP\xD3DROMO\",\"street\":\"MICHOAC\xC1N\",\"municipality\"\
+        :\"CUAUHTEMOC\",\"state\":\"CDMX\",\"zipCode\":\"6100\"},\"client\":{\"idClient\"\
+        :69319,\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isPaymentMandatory\"\
+        :0,\"lastName\":\"Dev\",\"parent\":false},\"contact\":{\"idContact\":687452,\"\
+        name\":\"Andres Hernandez\",\"phone\":\"5529372492\",\"email\":\"andres@cuenca.com\"\
+        },\"packageStatus\":{\"idPackageStatus\":1},\"packageType\":{\"idPackageType\"\
+        :1},\"isOffice\":true,\"guide\":\"000303389P000040877\",\"guideIvoy\":\"000303389P000040877\"\
+        ,\"packageVisitCount\":0,\"packageHistory\":[],\"height\":0.0,\"width\":0.0,\"\
+        length\":0.0,\"volWeight\":0.0,\"realWeight\":0.0,\"smdClientPricing\":{\"\
+        idSmdClientPricing\":45,\"dateAdd\":null,\"dateDelete\":null,\"dateEdit\"\
+        :null,\"price\":0.0,\"revenue\":0.0,\"userAdd\":null,\"userDelete\":null,\"\
+        userEdit\":null,\"idClient\":null,\"tillWeight\":0.0,\"multiGuidePricings\"\
+        :[],\"zone\":{}},\"validInfo\":2,\"similarity\":0.0,\"originalAddress\":\"\
+        MICHOAC\xC1N 27 INT , HIP\xD3DROMO\\n C. P. 06100\",\"newVisitReason\":0,\"\
+        packageProcess\":{\"idPackageProcess\":1},\"numGuides\":0}]}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '42'
+      - '1218'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:30 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
+      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - A7md9Tp0m1JrKNVw6NzJVZ6TBx-R0kN6Z0_dtlfpQEJ354VC_x1Ohg==
+      - y8m4IY9Y5rS_x6Zgnwm8jE9F9YI-m3rextS0yNnwwTbfuakUBgL4cw==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -239,13 +263,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - EFvxQE1roAMFUCg=
+      - Hsgv-EZsoAMFxTQ=
       x-amzn-Remapped-Content-Length:
-      - '42'
+      - '1218'
       x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:30 GMT
       x-amzn-RequestId:
-      - 079a743e-a2af-4e31-a00c-36c66900e9ab
+      - cce3fc99-208d-47f8-b34c-1da6b571609a
     status:
       code: 200
       message: OK

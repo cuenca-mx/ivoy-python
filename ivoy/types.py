@@ -1,7 +1,6 @@
-import json
 from dataclasses import dataclass
 from enum import Enum, unique
-from typing import Optional
+from typing import List, Optional
 
 
 @unique
@@ -46,6 +45,24 @@ class OrderStatus(Enum):
     cancelled_by_user_with_collection = 12
 
 
+@unique
+class PackageStatus(Enum):
+    created = 1
+    in_order = 2
+    collected = 3
+    ready_to_storage = 4
+    ready_to_delivery = 5
+    delivered = 6
+    to_storage = 7
+    to_next_visit = 8
+    visits_done = 9
+    storaged = 10
+    canceled_visit = 12
+    deleted = 13
+    suspend_visit = 14
+    returned = 15
+
+
 @dataclass
 class OrderAddress:
     is_pickup: int
@@ -81,5 +98,89 @@ class OrderAddress:
             ),
         )
 
-    def to_json(self) -> str:
-        return json.dumps(self.to_dict())
+
+@dataclass
+class PackageAddress:
+    external_number: str
+    neighborhood: str
+    street: str
+    municipality: str
+    state: str
+    zip_code: str
+    internal_number: Optional[str] = ''
+    latitude: Optional[str] = ''
+    longitude: Optional[str] = ''
+    id: Optional[int] = None
+
+    def to_dict(self) -> dict:
+        return dict(
+            externalNumber=self.external_number,
+            internalNumber=self.internal_number,
+            latitude=self.latitude,
+            longitude=self.longitude,
+            neighborhood=self.neighborhood,
+            street=self.street,
+            municipality=self.municipality,
+            state=self.state,
+            zipCode=self.zip_code,
+            idAddress=self.id,
+        )
+
+
+@dataclass
+class PackageContact:
+    name: str
+    phone: str
+    email: str = ''
+    id: Optional[int] = None
+
+    def to_dict(self) -> dict:
+        return dict(
+            name=self.name,
+            phone=self.phone,
+            email=self.email,
+            idContact=self.id,
+        )
+
+
+@dataclass
+class PackageInfo:
+    address: PackageAddress
+    contact: PackageContact
+    ivoy_guide: Optional[str] = None
+    comment: Optional[str] = None
+    guide: Optional[str] = None
+    num_guides: Optional[int] = None
+    guides: Optional[List[str]] = None
+    package_type: Package = Package.envelope
+    is_office: bool = False
+    height: Optional[int] = None
+    width: Optional[int] = None
+    length: Optional[int] = None
+    real_weight: Optional[int] = None
+    id: Optional[int] = None
+    price: Optional[int] = None
+    status: Optional[PackageStatus] = None
+
+    def to_dict(self) -> dict:
+        data = dict(
+            idPackage=self.id,
+            ivoyGuide=self.ivoy_guide,
+            comment=self.comment,
+            guide=self.guide,
+            numGuides=self.num_guides,
+            guides=self.guides,
+            address=self.address.to_dict(),
+            contact=self.contact.to_dict(),
+            packageType=dict(idPackageType=self.package_type.value),
+            isOffice=self.is_office,
+            height=self.height,
+            width=self.width,
+            length=self.length,
+            realWeight=self.real_weight,
+            price=self.price,
+        )
+        for key in list(data):
+            if data[key] is None:
+                del data[key]
+        return data

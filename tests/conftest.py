@@ -28,11 +28,16 @@ def scrub_body_request(request: Request) -> dict:
 
 
 def scrub_body_response(response: dict) -> dict:
-    if (
-        'token' in response['body']['string'].decode()
-        and 'isActive' in response['body']['string'].decode()
-    ):
-        response['body']['string'] = json.dumps(
-            dict(code=0, token=dict(access_token='123'))
-        ).encode('utf-8')
+    if type(response['body']['string']) != bytes:
+        if (
+            'token' in response['body']['string'].decode()
+            and 'isActive' in response['body']['string'].decode()
+        ):
+            response['body']['string'] = json.dumps(
+                dict(
+                    code=0,
+                    token=dict(access_token='123'),
+                    data=dict(idClient=69319),
+                )
+            ).encode('utf-8')
     return response

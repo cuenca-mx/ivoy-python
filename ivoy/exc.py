@@ -17,6 +17,10 @@ class NotEnoughAddresses(IvoyException):
     """Addresses Needed to create Budget/Order"""
 
 
+class NecessaryFields(IvoyException):
+    """Necessary Fields needed to create/edit Packages"""
+
+
 class InvalidPhone(IvoyException):
     def __init__(self, **kwargs):
         message = f'Invalid or incomplete Phone Number'
@@ -74,6 +78,12 @@ class InvalidDate(IvoyException):
 class InvalidVehicle(IvoyException):
     def __init__(self, **kwargs):
         message = f'Error on vehicle or not available'
+        super().__init__(message=message, **kwargs)
+
+
+class InvalidWarehouse(IvoyException):
+    def __init__(self, **kwargs):
+        message = f'Invalid Warehouse id'
         super().__init__(message=message, **kwargs)
 
 
@@ -174,6 +184,7 @@ IVOY_EXCEPTIONS = {
     -251: UnableToCreate,
     -252: InvalidVehicle,
     -258: InvalidVehicle,
+    -327: InvalidWarehouse,
 }
 
 

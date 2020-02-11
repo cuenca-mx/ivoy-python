@@ -9,69 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
-  response:
-    body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '4891'
-      Content-Security-Policy:
-      - default-src 'self'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
-      Referrer-Policy:
-      - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
-      - Origin
-      Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - VC28C9TS60yjakbyylnfbMWXsZLEdcMAOxlXEANg9aUrV5N1mHowEw==
-      X-Amz-Cf-Pop:
-      - IAH50-C1
-      X-Cache:
-      - Miss from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      X-Permitted-Cross-Domain-Policies:
-      - all
-      X-XSS-Protection:
-      - 1; mode=block
-      x-amz-apigw-id:
-      - EFvxME4-oAMFWyw=
-      x-amzn-Remapped-Content-Length:
-      - '4891'
-      x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
-      x-amzn-RequestId:
-      - 08bff0ca-bd7c-43cb-a622-60c44b218af0
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
@@ -86,23 +24,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4890'
+      - '6013'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - DNIWJY1KDlPjwL6OlekCeeY96T4iHcO_4cppUgsy1v37y-THuCgtig==
+      - jTq7w82Uduil5dHCbPtyDg9HyPs5p7bgfOijUtB_K55dBoXBiBVkLQ==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -114,13 +52,76 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - EFvxOF6NIAMF5yg=
+      - HsgxSFy8oAMFjkg=
       x-amzn-Remapped-Content-Length:
-      - '4890'
+      - '6013'
       x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:38 GMT
       x-amzn-RequestId:
-      - 7d515f88-8b6d-463f-ab8b-fd3f81602a17
+      - c03865d0-0c76-4637-b131-f6840eb96d36
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
+        69319}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6012'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Feb 2020 19:26:39 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Vary:
+      - Origin
+      Via:
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - RL8dHLUXie9_VUtbd9W4wWDeK7ym48XZe8cfI2cjsmWlqPHcTlxIzQ==
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      x-amz-apigw-id:
+      - HsgxUHWfoAMF9Hg=
+      x-amzn-Remapped-Content-Length:
+      - '6012'
+      x-amzn-Remapped-Date:
+      - Mon, 10 Feb 2020 19:26:39 GMT
+      x-amzn-RequestId:
+      - 51b07c0c-5058-4b10-9e6e-e3e54d8bdbe8
     status:
       code: 200
       message: OK
@@ -155,15 +156,15 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - cm7a4D97p75nYquT43lV5grbEVMltMKt3Ds5F7XWEMnpUVG-iMzuoQ==
+      - sQVtv3PAAgPgLmQyBFusQbegsfxaRnOZ1wYzDsluI9x0h7X1wUzgXQ==
       X-Amz-Cf-Pop:
       - IAH50-C4
       X-Cache:
@@ -177,18 +178,19 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - Hsgv6E8QoAMFVNQ=
+      - HsgxZFGQIAMFjCQ=
       x-amzn-Remapped-Content-Length:
       - '6015'
       x-amzn-Remapped-Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       x-amzn-RequestId:
-      - a0f42630-a4c0-4abe-932c-7767754d4df1
+      - c3d0a374-a433-4528-86ce-5d31c4f8755d
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": "wrong"}}}'
+    body: '{"data": {"packageRequest": {"idClient": "69319", "packageList": [{"idPackage":
+      40870}]}}}'
     headers:
       Accept:
       - '*/*'
@@ -197,37 +199,37 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '42'
+      - '90'
       Content-type:
       - application/json
       User-Agent:
       - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/order/getById/json/web
+    method: PUT
+    uri: https://api.ivoy.dev/public/packages/setData/deletePackage/json/web
   response:
     body:
-      string: '{"code":-100,"message":"Formato invalido"}'
+      string: '{"code":0,"data":true}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '42'
+      - '22'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Vary:
       - Origin
       Via:
-      - 1.1 f373f5855a8cd01ebb70c7b043d4222a.cloudfront.net (CloudFront)
+      - 1.1 59df6d0a09c425fa63105c74b980506c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - A7md9Tp0m1JrKNVw6NzJVZ6TBx-R0kN6Z0_dtlfpQEJ354VC_x1Ohg==
+      - kIaSORN9XjiiIUpWTl3FIX3j78X8Z_EYgGaPj0ztTtWpFzfkQlAXJg==
       X-Amz-Cf-Pop:
-      - IAH50-C1
+      - IAH50-C4
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -239,13 +241,13 @@ interactions:
       X-XSS-Protection:
       - 1; mode=block
       x-amz-apigw-id:
-      - EFvxQE1roAMFUCg=
+      - HsgxfGRUIAMFRyw=
       x-amzn-Remapped-Content-Length:
-      - '42'
+      - '22'
       x-amzn-Remapped-Date:
-      - Mon, 02 Dec 2019 19:03:35 GMT
+      - Mon, 10 Feb 2020 19:26:39 GMT
       x-amzn-RequestId:
-      - 079a743e-a2af-4e31-a00c-36c66900e9ab
+      - aa116ee8-4eab-4484-ab8b-f97221922050
     status:
       code: 200
       message: OK
