@@ -99,9 +99,6 @@ class OrderAddress:
             ),
         )
 
-    def to_json(self) -> str:
-        return json.dumps(self.to_dict())
-
 
 @dataclass
 class PackageAddress:
@@ -130,9 +127,6 @@ class PackageAddress:
             idAddress=self.id,
         )
 
-    def to_json(self) -> str:
-        return json.dumps(self.to_dict())
-
 
 @dataclass
 class PackageContact:
@@ -148,9 +142,6 @@ class PackageContact:
             email=self.email,
             idContact=self.id,
         )
-
-    def to_json(self) -> str:
-        return json.dumps(self.to_dict())
 
 
 @dataclass
@@ -194,6 +185,3 @@ class PackageInfo:
             if data[key] is None:
                 del data[key]
         return data
-
-    def to_json(self) -> str:
-        return json.dumps(self.to_dict())
