@@ -10,7 +10,6 @@ from .resources import (
     Order,
     OrderSharing,
     Package,
-    Resource,
     Waybill,
 )
 
@@ -36,12 +35,35 @@ class Client:
     session: Session
 
     # resources
-    budget: ClassVar = Budget
-    carrier_location: ClassVar = CarrierLocation
-    order: ClassVar = Order
-    order_sharing: ClassVar = OrderSharing
-    package: ClassVar = Package
-    waybill: ClassVar = Waybill
+    @property
+    def order(self):
+        Order._client = self
+        return Order
+
+    @property
+    def package(self):
+        Package._client = self
+        return Package
+
+    @property
+    def budget(self):
+        Budget._client = self
+        return Budget
+
+    @property
+    def carrier_location(self):
+        CarrierLocation._client = self
+        return CarrierLocation
+
+    @property
+    def order_sharing(self):
+        OrderSharing._client = self
+        return OrderSharing
+
+    @property
+    def waybill(self):
+        Waybill._client = self
+        return Waybill
 
     def __init__(
         self,
@@ -73,7 +95,6 @@ class Client:
         self.web_token = None
         self.same_day_token = None
         self.id_client = os.environ['IVOY_ID_CLIENT'] or None
-        Resource._client = self
 
     def get_token(
         self, web_token: bool = False, same_day_token: bool = False
