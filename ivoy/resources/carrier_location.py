@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import ClassVar
 
+from ivoy.exc import raise_ivoy_exception
+
 from .base import Resource
 
 
@@ -18,8 +20,12 @@ class CarrierLocation(Resource):
         json_data = dict(data=dict(bOrder=dict(idOrder=order_id)))
         resp = cls._client.post(cls._endpoint, json=json_data)
         resp = resp.json()
+        try:
+            messenger_location = resp['data']['messengerLocation']
+        except KeyError as e:
+            raise_ivoy_exception(-999, str(e))
         return cls(
             id=order_id,
-            latitude=resp['data']['messengerLocation']['latitude'],
-            longitude=resp['data']['messengerLocation']['longitude'],
+            latitude=messenger_location['latitude'],
+            longitude=messenger_location['longitude'],
         )
