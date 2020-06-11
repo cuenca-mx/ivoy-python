@@ -136,7 +136,9 @@ class Client:
             headers = self.create_headers(endpoint, same_day=True)
         else:
             headers = self.create_headers(endpoint)
-        response = self.session.request(method, url, headers=headers, **kwargs)
+        response = self.session.request(
+            method, url, headers=headers, timeout=90, **kwargs
+        )
         try:
             self._check_response(response, is_waybill)
         except ExpiredTokens:
