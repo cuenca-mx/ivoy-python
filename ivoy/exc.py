@@ -111,6 +111,12 @@ class NotRegistered(IvoyException):
         super().__init__(message=message, **kwargs)
 
 
+class MessengerLocationNotAvailable(IvoyException):
+    def __init__(self, **kwargs):
+        message = f'Messenger Location is not available'
+        super().__init__(message=message, **kwargs)
+
+
 IVOY_EXCEPTIONS = {
     -101: InvalidPhone,
     -102: InvalidPhone,
@@ -185,6 +191,7 @@ IVOY_EXCEPTIONS = {
     -252: InvalidVehicle,
     -258: InvalidVehicle,
     -327: InvalidWarehouse,
+    -999: MessengerLocationNotAvailable,
 }
 
 
