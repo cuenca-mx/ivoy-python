@@ -10,7 +10,7 @@ test_requires = [
     'pycodestyle',
     'pytest-cov',
     'black',
-    'isort[pipfile]',
+    'isort>=4.3.21,<4.4',
     'flake8',
     'mypy',
     'iso8601',
