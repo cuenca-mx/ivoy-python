@@ -8,7 +8,7 @@ test_requires = [
     'pytest',
     'pytest-vcr',
     'pycodestyle',
-    'pytest-cov',
+    'pytest-cov==2.8.1',
     'black',
     'isort>=4.3.21,<4.4',
     'flake8==3.7.9',
