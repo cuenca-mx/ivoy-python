@@ -81,7 +81,7 @@ class Package(Resource):
     @staticmethod
     def _create_json(
         package_list: List[PackageInfo],
-        id_client: int = None,
+        id_client: str = None,
         id_warehouse: int = None,
     ) -> dict:
         json_data = dict(
@@ -97,7 +97,7 @@ class Package(Resource):
 
     @staticmethod
     def _retrieve_json_with_filters(
-        id_client: int,
+        id_client: Optional[str],
         start_page: int,
         elements_by_page: int,
         from_date: Optional[int],
@@ -120,13 +120,17 @@ class Package(Resource):
         return dict(data=dict(bPackage=dict(idPackage=identity_id)))
 
     @staticmethod
-    def _update_json(id_client: int, package_info: PackageInfo) -> dict:
+    def _update_json(
+        id_client: Optional[str], package_info: PackageInfo
+    ) -> dict:
         json_data = dict(data=dict(bPackage=package_info.to_dict()))
         json_data['data']['bPackage']['client'] = dict(idClient=id_client)
         return json_data
 
     @staticmethod
-    def _delete_json(identity_ids: List[int], id_client: int) -> dict:
+    def _delete_json(
+        identity_ids: List[int], id_client: Optional[str]
+    ) -> dict:
         return dict(
             data=dict(
                 packageRequest=dict(

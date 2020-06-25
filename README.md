@@ -1,7 +1,7 @@
 # iVoy
 
-[![Build Status](https://travis-ci.com/cuenca-mx/ivoy-python.svg?token=KUPW5wq7zSydeEVhVfVe&branch=master)](https://travis-ci.com/cuenca-mx/ivoy-python)
-[![Coverage Status](https://coveralls.io/repos/github/cuenca-mx/ivoy-python/badge.svg?branch=master&t=VaY2TA)](https://coveralls.io/github/cuenca-mx/ivoy-python?branch=master)
+[![test](https://github.com/cuenca-mx/ivoy-python/workflows/test/badge.svg)](https://github.com/cuenca-mx/ivoy-python/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/cuenca-mx/ivoy-python/branch/master/graph/badge.svg)](https://codecov.io/gh/cuenca-mx/ivoy-python)
 
 [iVoy Mensajería](https://ivoy.mx) Python3.6+ Client Library
 
