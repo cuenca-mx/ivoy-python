@@ -19,8 +19,10 @@ class OrderSharing(Resource):
     def get_tracking_url(cls, identity_id: str) -> 'OrderSharing':
         json_data = cls._json_data(identity_id)
         resp = cls._client.post(cls._endpoint, json=json_data)
-        resp = resp.json()
-        return cls(id=identity_id, tracking_url=resp['data']['trackingURL'])
+        resp_json = resp.json()
+        return cls(
+            id=identity_id, tracking_url=resp_json['data']['trackingURL']
+        )
 
     @staticmethod
     def _json_data(identity_id: str) -> dict:

@@ -220,7 +220,7 @@ def test_insufficient_founds():
     except exc.InsufficientFunds as e:
         assert client
         assert e.code == -139
-        assert e.message == f'Insufficient Founds'
+        assert e.message == 'Insufficient Founds'
 
 
 @pytest.mark.vcr

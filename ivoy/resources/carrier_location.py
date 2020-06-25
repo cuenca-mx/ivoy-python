@@ -19,9 +19,9 @@ class CarrierLocation(Resource):
     def get_location(cls, order_id: str) -> 'CarrierLocation':
         json_data = dict(data=dict(bOrder=dict(idOrder=order_id)))
         resp = cls._client.post(cls._endpoint, json=json_data)
-        resp = resp.json()
+        resp_json = resp.json()
         try:
-            messenger_location = resp['data']['messengerLocation']
+            messenger_location = resp_json['data']['messengerLocation']
         except KeyError as e:
             raise_ivoy_exception(-999, str(e))
         return cls(

@@ -28,10 +28,10 @@ class Budget(Resource):
         address_array = [address.to_dict() for address in addresses]
         body = dict(data=dict(bOrder=dict(orderAddresses=address_array)))
         resp = cls._client.post(cls._endpoint, json=body)
-        resp = resp.json()
-        data = resp['data']
+        resp_json = resp.json()
+        data = resp_json['data']
         return cls(
-            _response=resp,
+            _response=resp_json,
             distance=data['distance'],
             price=data['price'],
             eta=data['eta'],

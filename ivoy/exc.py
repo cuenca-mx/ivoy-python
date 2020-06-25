@@ -23,97 +23,97 @@ class NecessaryFields(IvoyException):
 
 class InvalidPhone(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Invalid or incomplete Phone Number'
+        message = 'Invalid or incomplete Phone Number'
         super().__init__(message=message, **kwargs)
 
 
 class InvalidInformation(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Invalid Information Provided'
+        message = 'Invalid Information Provided'
         super().__init__(message=message, **kwargs)
 
 
 class NotAvailable(IvoyException):
     def __init__(self, **kwargs):
-        message = f'System Not Available, try again later'
+        message = 'System Not Available, try again later'
         super().__init__(message=message, **kwargs)
 
 
 class OutOFRange(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Address is out of range'
+        message = 'Address is out of range'
         super().__init__(message=message, **kwargs)
 
 
 class InvalidCode(IvoyException):
     def __init__(self, **kwargs):
-        message = f'This code is not valid or already used'
+        message = 'This code is not valid or already used'
         super().__init__(message=message, **kwargs)
 
 
 class AlreadyExists(IvoyException):
     def __init__(self, **kwargs):
-        message = f'User with this information already exists'
+        message = 'User with this information already exists'
         super().__init__(message=message, **kwargs)
 
 
 class MissingInformation(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Incomplete or missing information'
+        message = 'Incomplete or missing information'
         super().__init__(message=message, **kwargs)
 
 
 class InvoiceError(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Invoice cannot be created for this order'
+        message = 'Invoice cannot be created for this order'
         super().__init__(message=message, **kwargs)
 
 
 class InvalidDate(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Invalid date try a different date'
+        message = 'Invalid date try a different date'
         super().__init__(message=message, **kwargs)
 
 
 class InvalidVehicle(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Error on vehicle or not available'
+        message = 'Error on vehicle or not available'
         super().__init__(message=message, **kwargs)
 
 
 class InvalidWarehouse(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Invalid Warehouse id'
+        message = 'Invalid Warehouse id'
         super().__init__(message=message, **kwargs)
 
 
 class DoesNotExists(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Could not find anything with the information provided'
+        message = 'Could not find anything with the information provided'
         super().__init__(message=message, **kwargs)
 
 
 class UnableToCreate(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Unable to create or process try again later'
+        message = 'Unable to create or process try again later'
         super().__init__(message=message, **kwargs)
 
 
 class InsufficientFunds(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Insufficient Founds'
+        message = 'Insufficient Founds'
         super().__init__(message=message, **kwargs)
 
 
 class NotRegistered(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Found not registered with the information provided'
+        message = 'Found not registered with the information provided'
         super().__init__(message=message, **kwargs)
 
 
 class MessengerLocationNotAvailable(IvoyException):
     def __init__(self, **kwargs):
-        message = f'Messenger Location is not available'
+        message = 'Messenger Location is not available'
         super().__init__(message=message, **kwargs)
 
 
