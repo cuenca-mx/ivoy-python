@@ -113,7 +113,9 @@ class Client:
                 ),
             ),
         )
-        response = self.session.request('POST', url, auth=auth, json=json_data, timeout=60)
+        response = self.session.request(
+            'POST', url, auth=auth, json=json_data, timeout=60
+        )
         self._check_response(response)
         data = response.json()
         self.id_client = data['data']['idClient']
