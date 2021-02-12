@@ -9,7 +9,7 @@ from .base import Resource
 @dataclass
 class CarrierLocation(Resource):
 
-    _endpoint: ClassVar[str] = '/api/orderSharing/getOrderSharing/json/web'
+    _endpoint: ClassVar[str] = '/v1/data/orderSharing/getOrderSharing/json/web'
 
     id: str
     latitude: float

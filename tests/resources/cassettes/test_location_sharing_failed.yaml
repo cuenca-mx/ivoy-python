@@ -9,117 +9,75 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
+      - '85'
       Content-Type:
       - application/json
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
+      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
+        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
+        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
+        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
+        23:35\"}}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6209c8deffd9521d-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '4891'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Dec 2019 01:41:26 GMT
+      - Fri, 12 Feb 2021 22:35:46 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      NEL:
+      - '{"report_to":"cf-nel","max_age":604800}'
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
-      - Origin
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=vbqg6eZa7o1friYz3OY6M4Cu6V%2FHg275Ix3AybSJKp8ejDNup0DolTyZ0awaD%2FsGHemmIXzPYAiKyBgyOnuVIjiEUISdfEsZQcfBU51HdaqHrNmMIFWq2tE%3D"}]}'
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cfduid=d022057804f59e80dd8721a9af8f4d1641613169346; expires=Sun, 14-Mar-21
+        22:35:46 GMT; path=/; domain=.ivoy.dev; HttpOnly; SameSite=Lax; Secure
+      Transfer-Encoding:
+      - chunked
       Via:
-      - 1.1 46cf8c846d441a6db760cf4a1563952f.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - K7NIhvVdvixo43uGLOaJbQPLa7gCUJx8neZzWFO9OJAY-mtoGZvULg==
-      X-Amz-Cf-Pop:
-      - DFW53-C1
-      X-Cache:
-      - Miss from cloudfront
+      - kong/2.2.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '170'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
-      x-amz-apigw-id:
-      - E4GHEHWiIAMFulw=
-      x-amzn-Remapped-Content-Length:
-      - '4891'
-      x-amzn-Remapped-Date:
-      - Wed, 18 Dec 2019 01:41:26 GMT
-      x-amzn-RequestId:
-      - 55029ec0-09c0-4029-b9f1-49a44a810cbe
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '91'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.22.0
-    method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
-  response:
-    body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '4890'
-      Content-Security-Policy:
-      - default-src 'self'
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 18 Dec 2019 01:41:27 GMT
-      Referrer-Policy:
-      - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
+      cf-request-id:
+      - 0839fbdf5c0000521da1166000000001
+      content-length:
+      - '4778'
+      vary:
       - Origin
-      Via:
-      - 1.1 46cf8c846d441a6db760cf4a1563952f.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - BwQC_CFiwLMgOUTqle6Ggl4Wt__Si_gU_4D4-x8nS-1g6tMlW-lA4g==
-      X-Amz-Cf-Pop:
-      - DFW53-C1
-      X-Cache:
-      - Miss from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      X-Permitted-Cross-Domain-Policies:
-      - all
-      X-XSS-Protection:
-      - 1; mode=block
-      x-amz-apigw-id:
-      - E4GHHGinoAMF-Qw=
-      x-amzn-Remapped-Content-Length:
-      - '4890'
-      x-amzn-Remapped-Date:
-      - Wed, 18 Dec 2019 01:41:27 GMT
-      x-amzn-RequestId:
-      - 965ad398-00cf-4687-a58a-e2b2c2d1b738
+      - Origin
     status:
       code: 200
       message: OK
@@ -136,53 +94,152 @@ interactions:
       - '85'
       Content-Type:
       - application/json
+      Cookie:
+      - __cfduid=d022057804f59e80dd8721a9af8f4d1641613169346
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
     uri: https://api.ivoy.dev/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
-        69319}}'
+      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
+        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
+        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
+        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
+        23:35\"}}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6209c8e1aa54521d-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '6015'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
+      - Fri, 12 Feb 2021 22:35:47 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      NEL:
+      - '{"report_to":"cf-nel","max_age":604800}'
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
-      Vary:
-      - Origin
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=%2BExZOaSBvfx5traPwHutoHqraAnIxG7psOa2lVA4Wrp%2Fqa2x4tngPmU8g%2FMIFHyg3pINWrexZnDo0ORDVubHDclrUVbp%2FoZO5Gj0LPclvbdwOKepmaN3Zfs%3D"}]}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - cm7a4D97p75nYquT43lV5grbEVMltMKt3Ds5F7XWEMnpUVG-iMzuoQ==
-      X-Amz-Cf-Pop:
-      - IAH50-C4
-      X-Cache:
-      - Miss from cloudfront
+      - kong/2.2.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '336'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
-      x-amz-apigw-id:
-      - Hsgv6E8QoAMFVNQ=
-      x-amzn-Remapped-Content-Length:
-      - '6015'
-      x-amzn-Remapped-Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
-      x-amzn-RequestId:
-      - a0f42630-a4c0-4abe-932c-7767754d4df1
+      cf-request-id:
+      - 0839fbe1060000521de910b000000001
+      content-length:
+      - '4778'
+      vary:
+      - Origin
+      - Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      Cookie:
+      - __cfduid=d022057804f59e80dd8721a9af8f4d1641613169346
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+  response:
+    body:
+      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
+        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
+        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
+        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
+        23:35\"}}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6209c8e44cea521d-MEX
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 12 Feb 2021 22:35:47 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      NEL:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=I4s%2FH17oTmBUhWSylTLJSn%2BQopysOY6ItkKcmfU3h9MPlEj9cy7hoACQ2VNMgBZ4FVKcL6Jjyigo5ODJwB6JQJUidB681H52X5R5LXzIyZhgE7oNnXWkuxE%3D"}]}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - kong/2.2.0
+      WWW-Authenticate:
+      - Key realm="kong"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '115'
+      X-Permitted-Cross-Domain-Policies:
+      - all
+      X-XSS-Protection:
+      - 1; mode=block
+      cf-request-id:
+      - 0839fbe2aa0000521dcc89a000000001
+      content-length:
+      - '4778'
+      vary:
+      - Origin
+      - Origin
     status:
       code: 200
       message: OK
@@ -200,35 +257,58 @@ interactions:
       Content-type:
       - application/json
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
-    uri: https://data.alb.api.ivoy.mx/api/orderSharing/getOrderSharing/json/web
+    uri: https://api.ivoy.mx/v1/data/orderSharing/getOrderSharing/json/web
   response:
     body:
       string: '{"code":-111,"message":"Informacion invalida: Datos de la Orden"}'
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6209c8e5eb765211-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '65'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Dec 2019 01:41:27 GMT
+      - Fri, 12 Feb 2021 22:35:47 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cfduid=dca7177e2f4255d5ab772949774599fc31613169347; expires=Sun, 14-Mar-21
+        22:35:47 GMT; path=/; domain=.ivoy.mx; HttpOnly; SameSite=Lax; Secure
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Origin
+      Via:
+      - kong/2.3.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '153'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
+      cf-request-id:
+      - 0839fbe3ac0000521165249000000001
+      content-length:
+      - '65'
     status:
       code: 200
       message: OK
