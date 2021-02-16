@@ -9,6 +9,7 @@ from ivoy.resources import OrderSharing
 def test_order_sharing():
     client = Client()
     order_sharing = client.order_sharing.get_tracking_url(2883031)
+    assert client
     assert order_sharing
     assert type(order_sharing) == OrderSharing
     assert order_sharing.id == 2883031
