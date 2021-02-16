@@ -18,8 +18,7 @@ def scrub_body_request(request: Request) -> dict:
     body = request.body.decode('utf-8')
     body_dict = json.loads(body)
     try:
-        body_dict['data']['systemRequest']['user'] = 'USER'
-        body_dict['data']['systemRequest']['password'] = 'PASS'
+       pass
     except KeyError:
         pass
 

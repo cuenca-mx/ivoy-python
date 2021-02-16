@@ -10,7 +10,9 @@ class OrderSharing(Resource):
     This is based in iVoy App
     """
 
-    _endpoint: ClassVar[str] = '/api/orderSharing/createSharingURL/json/web'
+    _endpoint: ClassVar[
+        str
+    ] = '/v1/data/orderSharing/createSharingURL/json/web'
 
     id: str
     tracking_url: str
