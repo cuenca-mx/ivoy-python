@@ -11,10 +11,10 @@ def test_order_sharing():
     order_sharing = client.order_sharing.get_tracking_url(2883031)
     assert order_sharing
     assert type(order_sharing) == OrderSharing
-    assert order_sharing.id == 1438597
+    assert order_sharing.id == 2883031
     assert (
         order_sharing.tracking_url
-        == 'https://v2.ivoy.mx/client/app/share/MTQzODU5N2k='
+        == 'https://v2.ivoy.mx/client/app/share/Mjg4MzAzMWk='
     )
 
 
