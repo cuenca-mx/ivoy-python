@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -78,7 +78,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -141,7 +141,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -205,7 +205,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: PUT
-    uri: https://api.ivoy.dev/public/packages/setData/deletePackage/json/web
+    uri: https://api.ivoy.mx/public/packages/setData/deletePackage/json/web
   response:
     body:
       string: '{"code":0,"data":true}'

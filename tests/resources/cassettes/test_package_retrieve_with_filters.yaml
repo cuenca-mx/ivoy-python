@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
@@ -154,7 +154,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
@@ -293,7 +293,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\"\
@@ -433,7 +433,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/public/packages/getData/getPackagesWithFilters/json/web
+    uri: https://api.ivoy.mx/public/packages/getData/getPackagesWithFilters/json/web
   response:
     body:
       string: "{\"code\":0,\"data\":{\"fromDate\":1580855097799,\"untilDate\":1581033404458,\"\

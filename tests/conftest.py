@@ -18,7 +18,7 @@ def scrub_body_request(request: Request) -> dict:
     body = request.body.decode('utf-8')
     body_dict = json.loads(body)
     try:
-       pass
+        pass
     except KeyError:
         pass
 
