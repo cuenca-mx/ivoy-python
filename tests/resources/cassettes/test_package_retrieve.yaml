@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -78,7 +78,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -141,7 +141,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
       string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
@@ -204,7 +204,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: POST
-    uri: https://api.ivoy.dev/public/package/selectPackage/json/web
+    uri: https://api.ivoy.mx/public/package/selectPackage/json/web
   response:
     body:
       string: "{\"code\":0,\"data\":{\"idPackage\":40871,\"comment\":\"Churrer\xED\

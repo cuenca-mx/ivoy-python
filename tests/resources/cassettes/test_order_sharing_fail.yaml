@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    body: '{"data": {"systemRequest": {"user": "soporte@cuenca.com", "password": "k*tfGDF7e}-^"}}}'
     headers:
       Accept:
       - '*/*'
@@ -9,60 +9,87 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
+      - '87'
       Content-Type:
       - application/json
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data":{"idClient": 69319}}'
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\",\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\",\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\",\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\",\"lastName\":\".\",\"nickname\":\"Daniel
+        Monterde_Y2H72_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":2,\"description\":\"Cliente
+        con Prepago\",\"name\":\"client_prepaid\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis
+        Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\":1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\",\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\":\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\":\"CUENCA
+        LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\":\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"AVENIDA
+        PASEO DE LA REFORMA\",\"municipality\":\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD
+        DE M\xC9XICO\",\"zipCode\":\"06500\",\"originalAddress\":\"AVENIDA PASEO DE
+        LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\":0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\":729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\":82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\":82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\":82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\":1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxMzQzNzM4MSwidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxMzQzNzM4MSwiZXhwIjoxNjEzNDQwOTgxLCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.A9um_SlmmyU2MVM-f-trmTxC0wA0IC__DXF0Agvda1zzJ4QKNLCbA3q-A46xtU-sVvlddpDfg4Sf7yyd7hsHYIPL4RPun1XESg2Ze-OOydpn5Oa9AwekBYRcPACke4SY6WSobYrQEKlf_mBjKiph5eQpqRiiVhPFh5e08Th00ar3cxprJmrzW0sTexwsIGBZpO__SZ_2TCTE_Os7tQrwCzioymkhpzzZAe0uee6qu-56_HUDguGpcrvtRyB8ujgafqGJ7w92ncIj2wV-QNUE4Fiu3D8hrbk-9ec1xTNSb2MNr3GntSvhzD0CPi7BXQOHfmmMXSO5MfEaIObUVcfXMw\",\"token_type\":\"ivoyat\",\"expires_in\":\"15/02/21
+        20:03\"}}"
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 622359849da2522f-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '4891'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 19:07:32 GMT
+      - Tue, 16 Feb 2021 01:03:36 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cfduid=d80be66e20cfb40b1e0dd7ff5f1e86bd51613437415; expires=Thu, 18-Mar-21
+        01:03:35 GMT; path=/; domain=.ivoy.mx; HttpOnly; SameSite=Lax; Secure
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Origin
       Via:
-      - 1.1 47e18044f27eee03e80fe9a5284f7924.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - Bvr_gRaAcClSsX2hWyKsxt8WGKT-sHQTYZEoE_mCIlUEpjTrbITECQ==
-      X-Amz-Cf-Pop:
-      - IAH50-C1
-      X-Cache:
-      - Miss from cloudfront
+      - kong/2.3.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '1071'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
-      x-amz-apigw-id:
-      - D1RqIEvHoAMF9pA=
-      x-amzn-Remapped-Content-Length:
-      - '4891'
-      x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 19:07:32 GMT
-      x-amzn-RequestId:
-      - 8cba9fb9-a4d4-4883-a763-5b38b9a3a258
+      cf-request-id:
+      - 0849f646e30000522f0035d000000001
+      content-length:
+      - '5611'
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    body: '{"data": {"systemRequest": {"user": "soporte@cuenca.com", "password": "k*tfGDF7e}-^"}}}'
     headers:
       Accept:
       - '*/*'
@@ -71,61 +98,86 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '91'
+      - '87'
       Content-Type:
       - application/json
+      Cookie:
+      - __cfduid=d80be66e20cfb40b1e0dd7ff5f1e86bd51613437415
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
-        69319}}'
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\",\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\",\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\",\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\",\"lastName\":\".\",\"nickname\":\"Daniel
+        Monterde_Y2H72_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":2,\"description\":\"Cliente
+        con Prepago\",\"name\":\"client_prepaid\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis
+        Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\":1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\",\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\":\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\":\"CUENCA
+        LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\":\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"AVENIDA
+        PASEO DE LA REFORMA\",\"municipality\":\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD
+        DE M\xC9XICO\",\"zipCode\":\"06500\",\"originalAddress\":\"AVENIDA PASEO DE
+        LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\":0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\":729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\":82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\":82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\":82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\":1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxMzQzNzM4MSwidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxMzQzNzM4MSwiZXhwIjoxNjEzNDQwOTgxLCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.A9um_SlmmyU2MVM-f-trmTxC0wA0IC__DXF0Agvda1zzJ4QKNLCbA3q-A46xtU-sVvlddpDfg4Sf7yyd7hsHYIPL4RPun1XESg2Ze-OOydpn5Oa9AwekBYRcPACke4SY6WSobYrQEKlf_mBjKiph5eQpqRiiVhPFh5e08Th00ar3cxprJmrzW0sTexwsIGBZpO__SZ_2TCTE_Os7tQrwCzioymkhpzzZAe0uee6qu-56_HUDguGpcrvtRyB8ujgafqGJ7w92ncIj2wV-QNUE4Fiu3D8hrbk-9ec1xTNSb2MNr3GntSvhzD0CPi7BXQOHfmmMXSO5MfEaIObUVcfXMw\",\"token_type\":\"ivoyat\",\"expires_in\":\"15/02/21
+        20:03\"}}"
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6223598bee55522f-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '4890'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 19:07:32 GMT
+      - Tue, 16 Feb 2021 01:03:37 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Origin
       Via:
-      - 1.1 47e18044f27eee03e80fe9a5284f7924.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - dsSgHU1GwR4QDI5YIbhqkr6fkJroDWW6Ik0XyjpAUlO8JExoL0bgyA==
-      X-Amz-Cf-Pop:
-      - IAH50-C1
-      X-Cache:
-      - Miss from cloudfront
+      - kong/2.3.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '1105'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
-      x-amz-apigw-id:
-      - D1RqKHBoIAMFj0A=
-      x-amzn-Remapped-Content-Length:
-      - '4890'
-      x-amzn-Remapped-Date:
-      - Wed, 27 Nov 2019 19:07:32 GMT
-      x-amzn-RequestId:
-      - 5c826804-a11b-42d4-ba91-0e48230e9e8b
+      cf-request-id:
+      - 0849f64b6f0000522f51a5b000000001
+      content-length:
+      - '5611'
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"systemRequest": {"user": "USER", "password": "PASS"}}}'
+    body: '{"data": {"systemRequest": {"user": "soporte@cuenca.com", "password": "k*tfGDF7e}-^"}}}'
     headers:
       Accept:
       - '*/*'
@@ -134,61 +186,86 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '85'
+      - '87'
       Content-Type:
       - application/json
+      Cookie:
+      - __cfduid=d80be66e20cfb40b1e0dd7ff5f1e86bd51613437415
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
-    uri: https://api.ivoy.dev/api/login/loginClient/json/web
+    uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: '{"code": 0, "token": {"access_token": "123"}, "data": {"idClient":
-        69319}}'
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\",\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\",\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\",\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\",\"lastName\":\".\",\"nickname\":\"Daniel
+        Monterde_Y2H72_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
+        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":2,\"description\":\"Cliente
+        con Prepago\",\"name\":\"client_prepaid\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis
+        Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\":1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\",\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\":\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\":\"CUENCA
+        LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\":\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\":\"JU\xC1REZ\",\"street\":\"AVENIDA
+        PASEO DE LA REFORMA\",\"municipality\":\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD
+        DE M\xC9XICO\",\"zipCode\":\"06500\",\"originalAddress\":\"AVENIDA PASEO DE
+        LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
+        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\":0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\":729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\":82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\":82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\":82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\":1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\":\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila
+        Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxMzQzNzM4MSwidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxMzQzNzM4MSwiZXhwIjoxNjEzNDQwOTgxLCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.A9um_SlmmyU2MVM-f-trmTxC0wA0IC__DXF0Agvda1zzJ4QKNLCbA3q-A46xtU-sVvlddpDfg4Sf7yyd7hsHYIPL4RPun1XESg2Ze-OOydpn5Oa9AwekBYRcPACke4SY6WSobYrQEKlf_mBjKiph5eQpqRiiVhPFh5e08Th00ar3cxprJmrzW0sTexwsIGBZpO__SZ_2TCTE_Os7tQrwCzioymkhpzzZAe0uee6qu-56_HUDguGpcrvtRyB8ujgafqGJ7w92ncIj2wV-QNUE4Fiu3D8hrbk-9ec1xTNSb2MNr3GntSvhzD0CPi7BXQOHfmmMXSO5MfEaIObUVcfXMw\",\"token_type\":\"ivoyat\",\"expires_in\":\"15/02/21
+        20:03\"}}"
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 622359936ff3522f-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '6015'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
+      - Tue, 16 Feb 2021 01:03:38 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Origin
       Via:
-      - 1.1 9422830f707ade946de8476fde24aafa.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - cm7a4D97p75nYquT43lV5grbEVMltMKt3Ds5F7XWEMnpUVG-iMzuoQ==
-      X-Amz-Cf-Pop:
-      - IAH50-C4
-      X-Cache:
-      - Miss from cloudfront
+      - kong/2.3.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '1100'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
-      x-amz-apigw-id:
-      - Hsgv6E8QoAMFVNQ=
-      x-amzn-Remapped-Content-Length:
-      - '6015'
-      x-amzn-Remapped-Date:
-      - Mon, 10 Feb 2020 19:26:29 GMT
-      x-amzn-RequestId:
-      - a0f42630-a4c0-4abe-932c-7767754d4df1
+      cf-request-id:
+      - 0849f6501e0000522f1ebfd000000001
+      content-length:
+      - '5611'
     status:
       code: 200
       message: OK
 - request:
-    body: '{"data": {"bOrder": {"idOrder": 1437397}}}'
+    body: '{"data": {"bOrder": {"idOrder": 2883031}}}'
     headers:
       Accept:
       - '*/*'
@@ -200,37 +277,58 @@ interactions:
       - '42'
       Content-type:
       - application/json
+      Cookie:
+      - __cfduid=d80be66e20cfb40b1e0dd7ff5f1e86bd51613437415
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.24.0
     method: POST
-    uri: https://data.alb.api.ivoy.mx/api/orderSharing/createSharingURL/json/web
+    uri: https://api.ivoy.mx/v1/data/orderSharing/createSharingURL/json/web
   response:
     body:
-      string: "{\"code\":-283,\"message\":\"El tracking de tu orden no esta disponible\
-        \ , consulta m\xE1s tarde\"}"
+      string: '{"code":0,"data":{"messengerRate":0.0,"trackingURL":"https://v2.ivoy.mx/client/app/share/Mjg4MzAzMWk="}}'
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6223599ad961522f-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '90'
       Content-Security-Policy:
       - default-src 'self'
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Nov 2019 19:07:32 GMT
+      - Tue, 16 Feb 2021 01:03:39 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Origin
+      Via:
+      - kong/2.3.0
+      WWW-Authenticate:
+      - Key realm="kong"
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '492'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
+      cf-request-id:
+      - 0849f654cb0000522f369ac000000001
+      content-length:
+      - '104'
     status:
       code: 200
       message: OK

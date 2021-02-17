@@ -9,6 +9,7 @@ from ivoy.resources import CarrierLocation
 def test_location_sharing_success():
     client = Client()
     location_sharing = client.carrier_location.get_location(1502057)
+    assert client
     assert type(location_sharing) == CarrierLocation
     assert location_sharing.id == 1502057
     assert type(location_sharing.latitude) == float
@@ -19,7 +20,7 @@ def test_location_sharing_success():
 def test_location_sharing_no_messenger_location():
     with pytest.raises(IvoyException):
         client = Client()
-        location_sharing = client.carrier_location.get_location(1502058)
+        location_sharing = client.carrier_location.get_location(9502058)
         assert client
         assert IvoyException.code == -999
         assert location_sharing is None
