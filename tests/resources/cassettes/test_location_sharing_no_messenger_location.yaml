@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '85'
+      - '87'
       Content-Type:
       - application/json
       User-Agent:
@@ -18,20 +18,71 @@ interactions:
     uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
-        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
-        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
-        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
-        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
-        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
-        23:35\"}}"
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\"\
+        ,\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\"\
+        ,\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\"\
+        ,\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\"\
+        ,\"lastName\":\".\",\"nickname\":\"Daniel Monterde_Y2H72_c\",\"clientProfile\"\
+        :{\"idClientProfile\":6,\"description\":\"Clientes Credito/Prepago\",\"name\"\
+        :\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\"\
+        :54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
+        }},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\"\
+        ,\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\"\
+        :2,\"description\":\"Cliente con Prepago\",\"name\":\"client_prepaid\"},\"\
+        gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"\
+        clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis\
+        \ Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\"\
+        :1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\"\
+        ,\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\"\
+        :\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\"\
+        :\"CUENCA LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\"\
+        :\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\"\
+        :\"JU\xC1REZ\",\"street\":\"AVENIDA PASEO DE LA REFORMA\",\"municipality\"\
+        :\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD DE M\xC9XICO\",\"zipCode\":\"06500\"\
+        ,\"originalAddress\":\"AVENIDA PASEO DE LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9\
+        MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\"\
+        :4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\",\"zones\"\
+        :\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\"\
+        :0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\"\
+        :729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\"\
+        :true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\"\
+        :82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\"\
+        :1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\"\
+        :\"Priscila Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"\
+        idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"\
+        isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"\
+        dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"\
+        isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"\
+        userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila\
+        \ Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\"\
+        :{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"\
+        },\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\"\
+        ,\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImM0ZWFhZjkxM2VlNWY0MDY0YmE2NjUzN2M0Njk3YzY5OGE3NGYwODIiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxNDYzNzM3NywidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxNDYzNzM3NywiZXhwIjoxNjE0NjQwOTc3LCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.uTHMR9ZDrE5ai1GhZe7VS2-ufMhCsbtK5DfIP6x1IF3VQD1wo1SRsyP2YEkvXRBg02BYa6BS4ih9gjh2czM9JujMgErfixKm3Xz8jJOioM4FS-4_fgr61DW4Xcb5XOcCLa9GFEnH3A_kbHNZkX4-bf8Q_McUwFLXwCSsaYpVthO8v1eRWhtLpjDWbUjDkuHmAEXE4KBEB7mvbpJux6X237VGchTuHxcRpz_LLoBKo4Zc5A9ZNlF1bV6yQVC7Ga-jmDWlDmkR6ZrWSO-UroVxotyRj1s0BsTJJZzf5betREcbV3i98VnpLe740XyUHXQjV8XOdhDK2rZdBFwRAfXqIg\"\
+        ,\"token_type\":\"ivoyat\",\"expires_in\":\"01/03/21 17:22\"}}"
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6209c8d7be7b522f-MEX
+      - 6295c9756a3b9a44-MFE
       Connection:
       - keep-alive
       Content-Security-Policy:
@@ -39,24 +90,22 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 12 Feb 2021 22:35:45 GMT
+      - Mon, 01 Mar 2021 22:22:58 GMT
       Expect-CT:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      NEL:
-      - '{"max_age":604800,"report_to":"cf-nel"}'
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=aY4H3tJfSywPCYePTj4nxDd2%2B67pxHpjKIHKH8yUVH%2BHvIRjp9b%2B528SdEbYHgq5EcDi7ExvfC76fWDbQ2FsPcB7Z92czJY9hgAjD%2FUZXAAKqd1sUw7GQ%2Bc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Set-Cookie:
-      - __cfduid=d845395c51237f6fbc9daf9453d9095e41613169345; expires=Sun, 14-Mar-21
-        22:35:45 GMT; path=/; domain=.ivoy.dev; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=dec3ffe74bca89d4269053397321396cb1614637376; expires=Wed, 31-Mar-21
+        22:22:56 GMT; path=/; domain=.ivoy.mx; HttpOnly; SameSite=Lax; Secure
       Transfer-Encoding:
       - chunked
+      Vary:
+      - Origin
       Via:
-      - kong/2.2.0
+      - kong/2.3.0
       WWW-Authenticate:
       - Key realm="kong"
       X-Content-Type-Options:
@@ -66,18 +115,15 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '118'
+      - '1647'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
       cf-request-id:
-      - 0839fbdad40000522f2627a000000001
+      - 08917c3d6300009a4491bb6000000001
       content-length:
-      - '4778'
-      vary:
-      - Origin
-      - Origin
+      - '5611'
     status:
       code: 200
       message: OK
@@ -91,31 +137,82 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '85'
+      - '87'
       Content-Type:
       - application/json
       Cookie:
-      - __cfduid=d845395c51237f6fbc9daf9453d9095e41613169345
+      - __cfduid=dec3ffe74bca89d4269053397321396cb1614637376
       User-Agent:
       - python-requests/2.24.0
     method: POST
     uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
-        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
-        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
-        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
-        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
-        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
-        23:35\"}}"
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\"\
+        ,\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\"\
+        ,\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\"\
+        ,\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\"\
+        ,\"lastName\":\".\",\"nickname\":\"Daniel Monterde_Y2H72_c\",\"clientProfile\"\
+        :{\"idClientProfile\":6,\"description\":\"Clientes Credito/Prepago\",\"name\"\
+        :\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\"\
+        :54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
+        }},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\"\
+        ,\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\"\
+        :2,\"description\":\"Cliente con Prepago\",\"name\":\"client_prepaid\"},\"\
+        gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"\
+        clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis\
+        \ Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\"\
+        :1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\"\
+        ,\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\"\
+        :\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\"\
+        :\"CUENCA LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\"\
+        :\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\"\
+        :\"JU\xC1REZ\",\"street\":\"AVENIDA PASEO DE LA REFORMA\",\"municipality\"\
+        :\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD DE M\xC9XICO\",\"zipCode\":\"06500\"\
+        ,\"originalAddress\":\"AVENIDA PASEO DE LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9\
+        MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\"\
+        :4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\",\"zones\"\
+        :\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\"\
+        :0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\"\
+        :729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\"\
+        :true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\"\
+        :82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\"\
+        :1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\"\
+        :\"Priscila Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"\
+        idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"\
+        isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"\
+        dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"\
+        isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"\
+        userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila\
+        \ Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\"\
+        :{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"\
+        },\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\"\
+        ,\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImM0ZWFhZjkxM2VlNWY0MDY0YmE2NjUzN2M0Njk3YzY5OGE3NGYwODIiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxNDYzNzM3NywidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxNDYzNzM3NywiZXhwIjoxNjE0NjQwOTc3LCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.uTHMR9ZDrE5ai1GhZe7VS2-ufMhCsbtK5DfIP6x1IF3VQD1wo1SRsyP2YEkvXRBg02BYa6BS4ih9gjh2czM9JujMgErfixKm3Xz8jJOioM4FS-4_fgr61DW4Xcb5XOcCLa9GFEnH3A_kbHNZkX4-bf8Q_McUwFLXwCSsaYpVthO8v1eRWhtLpjDWbUjDkuHmAEXE4KBEB7mvbpJux6X237VGchTuHxcRpz_LLoBKo4Zc5A9ZNlF1bV6yQVC7Ga-jmDWlDmkR6ZrWSO-UroVxotyRj1s0BsTJJZzf5betREcbV3i98VnpLe740XyUHXQjV8XOdhDK2rZdBFwRAfXqIg\"\
+        ,\"token_type\":\"ivoyat\",\"expires_in\":\"01/03/21 17:22\"}}"
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6209c8d8f803522f-MEX
+      - 6295c980fbf19a44-MFE
       Connection:
       - keep-alive
       Content-Security-Policy:
@@ -123,21 +220,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 12 Feb 2021 22:35:45 GMT
+      - Mon, 01 Mar 2021 22:23:00 GMT
       Expect-CT:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      NEL:
-      - '{"max_age":604800,"report_to":"cf-nel"}'
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=629QmAR8QOcH51POolFjm%2Fg%2BzzPaHHCBI%2BVyYkTIYQyd1GGRXqNqIcOv4RZa830bGydgbG7jsAgt%2BUGvQqlNOVNmifX1EEdc31Sy3%2BbmtTbGi%2BiUAmQFngI%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
+      Vary:
+      - Origin
       Via:
-      - kong/2.2.0
+      - kong/2.3.0
       WWW-Authenticate:
       - Key realm="kong"
       X-Content-Type-Options:
@@ -145,20 +240,17 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '114'
+      - '1233'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
       cf-request-id:
-      - 0839fbdb9d0000522f1bb4a000000001
+      - 08917c449b00009a4490b59000000001
       content-length:
-      - '4778'
-      vary:
-      - Origin
-      - Origin
+      - '5611'
     status:
       code: 200
       message: OK
@@ -172,31 +264,82 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '85'
+      - '87'
       Content-Type:
       - application/json
       Cookie:
-      - __cfduid=d845395c51237f6fbc9daf9453d9095e41613169345
+      - __cfduid=dec3ffe74bca89d4269053397321396cb1614637376
       User-Agent:
       - python-requests/2.24.0
     method: POST
     uri: https://api.ivoy.mx/api/login/loginClient/json/web
   response:
     body:
-      string: "{\"code\":0,\"data\":{\"idClient\":69319,\"cellPhone\":\"5500550000\",\"device\":\"web\",\"email\":\"cuenca.dev@cuenca.com\",\"firstName\":\"Cuenca\",\"isActive\":true,\"isPaymentMandatory\":0,\"lastName\":\"Dev\",\"nickname\":\"Cuenca_3CBL6_c\",\"clientProfile\":{\"idClientProfile\":6,\"description\":\"Clientes
-        Credito/Prepago\",\"name\":\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\":54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"}},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\",\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\":8,\"description\":\"Cliente
-        Same Day Credito\",\"name\":\"client_same_day_credit\"},\"gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"clientCreditcards\":[],\"clientInvoiceData\":[{\"idClientInvoiceData\":69319,\"name\":\"CUENCA
-        DEV\",\"address\":{\"latitude\":0.0,\"longitude\":0.0,\"originalAddress\":\"null
-        null, null null\"}}],\"smdClientPricings\":[{\"idSmdClientPricing\":45,\"price\":50.0,\"revenue\":40.0,\"idClient\":69319,\"tillWeight\":2.0,\"uuid\":\"9ac7ec65-9015-11ea-9326-0242ac130002\",\"multiGuidePricings\":[],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"}}],\"paymentMethods\":[{\"idPaymentMethod\":4,\"description\":\"Orden
-        Prepagada\",\"name\":\"credit_prepaid\",\"zones\":\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":69319,\"referralBalance\":0.0,\"referralCode\":\"SAP7R\"},\"clientConfigurations\":[{\"idClientConfiguration\":463965,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":1,\"idClient\":69319},{\"idClientConfiguration\":463966,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":2,\"idClient\":69319},{\"idClientConfiguration\":463967,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":3,\"idClient\":69319},{\"idClientConfiguration\":463968,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":4,\"idClient\":69319},{\"idClientConfiguration\":463969,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":5,\"idClient\":69319},{\"idClientConfiguration\":463970,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":6,\"idClient\":69319},{\"idClientConfiguration\":463971,\"dateAdd\":1575479743244,\"dateEdit\":1580830861000,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":7,\"idClient\":69319},{\"idClientConfiguration\":463989,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":8,\"idClient\":69319},{\"idClientConfiguration\":463990,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":9,\"idClient\":69319},{\"idClientConfiguration\":463991,\"dateAdd\":1580830574365,\"dateEdit\":1580830861000,\"isActive\":false,\"userAdd\":\"Octavio_P5XUL_u\",\"userEdit\":\"Octavio_P5XUL_u\",\"idConfiguration\":10,\"idClient\":69319}],\"zone\":{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"},\"isCompany\":true,\"senderContact\":{},\"uuid\":\"2ba0c300-3bd4-47bc-8d2a-f55e21a081c7\",\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjYxMDgzMDRiYWRmNDc1MWIyMWUwNDQwNTQyMDZhNDFkOGZmMWNiYTgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRGV2IEN1ZW5jYSIsImlzUGF5bWVudE1hbmRhdG9yeSI6MCwiaWRDbGllbnRUeXBlIjo4LCJpZENsaWVudFByb2ZpbGUiOjYsImlkVXNlciI6NjkzMTksIm5hbWVVc2VyIjoiQ3VlbmNhXzNDQkw2X2MiLCJsb2dpblR5cGUiOjIsImVtYWlsIjoiY3VlbmNhLmRldkBjdWVuY2EuY29tIiwiYXBpVHlwZSI6MCwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2l2b3ktc2VjdXJpdHkiLCJhdWQiOiJpdm95LXNlY3VyaXR5IiwiYXV0aF90aW1lIjoxNjEzMTY5MzQzLCJ1c2VyX2lkIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3Iiwic3ViIjoiMmJhMGMzMDAtM2JkNC00N2JjLThkMmEtZjU1ZTIxYTA4MWM3IiwiaWF0IjoxNjEzMTY5MzQzLCJleHAiOjE2MTMxNzI5NDMsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiKzUyNTUwMDU1MDAwMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzUyNTUwMDU1MDAwMCJdLCJlbWFpbCI6WyJjdWVuY2EuZGV2QGN1ZW5jYS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.B7bSxd6iVuVDI1lyyGGxgI4Vl1v56P6uTfFoCR-ZR2DkGDDpeKmAA5-A_CN4lvbWimjowFstG41HjqnPi2KXDZlCOTIOZt5zqIxKi-u6OegczFZ4USL3jQb0Or8NN_rX8rVZ_60Kl5kNx2pcW2Ib9MliwIaftWGR1QWSCLR3B1-jFpDxBndCH12AfjCLKNxZ5EeYpMETANPZcch9VQWmu-dv1r7qvggOf9I6tCZGvLL10z_p7cCcBPNkwuWh0ZUn_g7RJmzeLHsIGn0aX0BHI7cUrQ9XsgFtkDfz-HLOSw6aktUsRkgU1WFdLXVqwzaPkaNavFzpYlaeX-2kWJWq-Q\",\"token_type\":\"ivoyat\",\"expires_in\":\"12/02/21
-        23:35\"}}"
+      string: "{\"code\":0,\"data\":{\"idClient\":82597,\"cellPhone\":\"5564213395\"\
+        ,\"device\":\"web\",\"email\":\"soporte@cuenca.com\",\"firstName\":\"Cuenca\"\
+        ,\"image\":\"https://s3.amazonaws.com/api.ivoy/IVOYAPI/clients/photosProfile/1e3a2252f80c95ed6ee7dc473a1b8b91.jpg\"\
+        ,\"isActive\":true,\"isPaymentMandatory\":0,\"paymentManagerToken\":\"cus_5be08ce8e9d19\"\
+        ,\"lastName\":\".\",\"nickname\":\"Daniel Monterde_Y2H72_c\",\"clientProfile\"\
+        :{\"idClientProfile\":6,\"description\":\"Clientes Credito/Prepago\",\"name\"\
+        :\"client_c_p\",\"clientModules\":[{\"idClientModule\":33,\"module\":{\"idModule\"\
+        :54,\"name\":\"client_credit_prepaid\",\"path\":\"/client/payMethod/creditPrepaid\"\
+        }},{\"idClientModule\":53,\"module\":{\"idModule\":57,\"name\":\"client_internal_guide\"\
+        ,\"path\":\"/client/internal/guide\"}}]},\"clientType\":{\"idClientType\"\
+        :2,\"description\":\"Cliente con Prepago\",\"name\":\"client_prepaid\"},\"\
+        gender\":{\"idGender\":1,\"description\":\"Hombre\",\"name\":\"male\"},\"\
+        clientCreditcards\":[{\"idClientCreditcard\":65422,\"cardHolderName\":\"Luis\
+        \ Daniel Monterde Noriega\",\"expMonth\":\"08\",\"expYear\":\"24\",\"isDefault\"\
+        :1,\"publicNumber\":\"3076\",\"token\":\"crd_5dbb12b65cd2d|tok_5dbb12b5a3c98\"\
+        ,\"creditcardType\":{\"idCreditcardType\":1,\"description\":\"VISA\",\"name\"\
+        :\"VISA\"}}],\"clientInvoiceData\":[{\"idClientInvoiceData\":82597,\"name\"\
+        :\"CUENCA LABS, S.A. DE C.V.\",\"rfc\":\"CLA180906225\",\"address\":{\"externalNumber\"\
+        :\"265\",\"internalNumber\":\"\",\"latitude\":0.0,\"longitude\":0.0,\"neighborhood\"\
+        :\"JU\xC1REZ\",\"street\":\"AVENIDA PASEO DE LA REFORMA\",\"municipality\"\
+        :\"CUAUHT\xC9MOC\",\"state\":\"CIUDAD DE M\xC9XICO\",\"zipCode\":\"06500\"\
+        ,\"originalAddress\":\"AVENIDA PASEO DE LA REFORMA 265, JU\xC1REZ, CUAUHT\xC9\
+        MOC, CIUDAD DE M\xC9XICO 06500\"}}],\"paymentMethods\":[{\"idPaymentMethod\"\
+        :4,\"description\":\"Orden Prepagada\",\"name\":\"credit_prepaid\",\"zones\"\
+        :\"|1|2|3|\"}],\"clientReferral\":{\"idClientReferral\":82549,\"referralBalance\"\
+        :0.0,\"referralCode\":\"VJBPC\"},\"clientConfigurations\":[{\"idClientConfiguration\"\
+        :729904,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\"\
+        :true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":1,\"idClient\":82597},{\"idClientConfiguration\":729905,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":true,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :2,\"idClient\":82597},{\"idClientConfiguration\":729906,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":3,\"idClient\"\
+        :82597},{\"idClientConfiguration\":729907,\"dateAdd\":1540589334000,\"dateEdit\"\
+        :1600986187536,\"isActive\":true,\"userAdd\":\"register.client\",\"userEdit\"\
+        :\"Priscila Gabriela_747F5_u\",\"idConfiguration\":4,\"idClient\":82597},{\"\
+        idClientConfiguration\":729908,\"dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"\
+        isActive\":true,\"userAdd\":\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":5,\"idClient\":82597},{\"idClientConfiguration\":729909,\"\
+        dateAdd\":1540589334000,\"dateEdit\":1600986187536,\"isActive\":false,\"userAdd\"\
+        :\"register.client\",\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\"\
+        :6,\"idClient\":82597},{\"idClientConfiguration\":729910,\"dateAdd\":1540589334000,\"\
+        dateEdit\":1600986187536,\"isActive\":true,\"userAdd\":\"register.client\"\
+        ,\"userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":7,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226079,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1583424109303,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila Gabriela_747F5_u\"\
+        ,\"idConfiguration\":8,\"idClient\":82597},{\"idClientConfiguration\":1226080,\"\
+        dateAdd\":1582164310055,\"dateDelete\":1583424109303,\"dateEdit\":1600986187536,\"\
+        isActive\":false,\"userDelete\":\"Marlene_u\",\"userAdd\":\"aldoivoy_u\",\"\
+        userEdit\":\"Priscila Gabriela_747F5_u\",\"idConfiguration\":9,\"idClient\"\
+        :82597},{\"idClientConfiguration\":1226081,\"dateAdd\":1582164310055,\"dateDelete\"\
+        :1582560819173,\"dateEdit\":1600986187536,\"isActive\":true,\"userDelete\"\
+        :\"Francisco_OG9Y3_u\",\"userAdd\":\"aldoivoy_u\",\"userEdit\":\"Priscila\
+        \ Gabriela_747F5_u\",\"idConfiguration\":10,\"idClient\":82597}],\"zone\"\
+        :{\"idZone\":1,\"description\":\"CDMX|M\xC9X.|MOR.|HGO.\",\"name\":\"cdmx\"\
+        },\"isCompany\":false,\"senderContact\":{},\"uuid\":\"91b4ae8c-a7f1-11e9-a6e2-0a76b6404696\"\
+        ,\"parent\":false},\"token\":{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImM0ZWFhZjkxM2VlNWY0MDY0YmE2NjUzN2M0Njk3YzY5OGE3NGYwODIiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQ3VlbmNhIC4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2FwaS5pdm95L0lWT1lBUEkvY2xpZW50cy9waG90b3NQcm9maWxlLzFlM2EyMjUyZjgwYzk1ZWQ2ZWU3ZGM0NzNhMWI4YjkxLmpwZyIsImlkVXNlciI6ODI1OTcsIm5hbWVVc2VyIjoiRGFuaWVsIE1vbnRlcmRlX1kySDcyX2MiLCJsb2dpblR5cGUiOjIsImlkQ2xpZW50UHJvZmlsZSI6NiwiaXNQYXltZW50TWFuZGF0b3J5IjowLCJpZENsaWVudFR5cGUiOjIsImFwaVR5cGUiOjAsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9pdm95LXNlY3VyaXR5IiwiYXVkIjoiaXZveS1zZWN1cml0eSIsImF1dGhfdGltZSI6MTYxNDYzNzM3NywidXNlcl9pZCI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsInN1YiI6IjkxYjRhZThjLWE3ZjEtMTFlOS1hNmUyLTBhNzZiNjQwNDY5NiIsImlhdCI6MTYxNDYzNzM3NywiZXhwIjoxNjE0NjQwOTc3LCJlbWFpbCI6InNvcG9ydGVAY3VlbmNhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV9udW1iZXIiOiIrNTI1NTY0MjEzMzk1IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNTI1NTY0MjEzMzk1Il0sImVtYWlsIjpbInNvcG9ydGVAY3VlbmNhLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.uTHMR9ZDrE5ai1GhZe7VS2-ufMhCsbtK5DfIP6x1IF3VQD1wo1SRsyP2YEkvXRBg02BYa6BS4ih9gjh2czM9JujMgErfixKm3Xz8jJOioM4FS-4_fgr61DW4Xcb5XOcCLa9GFEnH3A_kbHNZkX4-bf8Q_McUwFLXwCSsaYpVthO8v1eRWhtLpjDWbUjDkuHmAEXE4KBEB7mvbpJux6X237VGchTuHxcRpz_LLoBKo4Zc5A9ZNlF1bV6yQVC7Ga-jmDWlDmkR6ZrWSO-UroVxotyRj1s0BsTJJZzf5betREcbV3i98VnpLe740XyUHXQjV8XOdhDK2rZdBFwRAfXqIg\"\
+        ,\"token_type\":\"ivoyat\",\"expires_in\":\"01/03/21 17:23\"}}"
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6209c8da3987522f-MEX
+      - 6295c989ec809a44-MFE
       Connection:
       - keep-alive
       Content-Security-Policy:
@@ -204,21 +347,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 12 Feb 2021 22:35:45 GMT
+      - Mon, 01 Mar 2021 22:23:01 GMT
       Expect-CT:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      NEL:
-      - '{"max_age":604800,"report_to":"cf-nel"}'
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=os%2FiSouYz%2BNtfaj%2FSP9JQHUGI4hsAN77Ya3UkzmzjbWopu%2FzzKwMLmGYGcrsqrXoiEeray5EaOTTvAp3tnzD%2F32OnrdW9xTzaIocD16GbN%2FpMNskD%2Fu0Iyw%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
+      Vary:
+      - Origin
       Via:
-      - kong/2.2.0
+      - kong/2.3.0
       WWW-Authenticate:
       - Key realm="kong"
       X-Content-Type-Options:
@@ -228,18 +369,15 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '114'
+      - '1218'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
       cf-request-id:
-      - 0839fbdc620000522f5b36a000000001
+      - 08917c4a3500009a44a632f000000001
       content-length:
-      - '4778'
-      vary:
-      - Origin
-      - Origin
+      - '5611'
     status:
       code: 200
       message: OK
@@ -256,10 +394,12 @@ interactions:
       - '42'
       Content-type:
       - application/json
+      Cookie:
+      - __cfduid=dec3ffe74bca89d4269053397321396cb1614637376
       User-Agent:
       - python-requests/2.24.0
     method: POST
-    uri: https://api.ivoy.mx/v1/data/orderSharing/getOrderSharing/json/web
+    uri: https://api.ivoy.mx/play/data/rest/orderSharing/getOrderSharing/json/web
   response:
     body:
       string: '{"code":-111,"message":"Informacion invalida: Datos de la Orden"}'
@@ -267,7 +407,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6209c8dcdc74522f-MEX
+      - 6295c9922b929a44-MFE
       Connection:
       - keep-alive
       Content-Security-Policy:
@@ -275,16 +415,13 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 12 Feb 2021 22:35:46 GMT
+      - Mon, 01 Mar 2021 22:23:01 GMT
       Expect-CT:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Referrer-Policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Server:
       - cloudflare
-      Set-Cookie:
-      - __cfduid=d6c17d05b503be578d0351c59c12428f11613169346; expires=Sun, 14-Mar-21
-        22:35:46 GMT; path=/; domain=.ivoy.mx; HttpOnly; SameSite=Lax; Secure
       Transfer-Encoding:
       - chunked
       Vary:
@@ -300,13 +437,13 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '164'
+      - '158'
       X-Permitted-Cross-Domain-Policies:
       - all
       X-XSS-Protection:
       - 1; mode=block
       cf-request-id:
-      - 0839fbde090000522ff1193000000001
+      - 08917c4f5b00009a4465a57000000001
       content-length:
       - '65'
     status:
