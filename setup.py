@@ -33,7 +33,7 @@ setup(
     package_data=dict(ivoy=['py.typed']),
     python_requires='>=3.6',
     install_requires=[
-        'requests==2.24.0',
+        'requests==2.26.0',
         'iso8601==0.1.12',
         'dataclasses>=0.6;python_version<"3.7"',
     ],
