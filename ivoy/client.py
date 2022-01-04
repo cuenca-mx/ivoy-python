@@ -75,6 +75,7 @@ class Client:
         web_auth_password: Optional[str] = None,
         same_day_auth_user: Optional[str] = None,
         same_day_auth_password: Optional[str] = None,
+        fallback_url: Optional[bool] = None,
     ):
         self.session = Session()
         self.auth_user = auth_user or os.environ['IVOY_AUTH_USER']
@@ -94,12 +95,14 @@ class Client:
         self.token = None
         self.web_token = None
         self.same_day_token = None
+        self.fallback_url = fallback_url
         self.id_client = os.environ['IVOY_ID_CLIENT'] or None
 
     def get_token(
         self, web_token: bool = False, same_day_token: bool = False
     ) -> str:
-        url = f'{self.base_url}/api/login/loginClient/json/web'
+        domain = 'https://api.ivoy.mx' if self.fallback_url else self.base_url
+        url = f'{domain}/api/login/loginClient/json/web'
         if web_token:
             auth = (self.web_auth_user, self.web_auth_password)
         elif same_day_token:
