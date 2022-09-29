@@ -13,7 +13,7 @@ test_requires = [
     'isort[pipfile]==4.3.21',
     'flake8==3.8.3',
     'mypy==0.782',
-    'iso8601==0.1.12',
+    'iso8601==1.1.0',
 ]
 
 with open('README.md', 'r') as f:
@@ -34,7 +34,7 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         'requests==2.24.0',
-        'iso8601==0.1.12',
+        'iso8601==1.1.0',
         'dataclasses>=0.6;python_version<"3.7"',
     ],
     setup_requires=['pytest-runner'],
