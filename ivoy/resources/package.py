@@ -23,7 +23,7 @@ class Package(Resource):
     package_list: List[PackageInfo]
 
     @classmethod
-    def create(cls, package_list: List[PackageInfo], id_warehouse: int = None):
+    def create(cls, package_list: List[PackageInfo], id_warehouse: str = None):
         id_client = cls._client.id_client
         endpoint = f'{cls._endpoint}/packages/setData/newPackage/json/web'
         json_data = cls._create_json(package_list, id_client, id_warehouse)
@@ -82,7 +82,7 @@ class Package(Resource):
     def _create_json(
         package_list: List[PackageInfo],
         id_client: str = None,
-        id_warehouse: int = None,
+        id_warehouse: str = None,
     ) -> dict:
         json_data = dict(
             data=dict(
