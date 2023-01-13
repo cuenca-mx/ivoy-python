@@ -145,7 +145,8 @@ class Package(Resource):
 
     @staticmethod
     def _to_object(
-        response: dict, comes_from: str = 'create/edit',
+        response: dict,
+        comes_from: str = 'create/edit',
     ) -> 'Package':
         packages = list()
         if comes_from == 'filters':
@@ -241,4 +242,7 @@ class Package(Resource):
                         real_weight=package['realWeight'],
                     )
                 )
-        return Package(_response=response, package_list=packages,)
+        return Package(
+            _response=response,
+            package_list=packages,
+        )

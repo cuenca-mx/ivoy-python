@@ -13,7 +13,9 @@ from ivoy.types import (
 
 def package_info():
     contact = PackageContact(
-        name='Andres Hernandez', phone='5529372492', email='andres@cuenca.com',
+        name='Andres Hernandez',
+        phone='5529372492',
+        email='andres@cuenca.com',
     )
     package_type = PackageType.envelope
     address = PackageAddress(
