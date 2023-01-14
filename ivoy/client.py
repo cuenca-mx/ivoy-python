@@ -109,7 +109,8 @@ class Client:
         json_data = dict(
             data=dict(
                 systemRequest=dict(
-                    user=self.ivoy_user, password=self.ivoy_password,
+                    user=self.ivoy_user,
+                    password=self.ivoy_password,
                 ),
             ),
         )
@@ -125,7 +126,12 @@ class Client:
     def put(self, endpoint: str, **kwargs: Any) -> Response:
         return self.request('put', endpoint, **kwargs)
 
-    def request(self, method: str, endpoint: str, **kwargs: Any,) -> Response:
+    def request(
+        self,
+        method: str,
+        endpoint: str,
+        **kwargs: Any,
+    ) -> Response:
         if 'orderSharing' in endpoint:
             url = self.web_url + endpoint
         else:

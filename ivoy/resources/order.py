@@ -70,7 +70,8 @@ class Order(Resource):
 
     @staticmethod
     def _to_object(
-        response: dict, addresses: List[OrderAddress] = [],
+        response: dict,
+        addresses: List[OrderAddress] = [],
     ) -> 'Order':
         data = response['data']
         if addresses == []:
@@ -123,7 +124,9 @@ class Order(Resource):
 
     @staticmethod
     def _create_json(
-        address_array: list, package: Package, payment: PaymentMethod,
+        address_array: list,
+        package: Package,
+        payment: PaymentMethod,
     ) -> dict:
         json_data = dict(
             data=dict(
