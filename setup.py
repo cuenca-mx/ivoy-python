@@ -11,7 +11,7 @@ test_requires = [
     'pytest-cov==2.10.0',
     'black==19.10b0',
     'isort[pipfile]==4.3.21',
-    'flake8==3.7.*',
+    'flake8==3.8.3',
     'mypy==0.782',
     'iso8601==0.1.12',
 ]
